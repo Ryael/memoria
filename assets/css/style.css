@@ -16,6 +16,16 @@ html {
     background: url(../images/background.png);
 }
 
+h1,h2,h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
+body {
+    font-family: Fredoka, sans-serif;
+    color: #ffffff;
+}
+
 /* Title Page */
 
 #title {
@@ -26,13 +36,91 @@ html {
 }
 
 #title > h1 {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 400;
     text-transform: uppercase;
     color: #ffffff;
-    font-size: 80px;
-    padding-top: 100px;
+    font-size: 110px;
+    padding: 100px 0px 75px 0px;
 }
 
-/* Buttons */
+/* Main Menu */
 
+#main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main-menu > a {
+    position: relative;
+}
+
+.btn {
+    display: inline-block;
+    transform: skew(-7deg);
+    font-weight: 400;
+    font-size: 35px;
+    padding: 25px 50px;
+    margin: 25px 0px 25px 0px;
+    width: 15%;
+    white-space: normal;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+    z-index: 1;
+}
+
+.btn > span {
+    display: inline-block;
+    transform: skew(7deg);
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: none;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.btn:hover,
+.btn:focus {
+    color: #ffffff;
+    transition: 0.5s ease-in-out; /* Default, fallback */
+    -o-transition: 0.5s ease-in-out; /* Opera */
+    -ms-transition: 0.5s ease-in-out; /* IE 10 */
+    -moz-transition: 0.5s ease-in-out; /* Firefox */
+    -webkit-transition: 0.5s ease-in-out; /* Safari and Chrome */
+    background: #5c27fe;
+}
+
+.btn:not(:hover),
+.btn:not(:focus) {
+    transition: 0.5s ease-in-out; /* Default, fallback */
+    -o-transition: 0.5s ease-in-out; /* Opera */
+    -ms-transition: 0.5s ease-in-out; /* IE 10 */
+    -moz-transition: 0.5s ease-in-out; /* Firefox */
+    -webkit-transition: 0.5s ease-in-out; /* Safari and Chrome */
+}
+
+/* Footer */
+
+#bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position : fixed;
+    bottom : 0;
+}
+
+#credits {
+    width: 100%;
+}
