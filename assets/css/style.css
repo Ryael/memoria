@@ -56,6 +56,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    overflow: auto;
 }
 
 #main-menu > a {
@@ -134,7 +135,6 @@ body {
     .btn {
         width: 15%;
     }
-    
 }
 
 @media (min-width: 2000px) {
@@ -148,15 +148,10 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    .btn {
-        width: 45%;
-    }
-}
-
 @media (max-width: 768px) {
     .btn {
         width: 45%;
+        font-size: 25px;
     }
 
     #title > h1 {
@@ -164,3 +159,55 @@ body {
         padding-top: 75px;
     }
 }
+
+@media (max-width: 480px) {
+    .btn {
+        width: 45%;
+    }
+}
+
+@media (max-width: 320px) {
+    .btn {
+        width: 55%;
+    }
+
+    #title > h1 {
+        font-size: 10vw;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 240px) {
+    .btn {
+        width: 40%;
+        font-size: 15px;
+    }
+
+    #title > h1 {
+        font-size: 0vw;
+        padding-top: 0px;
+    }
+}
+
+@media (max-height: 800px) {
+    #title > h1 {
+        padding-top: 50px;
+    }
+}
+
+/* Media Query for Horizontal/Landscape Orientation, which prevents overlap of content and allows for scrolling */
+
+@media screen and (min-width:320px) and (max-width:1024px) and (orientation:landscape) {
+    #main-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, -0%);
+        width: 100%;
+        overflow: auto;
+    }
+} 
