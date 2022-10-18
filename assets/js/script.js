@@ -15,3 +15,11 @@ function startGameButton() {
     document.getElementById("game-area").style.display = "flex";
     document.getElementById("leaderboards").style.display = "block";
 }
+
+/** Credits
+ */
+ function creditsButton() {
+    document.getElementById("main-menu").style.display = "none";
+    document.getElementById("game-area").style.display = "flex";
+    document.getElementById("credits").style.display = "block";
+}
