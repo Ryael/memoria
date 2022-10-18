@@ -112,6 +112,18 @@ body {
     -webkit-transition: 0.5s ease-in-out; /* Safari and Chrome */
 }
 
+/* Game Area */
+
+#game-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1vh 0 1vh 0;
+    overflow: auto;
+}
+
+
 /* Footer */
 
 #footer {
