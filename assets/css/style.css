@@ -115,7 +115,7 @@ body {
 /* Game Area */
 
 #game-area {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -123,13 +123,14 @@ body {
     overflow: auto;
 }
 
-#game-board {
+#rules-difficulty {
+    display: none;
     width: 600px;
     height: 600px;
     background: #fff;
 }
 
-#game-board p {
+#rules-difficulty p {
     color: #111;
 }
 

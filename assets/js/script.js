@@ -1,6 +1,9 @@
-/** Hides Main Menu
+/* Button Scripts */
+
+/** Start Game
  */
-function hideMainMenu() {
-    let hideMainMenu = document.getElementById("main-menu");
-    hideMainMenu.style.display = "none";
+function startGameButton() {
+    document.getElementById("main-menu").style.display = "none";
+    document.getElementById("game-area").style.display = "flex";
+    document.getElementById("rules-difficulty").style.display = "block";
 }
