@@ -1,25 +1,50 @@
 /* Button Scripts */
 
-/** Start Game
- */
+/** Hides Section by ID */
+function hideSection(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+/** Shows Section by ID as Flex */
+function showSectionFlex(id) {
+    document.getElementById(id).style.display = "flex";
+}
+
+/** Shows Section by ID as Block */
+function showSectionBlock(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+/** Start Game */
 function startGameButton() {
-    document.getElementById("main-menu").style.display = "none";
-    document.getElementById("game-area").style.display = "flex";
-    document.getElementById("rules-difficulty").style.display = "block";
+    hideSection("main-menu");
+    showSectionFlex("game-area");
+    showSectionBlock("rules-difficulty");
+    showSectionFlex("back-button");
 }
 
-/** Leaderboards
- */
+/** Leaderboards */
  function leaderboardsButton() {
-    document.getElementById("main-menu").style.display = "none";
-    document.getElementById("game-area").style.display = "flex";
-    document.getElementById("leaderboards").style.display = "block";
+    hideSection("main-menu");
+    showSectionFlex("game-area");
+    showSectionBlock("leaderboards");
+    showSectionFlex("back-button");
 }
 
-/** Credits
- */
+/** Credits */
  function creditsButton() {
-    document.getElementById("main-menu").style.display = "none";
-    document.getElementById("game-area").style.display = "flex";
-    document.getElementById("credits").style.display = "block";
+    hideSection("main-menu");
+    showSectionFlex("game-area");
+    showSectionBlock("credits");
+    showSectionFlex("back-button");
+}
+
+/** Return to Main Menu */
+function backButton() {
+    showSectionFlex("main-menu");
+    hideSection("game-area");
+    hideSection("credits");
+    hideSection("rules-difficulty");
+    hideSection("leaderboards");
+    hideSection("back-button");
 }
