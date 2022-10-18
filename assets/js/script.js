@@ -1,4 +1,6 @@
-function startGame() {
-    let mainMenu = document.getElementById("main-menu");
-    mainMenu.style.display = "none";
+/** Hides Main Menu
+ */
+function hideMainMenu() {
+    let hideMainMenu = document.getElementById("main-menu");
+    hideMainMenu.style.display = "none";
 }
