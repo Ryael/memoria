@@ -123,6 +123,8 @@ body {
     overflow: auto;
 }
 
+/* Rules & Difficulty */
+
 #rules-difficulty {
     display: none;
     width: 600px;
@@ -130,7 +132,20 @@ body {
     background: #fff;
 }
 
-#rules-difficulty p {
+#rules-difficulty > p {
+    color: #111;
+}
+
+/* Leaderboards */
+
+#leaderboards {
+    display: none;
+    width: 600px;
+    height: 600px;
+    background: #fff;
+}
+
+#leaderboards > p {
     color: #111;
 }
 
