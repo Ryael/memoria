@@ -123,6 +123,15 @@ body {
     overflow: auto;
 }
 
+#game-board {
+    width: 600px;
+    height: 600px;
+    background: #fff;
+}
+
+#game-board p {
+    color: #111;
+}
 
 /* Footer */
 
