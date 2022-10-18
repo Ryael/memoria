@@ -149,6 +149,19 @@ body {
     color: #111;
 }
 
+/* Credits */
+
+#credits {
+    display: none;
+    width: 600px;
+    height: 600px;
+    background: #fff;
+}
+
+#credits > p {
+    color: #111;
+}
+
 /* Footer */
 
 #footer {
