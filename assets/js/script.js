@@ -22,11 +22,11 @@ const selectors = {
 
 /** Defines values to record game state  */
 const state = {
-    gameStarted: false,
-    flippedCards: 0,
-    totalFlips: 0,
-    totalTime: 0,
-    loop: null
+    gameStarted: false, // Checks if the game was started via interacting with the cards.
+    flippedCards: 0, // Keeps track of the number of flipped cards. If this number is 2, the cards are flipped back.
+    totalFlips: 0, // Keeps track of the total number of flips.
+    totalTime: 0, // Keeps track of the amount of time elapsed in seconds.
+    loop: null // Used to update the timer every second once the game has started.
 }
 
 /* Button Scripts */
