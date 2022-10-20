@@ -150,6 +150,9 @@ body {
 
 #memory-game {
     display: none;
+    width: 600px;
+    height: 600px;
+    background: #fff;
 }
 
 #board-container {

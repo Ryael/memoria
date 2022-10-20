@@ -23,6 +23,13 @@ function startGameButton() {
     showSectionFlex("back-button");
 }
 
+/** Easy Mode */
+function easyGameButton() {
+    hideSection("rules-difficulty");
+    showSectionFlex("game-area");
+    showSectionFlex("memory-game");
+}
+
 /** Leaderboards */
  function leaderboardsButton() {
     hideSection("main-menu");
@@ -47,4 +54,6 @@ function backButton() {
     hideSection("rules-difficulty");
     hideSection("leaderboards");
     hideSection("back-button");
+    hideSection("memory-game");
 }
+
