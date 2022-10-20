@@ -115,3 +115,18 @@ const generateGame = () => {
     const parser = new DOMParser().parseFromString(cards, "text/html") // This adds the board to the HTML.
     selectors.board.replaceWith(parser.querySelector("#board")) // Updates the selector board with the new board.
 }
+
+/** Take a selection of random items from an array */
+const pickRandom = (array, numberOfItems) => {
+    const clonedArray = [...array] // Duplicates the array.
+    const randomPicks = [] // Stores randomly picked emoji.
+
+    for (let index = 0; index < numberOfItems; index++) {
+        const randomIndex = Math.floor(Math.random() * clonedArray.length) // Returns a random whole number between 0 and the given array length. 
+        
+        randomPicks.push(clonedArray[randomIndex]) // Stores randomly picked emoji in the randomPicks array.
+        clonedArray.splice(randomIndex, 1) // Removes the randomly picked emoji from clonedArray such that it isn't chosen again.
+    }
+
+    return randomPicks // Returns the randomly chosen emoji. 
+}
