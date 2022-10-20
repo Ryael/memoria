@@ -1,7 +1,7 @@
 /* Constants */
 
-/** Sets constants for menu navigation */
-const idSelectors = {
+/** Sets menu selectors for menu navigation */
+const menuSelectors = {
     mainMenu: document.querySelector("#main-menu"),
     gameArea: document.querySelector("#game-area"),
     rulesDifficulty: document.querySelector("#rules-difficulty"),
@@ -18,6 +18,15 @@ const selectors = {
     moves: document.querySelector("#moves"),
     timer: document.querySelector("#timer"),
     win: document.querySelector("'.win'")
+}
+
+/** Defines values to record game state  */
+const state = {
+    gameStarted: false,
+    flippedCards: 0,
+    totalFlips: 0,
+    totalTime: 0,
+    loop: null
 }
 
 /* Button Scripts */
@@ -39,44 +48,44 @@ function showSectionBlock(item) {
 
 /** Start Game */
 function startGameButton() {
-    hideSection(idSelectors.mainMenu);
-    showSectionFlex(idSelectors.gameArea);
-    showSectionBlock(idSelectors.rulesDifficulty);
-    showSectionFlex(idSelectors.backButton);
+    hideSection(menuSelectors.mainMenu);
+    showSectionFlex(menuSelectors.gameArea);
+    showSectionBlock(menuSelectors.rulesDifficulty);
+    showSectionFlex(menuSelectors.backButton);
 }
 
 /** Easy Mode */
 function easyGameButton() {
-    hideSection(idSelectors.rulesDifficulty);
-    showSectionFlex(idSelectors.gameArea);
-    showSectionFlex(idSelectors.memoryGame);
+    hideSection(menuSelectors.rulesDifficulty);
+    showSectionFlex(menuSelectors.gameArea);
+    showSectionFlex(menuSelectors.memoryGame);
 }
 
 /** Leaderboards */
  function leaderboardsButton() {
-    hideSection(idSelectors.mainMenu);
-    showSectionFlex(idSelectors.gameArea);
-    showSectionBlock(idSelectors.leaderboards);
-    showSectionFlex(idSelectors.backButton);
+    hideSection(menuSelectors.mainMenu);
+    showSectionFlex(menuSelectors.gameArea);
+    showSectionBlock(menuSelectors.leaderboards);
+    showSectionFlex(menuSelectors.backButton);
 }
 
 /** Credits */
  function creditsButton() {
-    hideSection(idSelectors.mainMenu);
-    showSectionFlex(idSelectors.gameArea);
-    showSectionBlock(idSelectors.credits);
-    showSectionFlex(idSelectors.backButton);
+    hideSection(menuSelectors.mainMenu);
+    showSectionFlex(menuSelectors.gameArea);
+    showSectionBlock(menuSelectors.credits);
+    showSectionFlex(menuSelectors.backButton);
 }
 
 /** Return to Main Menu */
 function returnButton() {
-    showSectionFlex(idSelectors.mainMenu);
-    hideSection(idSelectors.gameArea);
-    hideSection(idSelectors.credits);
-    hideSection(idSelectors.rulesDifficulty);
-    hideSection(idSelectors.leaderboards);
-    hideSection(idSelectors.backButton);
-    hideSection(idSelectors.memoryGame);
+    showSectionFlex(menuSelectors.mainMenu);
+    hideSection(menuSelectors.gameArea);
+    hideSection(menuSelectors.credits);
+    hideSection(menuSelectors.rulesDifficulty);
+    hideSection(menuSelectors.leaderboards);
+    hideSection(menuSelectors.backButton);
+    hideSection(menuSelectors.memoryGame);
 }
 
 /* Memory Game */
