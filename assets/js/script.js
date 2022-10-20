@@ -1,3 +1,25 @@
+/* Constants */
+
+/** Sets constants for menu navigation */
+const idSelectors = {
+    mainMenu: document.querySelector("#main-menu"),
+    gameArea: document.querySelector("#game-area"),
+    rulesDifficulty: document.querySelector("#rules-difficulty"),
+    leaderboards: document.querySelector("#leaderboards"),
+    credits: document.querySelector("#credits"),
+    backButton: document.querySelector("#back-button"),
+    memoryGame: document.querySelector("#memory-game")
+}
+
+/** Defines the selectors used throughout the game */
+const selectors = {
+    boardContainer: document.querySelector("#board-container"),
+    board: document.querySelector("#board"),
+    moves: document.querySelector("#moves"),
+    timer: document.querySelector("#timer"),
+    win: document.querySelector("'.win'")
+}
+
 /* Button Scripts */
 
 /** Hides Section by ID */
@@ -13,17 +35,6 @@ function showSectionFlex(item) {
 /** Shows Section by ID as Block */
 function showSectionBlock(item) {
     item.style.display = "block";
-}
-
-/** Sets constants for menu navigation */
-const idSelectors = {
-    mainMenu: document.querySelector("#main-menu"),
-    gameArea: document.querySelector("#game-area"),
-    rulesDifficulty: document.querySelector("#rules-difficulty"),
-    leaderboards: document.querySelector("#leaderboards"),
-    credits: document.querySelector("#credits"),
-    backButton: document.querySelector("#back-button"),
-    memoryGame: document.querySelector("#memory-game")
 }
 
 /** Start Game */
@@ -69,12 +80,3 @@ function returnButton() {
 }
 
 /* Memory Game */
-
-/** Defines the selectors used throughout the game */
-const selectors = {
-    boardContainer: document.querySelector("#board-container"),
-    board: document.querySelector("#board"),
-    moves: document.querySelector("#moves"),
-    timer: document.querySelector("#timer"),
-    win: document.querySelector("#win")
-}
