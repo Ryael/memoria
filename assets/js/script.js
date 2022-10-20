@@ -89,3 +89,29 @@ function returnButton() {
 }
 
 /* Memory Game */
+
+/** Creates and displays the game */
+const generateGame = () => {
+    const area = selectors.board.getAttribute("data-area") // Grabs the value of the given attribute and stores it as a constant.
+
+    if (area % 2 !== 0) {
+        throw new Error("The area of the board must be an even number.") // Checks if the attribute passed above is an even number. If not, it throws an error.
+    }
+
+    const emojis = ["💧", "🔥", "❄", "⚡", "🌀", "🌪", "☄", "💎", "⚗", "🛡", "🏹", "💣", "⚔", "🗝", "🕯", "🎵", "💍", "🎀"] // Array of emoji for card faces. Minimum required is (largest area² / 2).
+    const picks = pickRandom(emojis, (area * area) / 2) // Selects (area² / 2) random emoji.
+    const shuffledItems = shuffle([...picks, ...picks]) // Creates an array of shuffled pairs of emoji.
+    const cards = `
+        <div id="board" style="grid-template-columns: repeat(${area}, auto)">
+            ${shuffledItems.map(emoji => `
+                <div class="card">
+                    <div class="card-front"></div>
+                    <div class="card-back">${emoji}</div>
+                </div>
+            `).join("")}
+       </div>
+    ` // Creates a board of cards based on the area², and adds a card for each item in the shuffled array with the emoji as its back.
+    
+    const parser = new DOMParser().parseFromString(cards, "text/html") // This adds the board to the HTML.
+    selectors.board.replaceWith(parser.querySelector("#board")) // Updates the selector board with the new board.
+}

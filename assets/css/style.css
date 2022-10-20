@@ -183,15 +183,15 @@ body {
     grid-gap: 20px;
 }
 
-#card {
+.card {
     position: relative;
     height: 100px;
     width: 100px;
     cursor: pointer;
 }
 
-#card-front,
-#card-back {
+.card-front,
+.card-back {
     position: absolute;
     border-radius: 5px;
     height: 100%;
@@ -201,7 +201,7 @@ body {
     backface-visibility: hidden; /* This is to hide the back of an element here, specifically, the card. It means that when flipped, the emoji won't be visible */
 }
 
-#card-back {
+.card-back {
     font-size: 28px;
     text-align: center;
     line-height: 100px;
@@ -209,11 +209,11 @@ body {
     transform: rotateY(180deg) rotateZ(50deg);
 }
 
-#card.flipped #card-front {
+.card.flipped .card-front {
     transform: rotateY(180deg) rotateZ(50deg);
 }
 
-#card.flipped #card-back {
+.card.flipped .card-back {
     transform: rotateY(0) rotateZ(0);
 }
 
