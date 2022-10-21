@@ -149,7 +149,7 @@ const shuffle = array => {
 /** Adds Event Listener */
 const attachEventListener = () => {
     // Attaches an event listener directly to the DOM for a click event.
-    document.addEventListener('click', event => { 
+    document.addEventListener("click", event => { 
         const eventTarget = event.target // Stores the element that was clicked.
         const eventParent = eventTarget.parentElement // Stores the parent of the element of that was clicked.
 
@@ -159,5 +159,20 @@ const attachEventListener = () => {
         }
     })
 }
+
+/** Starting the game */
+const startGame = () => {
+    state.gameStarted = true // Sets the gameStarted state to true.
+
+    // Increases total time state by 1 second.
+    state.loop = setInterval(() => {
+        state.totalTime++
+
+        selectors.moves.innerText = `${state.totalFlips} moves.` // Sets the text of the moves element.
+        selectors.timer.innerText = `Time: ${state.totalTime} seconds.` // Sets the text of the timer element.
+    }, 1000) 
+}
+
+/** Calling Functions */
 
 attachEventListener() 
