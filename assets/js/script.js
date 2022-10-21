@@ -17,7 +17,7 @@ const selectors = {
     board: document.querySelector("#board"),
     moves: document.querySelector("#moves"),
     timer: document.querySelector("#timer"),
-    win: document.querySelector("'.win'")
+    win: document.querySelector("#win")
 }
 
 /** Defines values to record game state  */
@@ -59,6 +59,7 @@ function easyGameButton() {
     hideSection(menuSelectors.rulesDifficulty);
     showSectionFlex(menuSelectors.gameArea);
     showSectionFlex(menuSelectors.memoryGame);
+    generateGame();
 }
 
 /** Leaderboards */
@@ -98,7 +99,7 @@ const generateGame = () => {
         throw new Error("The area of the board must be an even number.") // Checks if the attribute passed above is an even number. If not, it throws an error.
     }
 
-    const emojis = ["💧", "🔥", "❄", "⚡", "🌀", "🌪", "☄", "💎", "⚗", "🛡", "🏹", "💣", "⚔", "🗝", "🕯", "🎵", "💍", "🎀"] // Array of emoji for card faces. Minimum required is (largest area² / 2).
+    const emojis = ["💧", "🔥", "🧩", "⚡", "🌀", "🎲", "🧨", "💎", "⭐", "🌙", "🏹", "💣", "⏳", "⚓", "🏺", "🎵", "💍", "🎀"] // Array of emoji for card faces. Minimum required is (largest area² / 2).
     const picks = pickRandom(emojis, (area * area) / 2) // Selects (area² / 2) random emoji.
     const shuffledItems = shuffle([...picks, ...picks]) // Creates an array of shuffled pairs of emoji.
     const cards = `
