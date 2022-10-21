@@ -130,3 +130,18 @@ const pickRandom = (array, numberOfItems) => {
 
     return randomPicks // Returns the randomly chosen emoji. 
 }
+
+/** Shuffles an array using the Fisher-Yates shuffling algorithm */
+const shuffle = array => {
+    const clonedArray = [...array] // Duplicates the array.
+
+    for (let index = 0; index < clonedArray.length; index++) {
+        const randomIndex = Math.floor(Math.random() * (clonedArray.length - index)) + index // Generates a random index between the current index and the end of the array.
+        const originalValue = clonedArray[index] // Stores the value at index in clonedArray. This will help us swap places with a value at another index.
+
+        clonedArray[index] = clonedArray[randomIndex] // Sets the value at index to be equal to the value at randomIndex.
+        clonedArray[randomIndex] = originalValue // Sets the value at randomIndex to be equal to originalValue, finishing the swapping of values.
+    }
+
+    return clonedArray // Returns the shuffled array.
+}
