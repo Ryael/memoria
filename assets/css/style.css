@@ -150,8 +150,6 @@ body {
 
 #memory-game {
     display: none;
-    width: 600px;
-    height: 600px;
     background: #fff;
 }
 
@@ -160,7 +158,7 @@ body {
 }
 
 #game-stats {
-    display: flex;
+    display: none;
     gap: 20px;
     margin-bottom: 20px;
     color: #FFF;

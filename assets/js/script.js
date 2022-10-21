@@ -8,7 +8,8 @@ const menuSelectors = {
     leaderboards: document.querySelector("#leaderboards"),
     credits: document.querySelector("#credits"),
     backButton: document.querySelector("#back-button"),
-    memoryGame: document.querySelector("#memory-game")
+    memoryGame: document.querySelector("#memory-game"),
+    gameControls: document.querySelector("#game-stats")
 }
 
 /** Defines the selectors used throughout the game */
@@ -17,7 +18,7 @@ const selectors = {
     board: document.querySelector("#board"),
     moves: document.querySelector("#moves"),
     timer: document.querySelector("#timer"),
-    win: document.querySelector("#win")
+    win: document.querySelector("#win"),
 }
 
 /** Defines values to record game state  */
@@ -59,6 +60,7 @@ function easyGameButton() {
     hideSection(menuSelectors.rulesDifficulty);
     showSectionFlex(menuSelectors.gameArea);
     showSectionFlex(menuSelectors.memoryGame);
+    showSectionFlex(menuSelectors.gameControls);
     generateGame();
 }
 
@@ -87,6 +89,7 @@ function returnButton() {
     hideSection(menuSelectors.leaderboards);
     hideSection(menuSelectors.backButton);
     hideSection(menuSelectors.memoryGame);
+    hideSection(menuSelectors.gameControls);
 }
 
 /* Memory Game */
