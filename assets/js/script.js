@@ -173,6 +173,37 @@ const startGame = () => {
     }, 1000) 
 }
 
+/** Flipping Cards */
+const flipCard = card => {
+    state.flippedCards++ // Increments the state of flippedCards by 1.
+    state.totalFlips++ // Increments the state of totalFlips by 1.
+
+    // If the gameStarted state is false, call startGame().
+    if (!state.gameStarted) {
+        startGame()
+    }
+
+    // If there are less than two flipped cards, add the "flipped" class.
+    if (state.flippedCards <= 2) {
+        card.classList.add("flipped")
+    }
+
+    if (state.flippedCards === 2) {
+        const flippedCards = document.querySelectorAll(".flipped:not(.matched)")  // Stores flipped cards that haven't been matched.
+
+        // If the cards have matching emojis, give them the "matched" class.
+        if (flippedCards[0].innerText === flippedCards[1].innerText) {
+            flippedCards[0].classList.add("matched") 
+            flippedCards[1].classList.add("matched")
+        }
+
+        // Flip the cards back after 1 second.
+        setTimeout(() => {
+            flipBackCards()
+        }, 1000)
+    }
+}
+
 /** Calling Functions */
 
 attachEventListener() 
