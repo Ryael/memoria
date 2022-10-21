@@ -202,6 +202,24 @@ const flipCard = card => {
             flipBackCards()
         }, 1000)
     }
+
+    // If there are no more to flip, display win state. 
+    // 0 is falsey so if there are no unflipped cards, !0 would return true.
+    if (!document.querySelectorAll(".card:not(.flipped)").length) {
+        // Flips the board container and displays winning text and game stats.
+        setTimeout(() => {
+            selectors.boardContainer.classList.add("flipped")
+            selectors.win.innerHTML = `
+                <span class="win-text">
+                    You won!<br />
+                    with <span class="highlight">${state.totalFlips}</span> moves<br />
+                    under <span class="highlight">${state.totalTime}</span> seconds
+                </span>
+            `
+
+            clearInterval(state.loop) // Stops the game loop.
+        }, 1000)
+    }
 }
 
 /** Flipping Cards Back */
