@@ -204,6 +204,16 @@ const flipCard = card => {
     }
 }
 
-/** Calling Functions */
+/** Flipping Cards Back */
+const flipBackCards = () => {
+    // Unflip all unmatched cards.
+    document.querySelectorAll(".card:not(.matched)").forEach(card => {
+        card.classList.remove("flipped")
+    })
+
+    state.flippedCards = 0 // Reset flippedCards state to 0.
+}
+
+/* Calling Functions */
 
 attachEventListener() 
