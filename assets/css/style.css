@@ -120,7 +120,6 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 1vh 0 1vh 0;
-    overflow: auto;
 }
 
 #difficulty-settings {

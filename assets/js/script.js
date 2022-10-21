@@ -108,6 +108,7 @@ function returnButton() {
     hideSection(menuSelectors.backButton);
     hideSection(menuSelectors.memoryGame);
     hideSection(menuSelectors.gameControls);
+    location.reload();
 }
 
 /* Memory Game */
