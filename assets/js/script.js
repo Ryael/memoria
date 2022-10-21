@@ -145,3 +145,19 @@ const shuffle = array => {
 
     return clonedArray // Returns the shuffled array.
 }
+
+/** Adds Event Listener */
+const attachEventListener = () => {
+    // Attaches an event listener directly to the DOM for a click event.
+    document.addEventListener('click', event => { 
+        const eventTarget = event.target // Stores the element that was clicked.
+        const eventParent = eventTarget.parentElement // Stores the parent of the element of that was clicked.
+
+        // If the element clicked includes the class "card" and its parent doesn't include the class "flipped", then call flipCard on the parent.
+        if (eventTarget.className.includes("card") && !eventParent.className.includes("flipped")) {
+            flipCard(eventParent) 
+        }
+    })
+}
+
+attachEventListener() 
