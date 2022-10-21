@@ -61,7 +61,25 @@ function easyGameButton() {
     showSectionFlex(menuSelectors.gameArea);
     showSectionFlex(menuSelectors.memoryGame);
     showSectionFlex(menuSelectors.gameControls);
-    generateGame();
+    generateGame(2);
+}
+
+/** Normal Mode */
+function normalGameButton() {
+    hideSection(menuSelectors.rulesDifficulty);
+    showSectionFlex(menuSelectors.gameArea);
+    showSectionFlex(menuSelectors.memoryGame);
+    showSectionFlex(menuSelectors.gameControls);
+    generateGame(4);
+}
+
+/** Hard Mode */
+function hardGameButton() {
+    hideSection(menuSelectors.rulesDifficulty);
+    showSectionFlex(menuSelectors.gameArea);
+    showSectionFlex(menuSelectors.memoryGame);
+    showSectionFlex(menuSelectors.gameControls);
+    generateGame(6);
 }
 
 /** Leaderboards */
@@ -95,9 +113,7 @@ function returnButton() {
 /* Memory Game */
 
 /** Creates and displays the game */
-const generateGame = () => {
-    const area = selectors.board.getAttribute("data-area") // Grabs the value of the given attribute and stores it as a constant.
-
+const generateGame = (area) => {
     if (area % 2 !== 0) {
         throw new Error("The area of the board must be an even number.") // Checks if the attribute passed above is an even number. If not, it throws an error.
     }
