@@ -19,7 +19,7 @@ html {
 
 h1,h2,h3 {
     font-family: Jost, sans-serif;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 body {
@@ -40,7 +40,7 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     font-size: 6.875em;
-    padding: 12vh 0 6vh 0;
+    padding: 10vh 0 5vh 0;
 }
 
 /* Main Menu */
@@ -50,7 +50,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1vh 0 1vh 0;
+    padding-bottom: 2.5vh;
     overflow: auto;
 }
 
@@ -119,7 +119,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1vh 0 1vh 0;
+    padding-bottom: 2.5vh;
 }
 
 #difficulty-settings {
@@ -306,7 +306,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0.5vh 0 0.5vh 0;
     overflow: auto;
 }
 
@@ -317,7 +316,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 6vh 0 12vh 0;
+    padding: 2.5vh 0 13vh 0;
 }
 
 .social-icons {
