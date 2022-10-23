@@ -50,7 +50,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 2.5vh;
+    padding-bottom: 6.9vh;
     overflow: auto;
 }
 
@@ -119,7 +119,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 2.5vh;
+    padding-bottom: 5.6vh;
 }
 
 #difficulty-settings {
@@ -316,7 +316,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 2.5vh 0 13vh 0;
+    padding: 5.6vh 0 13vh 0;
 }
 
 .social-icons {
