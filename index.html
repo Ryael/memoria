@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Memoria</title>
 </head>
-<body>
+<body transition-style="in:wipe:bottom-left-main">
     <!-- Header -->
     <div id="title" onclick="returnButton()">
         <h1>Memoria</h1>
@@ -30,13 +30,13 @@
     <!-- End Main Menu -->
 
     <!-- Game Area -->
-    <div id="game-area">
+    <div id="game-area" transition-style="in:wipe:bottom-left">
         <div id="game-stats">
             <div id="moves">0 moves.</div>
             <div id="timer">Time: 0 seconds.</div>
         </div>
         <!-- Memory Game -->
-        <div id="memory-game">
+        <div id="memory-game" transition-style="in:wipe:bottom-left">
             <div id="board-container">
                 <div id="board">
                     <div id="card-front"></div>
@@ -48,7 +48,7 @@
         <!-- End Memory Game -->
 
         <!-- Rules & Difficulty -->
-        <div id="rules-difficulty">
+        <div id="rules-difficulty" transition-style="in:wipe:bottom-left">
             <h2>How to Play:</h2>
             <p id="instructions"> 
                 Click a card to reveal a shape. Click another card to reveal a second shape. When both shapes match, both cards are permanently revealed. Once the whole board is revealed, the game ends.
@@ -69,7 +69,7 @@
         <!-- End Rules & Difficulty -->
 
         <!-- Leaderboards -->
-        <div id="leaderboards">
+        <div id="leaderboards" transition-style="in:wipe:bottom-left">
             <p> 
                 Leaderboard goes here!
             </p>
@@ -77,7 +77,7 @@
         <!-- End Leaderboards -->
 
         <!-- Credits -->
-        <div id="credits">
+        <div id="credits" transition-style="in:wipe:bottom-left">
             <p> 
                 Credits go here! I did this, yay! Also, image was taken from Free Pik as part of an attribution license (link).
             </p>
