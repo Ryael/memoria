@@ -183,8 +183,6 @@ body {
     background-size: cover;
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
-    border: 2px solid #2a3cad;
-    z-index: 3;
 }
 
 #board > span{
@@ -195,7 +193,6 @@ body {
     height: 100%;
     display: block;
     box-sizing: border-box;
-    border-radius: 5px;
   }
   
   #board > span:nth-child(1)
@@ -259,6 +256,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-gap: 20px;
+    border: 2px solid #2a3cad;
 }
 
 #board-container.flipped #board {
