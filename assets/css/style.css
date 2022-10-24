@@ -41,7 +41,15 @@ body {
     color: #ffffff;
     font-size: 6.875em;
     padding: 10vh 0 5vh 0;
+    transition: 0.5s;
+    cursor: pointer;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
+
+#title > h1:hover {
+    letter-spacing: 10px;
+  }
 
 /* Main Menu */
 
