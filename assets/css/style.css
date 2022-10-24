@@ -44,7 +44,7 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     font-size: 6.875em;
-    padding-top: 10vh;
+    padding-top: 5.4vh;
     transition: 0.5s;
     cursor: pointer;
     background-clip: text;
@@ -62,7 +62,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 5vh 0 3.8vh 0;
+    padding: 2.4vh 0 3.8vh 0;
     overflow: auto;
 }
 
@@ -318,7 +318,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2.9vh 0 1.1vh 0;
+    padding: 2.9vh 0 3.8vh 0;
     overflow: auto;
 }
 
@@ -329,7 +329,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 5.6vh 0 13.9vh 0;
+    padding: 2.9vh 0 9.4vh 0;
 }
 
 .social-icons {
