@@ -100,14 +100,6 @@ function hardGameButton() {
 
 /** Return to Main Menu */
 function returnButton() {
-    showSectionFlex(menuSelectors.mainMenu);
-    hideSection(menuSelectors.gameArea);
-    hideSection(menuSelectors.credits);
-    hideSection(menuSelectors.rulesDifficulty);
-    hideSection(menuSelectors.leaderboards);
-    hideSection(menuSelectors.backButton);
-    hideSection(menuSelectors.memoryGame);
-    hideSection(menuSelectors.gameControls);
     location.reload();
 }
 
