@@ -181,8 +181,11 @@ const startGame = () => {
     state.loop = setInterval(() => {
         state.totalTime++
 
-        selectors.moves.innerText = `${state.totalFlips} moves.` // Sets the text of the moves element.
-        selectors.timer.innerText = `Time: ${state.totalTime} seconds.` // Sets the text of the timer element.
+        minutes = String(Math.floor(state.totalTime / 60)).padStart(2, 0); // Formatted minutes counter.
+        seconds = String(state.totalTime % 60).padStart(2, 0); // Formatted seconds counter.
+
+        selectors.moves.innerText = `Moves: ${state.totalFlips}` // Sets the text of the moves element.
+        selectors.timer.innerText = `Time: ${minutes}:${seconds}` // Sets the text of the timer element.
     }, 1000) 
 }
 
