@@ -228,8 +228,8 @@ const flipCard = card => {
             selectors.win.innerHTML = `
                 <span id="win-text">
                     You won!<br />
-                    with <span class="highlight">${state.totalFlips}</span> moves<br />
-                    under <span class="highlight">${state.totalTime}</span> seconds
+                    With <span class="highlight">${state.totalFlips}</span> moves<br />
+                    in <span class="highlight">${minutes}:${seconds}.</span>
                 </span>
             `
 

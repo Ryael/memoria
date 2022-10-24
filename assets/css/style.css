@@ -255,6 +255,10 @@ body {
     z-index: 3;
 }
 
+.highlight {
+    color: #9d79d1;
+}
+
 /* Rules & Difficulty */
 
 #rules-difficulty {
