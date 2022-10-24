@@ -116,6 +116,10 @@ const generateGame = (area) => {
     const shuffledItems = shuffle([...picks, ...picks]) // Creates an array of shuffled pairs of emoji.
     const cards = `
         <div id="board" style="grid-template-columns: repeat(${area}, auto)">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
             ${shuffledItems.map(emoji => `
                 <div class="card">
                     <div class="card-front"></div>

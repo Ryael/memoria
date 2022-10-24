@@ -179,10 +179,80 @@ body {
 #win {
     border-radius: 5px;
     box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
-    background: #9d79d1;
+    background: url("/assets/images/game-bg.png") center center no-repeat;
+    background-size: cover;
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
+    border: 2px solid #2a3cad;
+    z-index: 3;
 }
+
+#board > span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  #board > span:nth-child(1)
+  {
+    transform:rotate(0deg);
+  }
+  
+  #board > span:nth-child(2)
+  {
+    transform:rotate(90deg);
+  }
+  
+  #board > span:nth-child(3)
+  {
+    transform:rotate(180deg);
+  }
+
+  #board > span:nth-child(4)
+  {
+    transform:rotate(270deg);
+  }
+  
+#board > span:before
+  {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #50dfdb;
+    animation: animate 4s linear infinite;
+    border-radius: 5px;
+  }
+  
+  @keyframes animate {
+    0% {
+    transform:scaleX(0);
+    transform-origin: left;
+    }
+    50%
+    {
+      transform:scaleX(1);
+    transform-origin: left;
+    }
+    50.1%
+    {
+      transform:scaleX(1);
+    transform-origin: right;
+      
+    }
+    
+    100%
+    {
+      transform:scaleX(0);
+    transform-origin: right;
+      
+    }
+  }
 
 #board {
     padding: 20px;
