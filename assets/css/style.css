@@ -44,7 +44,7 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     font-size: 6.875em;
-    padding: 10vh 0 5vh 0;
+    padding-top: 10vh;
     transition: 0.5s;
     cursor: pointer;
     background-clip: text;
@@ -62,7 +62,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 3.8vh;
+    padding: 5vh 0 3.8vh 0;
     overflow: auto;
 }
 
@@ -131,7 +131,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 3.8vh;
+    padding: 5vh 0 3.9vh 0;
 }
 
 #difficulty-settings {
@@ -170,7 +170,7 @@ body {
 #game-stats {
     display: none;
     gap: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 9.6vh;
     color: #FFF;
     font-size: 14pt;
 }
