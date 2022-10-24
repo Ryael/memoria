@@ -188,8 +188,8 @@ const startGame = () => {
         minutes = String(Math.floor(state.totalTime / 60)).padStart(2, 0); // Formatted minutes counter.
         seconds = String(state.totalTime % 60).padStart(2, 0); // Formatted seconds counter.
 
-        selectors.moves.innerText = `Moves: ${state.totalFlips}` // Sets the text of the moves element.
-        selectors.timer.innerText = `Time: ${minutes}:${seconds}` // Sets the text of the timer element.
+        selectors.moves.innerHTML = `Moves: <span class="highlight">${state.totalFlips}</span>` // Sets the text of the moves element.
+        selectors.timer.innerHTML = `Time: <span class="highlight">${minutes}:${seconds}</span>` // Sets the text of the timer element.
     }, 1000) 
 }
 
