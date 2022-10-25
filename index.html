@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>Memoria</title>
 </head>
-<body transition-style="in:wipe:bottom-left-main">
+<body>
     <!-- Header -->
-    <div id="title">
+    <div id="title" class="fadeIn">
         <h1 onclick="returnButton()">Memoria</h1>
     </div>
     <!-- End Header -->
 
     <!-- Main Menu -->
-    <div id="main-menu">
+    <div id="main-menu" class="fadeIn">
         <a class="btn" onclick="startGameButton()">
             <span>Start Game</span>
         </a>
@@ -30,13 +30,13 @@
     <!-- End Main Menu -->
 
     <!-- Game Area -->
-    <div id="game-area" transition-style="in:wipe:bottom-left">
-        <div id="game-stats" transition-style="in:wipe:bottom-left">
+    <div id="game-area">
+        <div id="game-stats" class="fadeIn">
             <div id="flips">Flips: <span class="highlight">0</span></div>
             <div id="timer">Time: <span class="highlight">0:00</span></div>
         </div>
         <!-- Memory Game -->
-        <div id="memory-game" transition-style="in:wipe:bottom-left">
+        <div id="memory-game" class="fadeIn">
             <div id="board-container">
                 <div id="board">
                     <div id="card-front"></div>
@@ -48,7 +48,7 @@
         <!-- End Memory Game -->
 
         <!-- Rules & Difficulty -->
-        <div id="rules-difficulty" transition-style="in:wipe:bottom-left">
+        <div id="rules-difficulty" class="fadeIn">
             <h2>How to Play:</h2>
             <p id="instructions"> 
                 Click a card to reveal a shape. Click another card to reveal a second shape. When both shapes match, both cards are permanently revealed. Once the whole board is revealed, the game ends.
@@ -69,7 +69,7 @@
         <!-- End Rules & Difficulty -->
 
         <!-- Leaderboards -->
-        <div id="leaderboards" transition-style="in:wipe:bottom-left">
+        <div id="leaderboards" class="fadeIn">
             <h2>Leaderboards</h2>
             <div id="container">
                 <a class="btn leaderboards-btn" onclick="easyLeaderboardButton()">
@@ -86,7 +86,7 @@
         <!-- End Leaderboards -->
 
         <!-- Credits -->
-        <div id="credits" transition-style="in:wipe:bottom-left">
+        <div id="credits" class="fadeIn">
             <h2>Credits</h2>
             <div id="container">
                 <p>This website was designed by me, <a href="https://github.com/Ryael" class="highlight" title="GitHub" rel="noopener" aria-label="Visit my Github page (opens in a new tab)" target="_blank">Ryael</a>, as my second portfolio project for Code Institute. If you've found a bug or would like to give me some feedback, then please feel free to create an <a href="https://github.com/Ryael/memoria/issues" class="highlight" title="GitHub" rel="noopener" aria-label="Visit the issues section of my Github page (opens in a new tab)" target="_blank">issue on GitHub</a> or drop me an e-mail. I'd love to hear it! Memory games are a personal favourite of mine and I'd like to make this as great as I can.</p>
@@ -98,13 +98,13 @@
     <!-- End Game Area-->
 
     <!-- Back Button -->
-    <div id="back-button">
+    <div id="back-button" class="fadeIn">
         <a class=btn onclick="returnButton()">
             <span>Main Menu</span>
         </a>
     </div>
     <!-- Footer -->
-    <div id="footer">
+    <div id="footer" class="fadeIn">
         <a href="https://github.com/Ryael" class="social-icons" title="GitHub" rel="noopener" aria-label="Visit my Github page (opens in a new tab)" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/in/andrey-belyakov-/" class="social-icons" title="Linked In" rel="noopener" aria-label="Visit my LinkedIn page (opens in a new tab)" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
         <a href="mailto:rayrah@live.com" class="social-icons" title="E-mail" rel="noopener" aria-label="Send me an email (opens email application)" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
