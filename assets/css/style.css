@@ -341,7 +341,7 @@ body {
     height: auto;
     background: #F8F8F8;
     border-radius: 25px;
-    padding: 25px;
+    padding: 25px 25px 36px 25px;
 }
 
 #rules-difficulty > h2 {
@@ -371,7 +371,7 @@ body {
     height: auto;
     background: #F8F8F8;
     border-radius: 25px;
-    padding: 25px;
+    padding: 25px 25px 36px 25px;
 }
 
 #leaderboards > h2 {
