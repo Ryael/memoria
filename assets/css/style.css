@@ -172,6 +172,7 @@ body {
 
 #board-container {
     position: relative;
+    overflow: hidden;
 }
 
 #game-stats {
