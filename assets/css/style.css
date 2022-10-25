@@ -184,7 +184,6 @@ body {
 
 #board,
 #win {
-    border-radius: 5px;
     box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
     background: url("/assets/images/game-bg.png") center center no-repeat;
     background-size: cover;
@@ -333,6 +332,7 @@ body {
   }
 
 #win {
+    border-radius: 5px;
     position: absolute;
     top: 0;
     left: 0;
