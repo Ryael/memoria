@@ -518,6 +518,7 @@ body {
     to {
       opacity: 1;
     }
+  }
 
 /* Media Queries */
 
@@ -526,8 +527,7 @@ body {
         width: 30%;
     }
     .difficulty-btn,
-    .leaderboards-btn
-     {
+    .leaderboards-btn {
         width: 30%;
     }
 }
