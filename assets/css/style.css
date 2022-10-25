@@ -273,6 +273,10 @@ body {
     transform: rotateY(180deg) rotateZ(50deg);
 }
 
+#board-container.flipped #board > span {
+    display: none;
+}
+
 #board-container.flipped #win {
     transform: rotateY(0) rotateZ(0);
 }
@@ -495,10 +499,10 @@ body {
     background-color: #5c27fe;
     border-radius: 50%;
     transition: 0.5s ease-in-out; /* Default, fallback */
-    -o-transition: 0.4s ease-in-out; /* Opera */
-    -ms-transition: 0.4s ease-in-out; /* IE 10 */
-    -moz-transition: 0.4s ease-in-out; /* Firefox */
-    -webkit-transition: 0.4s ease-in-out; /* Safari and Chrome */
+    -o-transition: 0.5s ease-in-out; /* Opera */
+    -ms-transition: 0.5s ease-in-out; /* IE 10 */
+    -moz-transition: 0.5s ease-in-out; /* Firefox */
+    -webkit-transition: 0.5s ease-in-out; /* Safari and Chrome */
 }
 
 .social-icons:hover:after {

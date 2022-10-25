@@ -211,7 +211,7 @@ const flipCard = card => {
     if (state.flippedCards === 2) {
         const flippedCards = document.querySelectorAll(".flipped:not(.matched)")  // Stores flipped cards that haven't been matched.
 
-        // If the cards have matching emojis, give them the "matched" class.
+        // If the cards have matching emojis, give them the "matched" and "shake" classes.
         if (flippedCards[0].innerText === flippedCards[1].innerText) {
             flippedCards[0].classList.add("matched") 
             flippedCards[1].classList.add("matched")
@@ -239,7 +239,7 @@ const flipCard = card => {
                     in <span class="highlight">${minutes}:${seconds}.</span>
                 </span>
             `
-
+            
             clearInterval(state.loop) // Stops the game loop.
             displayConfetti() // Displays confetti.
         }, 1000)
