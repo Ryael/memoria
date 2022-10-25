@@ -673,6 +673,15 @@ body {
     #credits {
         width: 260px;
     }
+    #rules-difficulty > h2,
+    #leaderboards > h2,
+    #credits > h2 {
+        font-size: 1.5em;
+    }
+    #instructions,
+    #credits > #container > p {
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 320px) {
@@ -706,6 +715,15 @@ body {
     #leaderboards,
     #credits {
         width: 140px;
+    }
+    #rules-difficulty > h2,
+    #leaderboards > h2,
+    #credits > h2 {
+        font-size: 1em;
+    }
+    #instructions,
+    #credits > #container > p {
+        font-size: 0.7em;
     }
 }
 
