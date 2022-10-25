@@ -31,6 +31,13 @@ body {
     color: #ffffff;
 }
 
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 /* Title Page */
 
 #title {
@@ -69,6 +76,8 @@ body {
 #main-menu > a {
     position: relative;
 }
+
+/* Buttons */
 
 .btn {
     display: inline-block;
@@ -124,24 +133,6 @@ body {
     -webkit-transition: 0.5s ease-in-out; /* Safari and Chrome */
 }
 
-/* Game Area */
-
-#game-area {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 5vh 0 3.9vh 0;
-}
-
-#difficulty-settings,
-#leaderboards-selection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
 .difficulty-btn,
 .leaderboards-btn {
     font-size: 20px;
@@ -160,6 +151,16 @@ body {
 .leaderboards-btn:focus {
     color: #ffffff;
     background: #5c27fe;;
+}
+
+/* Game Area */
+
+#game-area {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5vh 0 3.9vh 0;
 }
 
 /* Memory Game */
