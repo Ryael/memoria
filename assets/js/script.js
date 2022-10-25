@@ -16,7 +16,7 @@ const menuSelectors = {
 const selectors = {
     boardContainer: document.querySelector("#board-container"),
     board: document.querySelector("#board"),
-    moves: document.querySelector("#moves"),
+    flips: document.querySelector("#flips"),
     timer: document.querySelector("#timer"),
     win: document.querySelector("#win"),
 }
@@ -188,7 +188,7 @@ const startGame = () => {
         minutes = String(Math.floor(state.totalTime / 60)).padStart(2, 0); // Formatted minutes counter.
         seconds = String(state.totalTime % 60).padStart(2, 0); // Formatted seconds counter.
 
-        selectors.moves.innerHTML = `Moves: <span class="highlight">${state.totalFlips}</span>` // Sets the text of the moves element.
+        selectors.flips.innerHTML = `Flips: <span class="highlight">${state.totalFlips}</span>` // Sets the text of the flips element.
         selectors.timer.innerHTML = `Time: <span class="highlight">${minutes}:${seconds}</span>` // Sets the text of the timer element.
     }, 1000) 
 }
@@ -232,7 +232,7 @@ const flipCard = card => {
             selectors.win.innerHTML = `
                 <span id="win-text">
                     You won!<br />
-                    With <span class="highlight">${state.totalFlips}</span> moves<br />
+                    With <span class="highlight">${state.totalFlips}</span> flips<br />
                     in <span class="highlight">${minutes}:${seconds}.</span>
                 </span>
             `
