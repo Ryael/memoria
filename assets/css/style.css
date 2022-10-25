@@ -38,6 +38,11 @@ body {
     flex-direction: column;
 }
 
+.highlight {
+    color: #9d79d1;
+    text-decoration: none;
+}
+
 /* Title Page */
 
 #title {
@@ -329,10 +334,6 @@ body {
     z-index: 3;
 }
 
-.highlight {
-    color: #9d79d1;
-}
-
 /* Rules & Difficulty */
 
 #rules-difficulty {
@@ -390,12 +391,29 @@ body {
 #credits {
     display: none;
     width: 600px;
-    height: 600px;
-    background: #fff;
+    height: auto;
+    background: #F8F8F8;
+    border-radius: 25px;
+    padding: 25px 25px 36px 25px;
 }
 
-#credits > p {
-    color: #111;
+#credits > h2 {
+    font-size: 2em;
+    color: #28167B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 0 25px 0;
+}
+
+#credits > #container > p {
+    color: #7a7594;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 25px 25px 25px;
 }
 
 /* Back Button */
