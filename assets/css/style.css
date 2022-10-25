@@ -265,7 +265,6 @@ body {
 #board {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(2, auto);
     grid-gap: 20px;
     border: 2px solid #2a3cad;
 }
