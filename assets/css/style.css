@@ -280,7 +280,7 @@ body {
     border-radius: 5px;
     height: 100%;
     width: 100%;
-    background: #111;
+    background: #090949;
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden; /* This is to hide the back of an element here, specifically, the card. It means that when flipped, the emoji won't be visible */
 }
