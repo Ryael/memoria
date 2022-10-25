@@ -311,6 +311,27 @@ body {
     transform: rotateY(0) rotateZ(0);
 }
 
+.card.shake{
+    animation: shake 0.4s ease-in-out 0.4s;
+  }
+  @keyframes shake {
+    0%, 100%{
+      transform: translateX(0);
+    }
+    20%{
+      transform: translateX(-7px);
+    }
+    40%{
+      transform: translateX(7px);
+    }
+    60%{
+      transform: translateX(-4px);
+    }
+    80%{
+      transform: translateX(4px);
+    }
+  }
+
 #win {
     position: absolute;
     top: 0;

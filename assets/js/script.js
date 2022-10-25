@@ -215,6 +215,9 @@ const flipCard = card => {
         if (flippedCards[0].innerText === flippedCards[1].innerText) {
             flippedCards[0].classList.add("matched") 
             flippedCards[1].classList.add("matched")
+        } else if (flippedCards[0].innerText !== flippedCards[1].innerText) {
+            flippedCards[0].classList.add("shake") 
+            flippedCards[1].classList.add("shake")
         }
 
         // Flip the cards back after 1 second.
@@ -247,7 +250,7 @@ const flipCard = card => {
 const flipBackCards = () => {
     // Unflip all unmatched cards.
     document.querySelectorAll(".card:not(.matched)").forEach(card => {
-        card.classList.remove("flipped")
+        card.classList.remove("flipped", "shake")
     })
 
     state.flippedCards = 0 // Reset flippedCards state to 0.
