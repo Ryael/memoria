@@ -501,7 +501,9 @@ body {
     .btn {
         width: 30%;
     }
-    .difficulty-btn {
+    .difficulty-btn,
+    .leaderboards-btn
+     {
         width: 30%;
     }
 }
@@ -510,7 +512,8 @@ body {
     .btn {
         width: 30%;
     }
-    .difficulty-btn {
+    .difficulty-btn,
+    .leaderboards-btn {
         width: 30%;
     }
 }
@@ -519,7 +522,8 @@ body {
     .btn {
         width: 15%;
     }
-    .difficulty-btn {
+    .difficulty-btn,
+    .leaderboards-btn {
         width: 30%;
     }
 }
@@ -545,7 +549,8 @@ body {
     #title > h1 {
         font-size: 15vw;
     }
-    .difficulty-btn {
+    .difficulty-btn,
+    .leaderboards-btn {
         width: 30%;
     }
 }
@@ -554,7 +559,8 @@ body {
     .btn {
         width: 45%;
     }
-    .difficulty-btn {
+    .difficulty-btn,
+    .leaderboards-btn {
         width: 30%;
     }
 }
@@ -566,7 +572,8 @@ body {
     #title > h1 {
         font-size: 15vw;
     }
-    .difficulty-btn {
+    .difficulty-btn,
+    .leaderboards-btn {
         width: 30%;
     }
 }
@@ -576,7 +583,8 @@ body {
         width: 40%;
         font-size: 15px;
     }
-    .difficulty-btn {
+    .difficulty-btn,
+    .leaderboards-btn {
         width: 30%;
     }
 }
