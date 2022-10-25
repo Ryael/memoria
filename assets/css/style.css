@@ -618,7 +618,7 @@ body {
     }
     .difficulty-btn,
     .leaderboards-btn {
-        width: 30%;
+        width: 60%;
     }
     #board {
         width: 400px;
@@ -650,7 +650,12 @@ body {
     }
     .difficulty-btn,
     .leaderboards-btn {
-        width: 30%;
+        width: 50%;
+    }
+
+    .difficulty-btn > span,
+    .leaderboards-btn > span {
+        font-size: 0.7em;
     }
     #board {
         width: 240px;
@@ -693,7 +698,11 @@ body {
     }
     .difficulty-btn,
     .leaderboards-btn {
-        width: 30%;
+        width: 55%;
+    }
+    .difficulty-btn > span,
+    .leaderboards-btn > span {
+        font-size: 0.4em;
     }
     #board {
         width: 130px;
@@ -724,6 +733,7 @@ body {
     #instructions,
     #credits > #container > p {
         font-size: 0.7em;
+        padding: 25px 10px 36px 10px;
     }
 }
 
@@ -734,6 +744,10 @@ body {
     }
     .difficulty-btn,
     .leaderboards-btn {
-        width: 30%;
+        width: 50%;
+    }
+    .difficulty-btn > span,
+    .leaderboards-btn > span {
+        font-size: 0.6em;
     }
 }
