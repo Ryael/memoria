@@ -117,21 +117,13 @@ body {
 .btn:hover,
 .btn:focus {
     color: #ffffff;
-    transition: 0.5s ease-in-out; /* Default, fallback */
-    -o-transition: 0.5s ease-in-out; /* Opera */
-    -ms-transition: 0.5s ease-in-out; /* IE 10 */
-    -moz-transition: 0.5s ease-in-out; /* Firefox */
-    -webkit-transition: 0.5s ease-in-out; /* Safari and Chrome */
+    transition: 0.5s ease-in-out;
     background: #5c27fe;
 }
 
 .btn:not(:hover),
 .btn:not(:focus) {
-    transition: 0.5s ease-in-out; /* Default, fallback */
-    -o-transition: 0.5s ease-in-out; /* Opera */
-    -ms-transition: 0.5s ease-in-out; /* IE 10 */
-    -moz-transition: 0.5s ease-in-out; /* Firefox */
-    -webkit-transition: 0.5s ease-in-out; /* Safari and Chrome */
+    transition: 0.5s ease-in-out;
 }
 
 .difficulty-btn,
@@ -495,11 +487,7 @@ body {
     position: absolute;
     background-color: #5c27fe;
     border-radius: 50%;
-    transition: 0.5s ease-in-out; /* Default, fallback */
-    -o-transition: 0.5s ease-in-out; /* Opera */
-    -ms-transition: 0.5s ease-in-out; /* IE 10 */
-    -moz-transition: 0.5s ease-in-out; /* Firefox */
-    -webkit-transition: 0.5s ease-in-out; /* Safari and Chrome */
+    transition: 0.5s ease-in-out;
 }
 
 .social-icons:hover:after {
