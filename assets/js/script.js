@@ -1,7 +1,9 @@
-/* Constants */
+/* Constants/Configs */
 
-const flipTime = 400
-const unmatchedTime = 1000
+const FLIP_TIME = 400;
+const UNMATCHED_TIME = 1000;
+const SUPPORTED_EMOJIS = ["💧", "🔥", "🧩", "⚡", "🌀", "🎲", "🧨", "💎", "⭐", "🌙", "🏹", "💣", "⏳", "⚓", "🏺", "🎵", "💍", "🎀"];
+
 
 /** Sets menu selectors for menu navigation */
 const menuSelectors = {
@@ -24,15 +26,17 @@ const selectors = {
     win: document.querySelector("#win"),
 }
 
-/** Defines values to record game state  */
-const state = {
+const defaultState = {
     gameStarted: false, // Checks if the game was started via interacting with the cards.
     flippedCards: 0, // Keeps track of the number of flipped cards. If this number is 2, the cards are flipped back.
     totalFlips: 0, // Keeps track of the total number of flips.
     totalTime: 0, // Keeps track of the amount of time elapsed in seconds.
     loop: null, // Used to update the timer every second once the game has started.
     disableFlip: false // Prevent flipping cards if true.
-}
+};
+
+/** Defines values to record game state  */
+const state = {...defaultState};
 
 /* Button Scripts */
 
@@ -52,7 +56,7 @@ function showSectionBlock(item) {
 }
 
 /** Start Game */
-function startGameButton() {
+function onStartGameButtonClick() {
     hideSection(menuSelectors.mainMenu);
     showSectionFlex(menuSelectors.gameArea);
     showSectionBlock(menuSelectors.rulesDifficulty);
@@ -68,26 +72,25 @@ function showGameArea() {
 }
 
 /** Easy Mode */
-function easyGameButton() {
+function onEasyGameButtonClick() {
     showGameArea();
     generateGame(2);
 }
 
 /** Normal Mode */
-function normalGameButton() {
+function onNormalGameButtonClick() {
     showGameArea();
     generateGame(4);
 }
 
 /** Hard Mode */
-function hardGameButton() {
+function onHardGameButtonClick() {
     showGameArea();
     generateGame(6);
 }
 
-
 /** Leaderboards */
- function leaderboardsButton() {
+ function onLeaderboardsButtonClick() {
     hideSection(menuSelectors.mainMenu);
     showSectionFlex(menuSelectors.gameArea);
     showSectionBlock(menuSelectors.leaderboards);
@@ -95,7 +98,7 @@ function hardGameButton() {
 }
 
 /** Credits */
- function creditsButton() {
+ function onCreditsButtonClick() {
     hideSection(menuSelectors.mainMenu);
     showSectionFlex(menuSelectors.gameArea);
     showSectionBlock(menuSelectors.credits);
@@ -103,7 +106,7 @@ function hardGameButton() {
 }
 
 /** Return to Main Menu */
-function returnButton() {
+function onReturnButtonClick() {
     location.reload();
 }
 
@@ -116,7 +119,7 @@ const generateGame = (area) => {
     }
 
     const boardDifficulty = `board-${area}`
-    const emojis = ["💧", "🔥", "🧩", "⚡", "🌀", "🎲", "🧨", "💎", "⭐", "🌙", "🏹", "💣", "⏳", "⚓", "🏺", "🎵", "💍", "🎀"] // Array of emoji for card faces. Minimum required is (largest area² / 2).
+    const emojis = [...SUPPORTED_EMOJIS]; // Array of emoji for card faces. Minimum required is (largest area² / 2).
     const picks = pickRandom(emojis, (area * area) / 2) // Selects (area² / 2) random emoji.
     const shuffledItems = shuffle([...picks, ...picks]) // Creates an array of shuffled pairs of emoji.
     const cards = `
@@ -133,11 +136,11 @@ const generateGame = (area) => {
             `).join("")}
        </div>
     ` // Creates a board of cards based on the area², and adds a card for each item in the shuffled array with the emoji as its back.
-    
+
     const parser = new DOMParser().parseFromString(cards, "text/html") // This adds the board to the HTML.
     selectors.board.replaceWith(parser.querySelector(`#${boardDifficulty}`)) // Updates the selector board with the new board.
 
-    attachEventListener() // Attaches event listener to created board. 
+    attachEventListener() // Attaches event listener to created board.
 }
 
 /** Take a selection of random items from an array */
@@ -146,13 +149,13 @@ const pickRandom = (array, numberOfItems) => {
     const randomPicks = [] // Stores randomly picked emoji.
 
     for (let index = 0; index < numberOfItems; index++) {
-        const randomIndex = Math.floor(Math.random() * clonedArray.length) // Returns a random whole number between 0 and the given array length. 
-        
+        const randomIndex = Math.floor(Math.random() * clonedArray.length) // Returns a random whole number between 0 and the given array length.
+
         randomPicks.push(clonedArray[randomIndex]) // Stores randomly picked emoji in the randomPicks array.
         clonedArray.splice(randomIndex, 1) // Removes the randomly picked emoji from clonedArray such that it isn't chosen again.
     }
 
-    return randomPicks // Returns the randomly chosen emoji. 
+    return randomPicks // Returns the randomly chosen emoji.
 }
 
 /** Shuffles an array using the Fisher-Yates shuffling algorithm */
@@ -173,13 +176,13 @@ const shuffle = array => {
 /** Adds Event Listener */
 const attachEventListener = () => {
     // Attaches an event listener directly to the DOM for a click event.
-    selectors.boardContainer.addEventListener("click", event => { 
+    selectors.boardContainer.addEventListener("click", event => {
         const eventTarget = event.target // Stores the element that was clicked.
         const eventParent = eventTarget.parentElement // Stores the parent of the element of that was clicked.
 
         // If the element clicked includes the class "card" and its parent doesn't include the class "flipped", then call flipCard on the parent.
         if (eventTarget.className.includes("card") && !eventParent.className.includes("flipped")) {
-            flipCard(eventParent) 
+            flipCard(eventParent)
         }
     })
 }
@@ -197,7 +200,7 @@ const startGame = () => {
 
         selectors.flips.innerHTML = `Flips: <span class="highlight">${state.totalFlips}</span>` // Sets the text of the flips element.
         selectors.timer.innerHTML = `Time: <span class="highlight">${minutes}:${seconds}</span>` // Sets the text of the timer element.
-    }, 1000) 
+    }, 1000)
 }
 
 /** Flipping Cards */
@@ -226,7 +229,7 @@ const flipCard = card => {
         const timeoutRef = setTimeout(() => {
             clearTimeout(timeoutRef);
             state.disableFlip = false;
-        }, flipTime);
+        }, FLIP_TIME);
     }
 
     if (state.flippedCards === 2) {
@@ -235,12 +238,12 @@ const flipCard = card => {
 
         // If the cards have matching emojis, give them the "matched" and "shake" classes.
         if (flippedCards[0].innerText === flippedCards[1].innerText) {
-            timeOut = flipTime
-            flippedCards[0].classList.add("matched") 
+            timeOut = FLIP_TIME
+            flippedCards[0].classList.add("matched")
             flippedCards[1].classList.add("matched")
         } else if (flippedCards[0].innerText !== flippedCards[1].innerText) {
-            timeOut = unmatchedTime
-            flippedCards[0].classList.add("shake") 
+            timeOut = UNMATCHED_TIME
+            flippedCards[0].classList.add("shake")
             flippedCards[1].classList.add("shake")
         }
 
@@ -251,7 +254,7 @@ const flipCard = card => {
         }, timeOut)
     }
 
-    // If there are no more to flip, display win state. 
+    // If there are no more to flip, display win state.
     // 0 is falsey so if there are no unflipped cards, !0 would return true.
     if (!document.querySelectorAll(".card:not(.flipped)").length) {
         // Flips the board container and displays winning text and game stats.
@@ -264,7 +267,7 @@ const flipCard = card => {
                     in <span class="highlight">${minutes}:${seconds}.</span>
                 </span>
             `
-            
+
             clearInterval(state.loop) // Stops the game loop.
             displayConfetti() // Displays confetti.
         }, 1000)
@@ -308,4 +311,3 @@ function displayConfetti() {
     confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
     }, 500);
 }
-

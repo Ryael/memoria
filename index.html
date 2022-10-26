@@ -11,19 +11,19 @@
 <body>
     <!-- Header -->
     <div id="title" class="fadeIn">
-        <h1 onclick="returnButton()">Memoria</h1>
+        <h1 onclick="onReturnButtonClick()">Memoria</h1>
     </div>
     <!-- End Header -->
 
     <!-- Main Menu -->
     <div id="main-menu" class="fadeIn">
-        <a class="btn" onclick="startGameButton()">
+        <a class="btn" onclick="onStartGameButtonClick()">
             <span>Start Game</span>
         </a>
-        <a class="btn" onclick="leaderboardsButton()">
+        <a class="btn" onclick="onLeaderboardsButtonClick()">
             <span>Leaderboards</span>
         </a>	
-        <a class="btn" onclick="creditsButton()">
+        <a class="btn" onclick="onCreditsButtonClick()">
             <span>Credits</span>
         </a>
     </div>
@@ -55,13 +55,13 @@
             </p>
             <h2>Select Difficulty:</h2>
             <div id="container">
-                <a class="btn difficulty-btn" onclick="easyGameButton()">
+                <a class="btn difficulty-btn" onclick="onEasyGameButtonClick()">
                     <span>Easy (2 x 2)</span>
                 </a>
-                <a class="btn difficulty-btn" onclick="normalGameButton()">
+                <a class="btn difficulty-btn" onclick="onNormalGameButtonClick()">
                     <span>Normal (4 x 4)</span>
                 </a>
-                <a class="btn difficulty-btn" onclick="hardGameButton()">
+                <a class="btn difficulty-btn" onclick="onHardGameButtonClick()">
                     <span>Hard (6 x 6)</span>
                 </a>
             </div>
@@ -72,13 +72,13 @@
         <div id="leaderboards" class="fadeIn">
             <h2>Leaderboards</h2>
             <div id="container">
-                <a class="btn leaderboards-btn" onclick="easyLeaderboardButton()">
+                <a class="btn leaderboards-btn" onclick="onEasyLeaderboardButtonClick()">
                     <span>Easy</span>
                 </a>
-                <a class="btn leaderboards-btn" onclick="normalLeaderboardButton()">
+                <a class="btn leaderboards-btn" onclick="onNormalLeaderboardButtonClick()">
                     <span>Normal</span>
                 </a>
-                <a class="btn leaderboards-btn" onclick="hardLeaderboardButton()">
+                <a class="btn leaderboards-btn" onclick="onHardLeaderboardButtonClick()">
                     <span>Hard</span>
                 </a>
             </div>
@@ -100,7 +100,7 @@
 
     <!-- Back Button -->
     <div id="back-button" class="fadeIn">
-        <a class=btn onclick="returnButton()">
+        <a class=btn onclick="onReturnButtonClick()">
             <span>Main Menu</span>
         </a>
     </div>
