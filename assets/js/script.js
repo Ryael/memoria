@@ -4,7 +4,6 @@ const FLIP_TIME = 400;
 const UNMATCHED_TIME = 1000;
 const SUPPORTED_EMOJIS = ["💧", "🔥", "🧩", "⚡", "🌀", "🎲", "🧨", "💎", "⭐", "🌙", "🏹", "💣", "⏳", "⚓", "🏺", "🎵", "💍", "🎀"];
 
-
 /** Sets menu selectors for menu navigation */
 const menuSelectors = {
     mainMenu: document.querySelector("#main-menu"),
@@ -14,8 +13,8 @@ const menuSelectors = {
     credits: document.querySelector("#credits"),
     backButton: document.querySelector("#back-button"),
     memoryGame: document.querySelector("#memory-game"),
-    gameControls: document.querySelector("#game-stats")
-}
+    gameControls: document.querySelector("#game-stats"),
+};
 
 /** Defines the selectors used throughout the game */
 const selectors = {
@@ -24,7 +23,7 @@ const selectors = {
     flips: document.querySelector("#flips"),
     timer: document.querySelector("#timer"),
     win: document.querySelector("#win"),
-}
+};
 
 const defaultState = {
     gameStarted: false, // Checks if the game was started via interacting with the cards.
@@ -32,11 +31,11 @@ const defaultState = {
     totalFlips: 0, // Keeps track of the total number of flips.
     totalTime: 0, // Keeps track of the amount of time elapsed in seconds.
     loop: null, // Used to update the timer every second once the game has started.
-    disableFlip: false // Prevent flipping cards if true.
+    disableFlip: false, // Prevent flipping cards if true.
 };
 
 /** Defines values to record game state  */
-const state = {...defaultState};
+const state = { ...defaultState };
 
 /* Button Scripts */
 
@@ -90,7 +89,7 @@ function onHardGameButtonClick() {
 }
 
 /** Leaderboards */
- function onLeaderboardsButtonClick() {
+function onLeaderboardsButtonClick() {
     hideSection(menuSelectors.mainMenu);
     showSectionFlex(menuSelectors.gameArea);
     showSectionBlock(menuSelectors.leaderboards);
@@ -98,7 +97,7 @@ function onHardGameButtonClick() {
 }
 
 /** Credits */
- function onCreditsButtonClick() {
+function onCreditsButtonClick() {
     hideSection(menuSelectors.mainMenu);
     showSectionFlex(menuSelectors.gameArea);
     showSectionBlock(menuSelectors.credits);
@@ -128,12 +127,16 @@ const generateGame = (area) => {
         <span></span>
         <span></span>
         <span></span>
-            ${shuffledItems.map(emoji => `
+            ${shuffledItems
+                .map(
+                    (emoji) => `
                 <div class="card">
                     <div class="card-front"></div>
                     <div class="card-back">${emoji}</div>
                 </div>
-            `).join("")}
+            `
+                )
+                .join("")}
        </div>
     `; // Creates a board of cards based on the area², and adds a card for each item in the shuffled array with the emoji as its back.
 
@@ -141,7 +144,7 @@ const generateGame = (area) => {
     selectors.board.replaceWith(parser.querySelector(`#${boardDifficulty}`)); // Updates the selector board with the new board.
 
     attachEventListener(); // Attaches event listener to created board.
-}
+};
 
 /** Take a selection of random items from an array */
 const pickRandom = (array, numberOfItems) => {
@@ -156,10 +159,10 @@ const pickRandom = (array, numberOfItems) => {
     }
 
     return randomPicks; // Returns the randomly chosen emoji.
-}
+};
 
 /** Shuffles an array using the Fisher-Yates shuffling algorithm */
-const shuffle = array => {
+const shuffle = (array) => {
     const clonedArray = [...array]; // Duplicates the array.
 
     for (let index = 0; index < clonedArray.length; index++) {
@@ -170,13 +173,13 @@ const shuffle = array => {
         clonedArray[randomIndex] = originalValue; // Sets the value at randomIndex to be equal to originalValue, finishing the swapping of values.
     }
 
-    return clonedArray // Returns the shuffled array.
-}
+    return clonedArray; // Returns the shuffled array.
+};
 
 /** Adds Event Listener */
 const attachEventListener = () => {
     // Attaches an event listener directly to the DOM for a click event.
-    selectors.boardContainer.addEventListener("click", event => {
+    selectors.boardContainer.addEventListener("click", (event) => {
         const eventTarget = event.target; // Stores the element that was clicked.
         const eventParent = eventTarget.parentElement; // Stores the parent of the element of that was clicked.
 
@@ -184,40 +187,38 @@ const attachEventListener = () => {
         if (eventTarget.className.includes("card") && !eventParent.className.includes("flipped")) {
             flipCard(eventParent);
         }
-    })
-}
+    });
+};
 
 /** Converting seconds to minutes and seconds */
 function getMinutesAndSecondsFromSeconds(totalSecsElapsed) {
     const minutes = String(Math.floor(totalSecsElapsed / 60)).padStart(2, 0); // Formatted minutes counter.
     const seconds = String(totalSecsElapsed % 60).padStart(2, 0); // Formatted seconds counter.
 
-    return {minutes,seconds };
-
+    return { minutes, seconds };
 }
 /** Starting the game */
 const startGame = () => {
-    state.gameStarted = true // Sets the gameStarted state to true.
+    state.gameStarted = true; // Sets the gameStarted state to true.
 
     // Increases total time state by 1 second.
     state.loop = setInterval(() => {
         state.totalTime++;
 
-        const {minutes, seconds} = getMinutesAndSecondsFromSeconds(state.totalTime);
-        selectors.flips.innerHTML = `Flips: <span class="highlight">${state.totalFlips}</span>` // Sets the text of the flips element.
-        selectors.timer.innerHTML = `Time: <span class="highlight">${minutes}:${seconds}</span>` // Sets the text of the timer element.
+        const { minutes, seconds } = getMinutesAndSecondsFromSeconds(state.totalTime);
+        selectors.flips.innerHTML = `Flips: <span class="highlight">${state.totalFlips}</span>`; // Sets the text of the flips element.
+        selectors.timer.innerHTML = `Time: <span class="highlight">${minutes}:${seconds}</span>`; // Sets the text of the timer element.
     }, 1000);
-}
+};
 
 /** Flipping Cards */
-const flipCard = card => {
-
+const flipCard = (card) => {
     // If this card has flipped property, then return out of here
     if (state.disableFlip || card.classList.contains("flipped") || card.classList.contains("matched")) {
         return;
     }
 
-    state.flippedCards++;// Increments the state of flippedCards by 1.
+    state.flippedCards++; // Increments the state of flippedCards by 1.
 
     // If the gameStarted state is false, call startGame().
     if (!state.gameStarted) {
@@ -229,7 +230,7 @@ const flipCard = card => {
         state.disableFlip = true;
         card.classList.add("flipped");
 
-        state.totalFlips++ // Increments the state of totalFlips by 1.
+        state.totalFlips++; // Increments the state of totalFlips by 1.
 
         // Flip the cards back after 0.4 seconds.
         const timeoutRef = setTimeout(() => {
@@ -265,7 +266,7 @@ const flipCard = card => {
     if (!document.querySelectorAll(".card:not(.flipped)").length) {
         // Flips the board container and displays winning text and game stats.
         setTimeout(() => {
-            const {minutes, seconds} = getMinutesAndSecondsFromSeconds(state.totalTime);
+            const { minutes, seconds } = getMinutesAndSecondsFromSeconds(state.totalTime);
             selectors.boardContainer.classList.add("flipped");
             selectors.win.innerHTML = `
                 <span id="win-text">
@@ -273,24 +274,24 @@ const flipCard = card => {
                     With <span class="highlight">${state.totalFlips}</span> flips<br />
                     in <span class="highlight">${minutes}:${seconds}.</span>
                 </span>
-            `
+            `;
 
             clearInterval(state.loop); // Stops the game loop.
             displayConfetti(); // Displays confetti.
         }, 1000);
     }
-}
+};
 
 /** Flipping Cards Back */
 const flipBackCards = () => {
     // Unflip all unmatched cards.
-    document.querySelectorAll(".card:not(.matched)").forEach(card => {
+    document.querySelectorAll(".card:not(.matched)").forEach((card) => {
         card.classList.remove("flipped", "shake");
-    })
+    });
 
     state.flippedCards = 0; // Reset flippedCards state to 0.
     state.disableFlip = false;
-}
+};
 
 /* Confetti
 Source: https://www.kirilv.com/canvas-confetti/ */
@@ -302,19 +303,19 @@ function displayConfetti() {
     let defaults = { startVelocity: 30, spread: 360, ticks: 30, zIndex: 0 }; // Spread, amount, and intensity of the initial confetti blast.
 
     function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
+        return Math.random() * (max - min) + min;
     }
 
-    let interval = setInterval(function() {
-    let timeLeft = animationEnd - Date.now();
+    let interval = setInterval(function () {
+        let timeLeft = animationEnd - Date.now();
 
-    if (timeLeft <= 0) {
-        return clearInterval(interval);
-    }
+        if (timeLeft <= 0) {
+            return clearInterval(interval);
+        }
 
-    let particleCount = 50 * (timeLeft / duration);
-    // Since particles fall down, start a bit higher than random. Also the speed of the confetti.
-    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+        let particleCount = 50 * (timeLeft / duration);
+        // Since particles fall down, start a bit higher than random. Also the speed of the confetti.
+        confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+        confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
     }, 500);
 }

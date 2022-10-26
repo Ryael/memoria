@@ -418,7 +418,7 @@ body {
     padding: 25px 0 25px 0;
 }
 
-#credits > .container > p {
+#credits > #container > p {
     color: #7a7594;
     display: inline-block;
     align-items: center;
@@ -669,7 +669,7 @@ body {
         font-size: 1.5em;
     }
     #instructions,
-    #credits > .container > p {
+    #credits > #container > p {
         font-size: 1em;
         padding: 25px 10px 36px 10px;
     }
@@ -720,7 +720,7 @@ body {
         font-size: 1em;
     }
     #instructions,
-    #credits > .container > p {
+    #credits > #container > p {
         font-size: 0.7em;
         padding: 25px 5px 36px 5px;
     }
