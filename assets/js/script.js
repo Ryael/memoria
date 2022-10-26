@@ -187,6 +187,14 @@ const attachEventListener = () => {
     })
 }
 
+/** Converting seconds to minutes and seconds */
+function getMinutesAndSecondsFromSeconds(totalSecsElapsed) {
+    const minutes = String(Math.floor(totalSecsElapsed / 60)).padStart(2, 0); // Formatted minutes counter.
+    const seconds = String(totalSecsElapsed % 60).padStart(2, 0); // Formatted seconds counter.
+
+    return {minutes,seconds };
+
+}
 /** Starting the game */
 const startGame = () => {
     state.gameStarted = true // Sets the gameStarted state to true.
@@ -195,9 +203,7 @@ const startGame = () => {
     state.loop = setInterval(() => {
         state.totalTime++
 
-        minutes = String(Math.floor(state.totalTime / 60)).padStart(2, 0); // Formatted minutes counter.
-        seconds = String(state.totalTime % 60).padStart(2, 0); // Formatted seconds counter.
-
+        const {minutes, seconds} = getMinutesAndSecondsFromSeconds(state.totalTime);
         selectors.flips.innerHTML = `Flips: <span class="highlight">${state.totalFlips}</span>` // Sets the text of the flips element.
         selectors.timer.innerHTML = `Time: <span class="highlight">${minutes}:${seconds}</span>` // Sets the text of the timer element.
     }, 1000)
@@ -259,6 +265,7 @@ const flipCard = card => {
     if (!document.querySelectorAll(".card:not(.flipped)").length) {
         // Flips the board container and displays winning text and game stats.
         setTimeout(() => {
+            const {minutes, seconds} = getMinutesAndSecondsFromSeconds(state.totalTime);
             selectors.boardContainer.classList.add("flipped")
             selectors.win.innerHTML = `
                 <span id="win-text">
@@ -283,31 +290,4 @@ const flipBackCards = () => {
 
     state.flippedCards = 0 // Reset flippedCards state to 0.
     state.disableFlip = false
-}
-
-/* Confetti
-Source: https://www.kirilv.com/canvas-confetti/ */
-
-/** Displays Confetti */
-function displayConfetti() {
-    let duration = 10 * 1000; // Duration of the confetti.
-    let animationEnd = Date.now() + duration; // End of the confetti.
-    let defaults = { startVelocity: 30, spread: 360, ticks: 30, zIndex: 0 }; // Spread, amount, and intensity of the initial confetti blast.
-
-    function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
-    }
-
-    let interval = setInterval(function() {
-    let timeLeft = animationEnd - Date.now();
-
-    if (timeLeft <= 0) {
-        return clearInterval(interval);
-    }
-
-    let particleCount = 50 * (timeLeft / duration);
-    // Since particles fall down, start a bit higher than random. Also the speed of the confetti.
-    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
-    }, 500);
 }
