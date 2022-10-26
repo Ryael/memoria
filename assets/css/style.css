@@ -645,7 +645,6 @@ body {
     .leaderboards-btn {
         width: 50%;
     }
-
     .difficulty-btn > span,
     .leaderboards-btn > span {
         font-size: 0.7em;
@@ -679,6 +678,9 @@ body {
     #instructions,
     #credits > #container > p {
         font-size: 1em;
+    }
+    #win-text {
+        font-size: 14pt;
     }
 }
 
@@ -727,6 +729,9 @@ body {
     #credits > #container > p {
         font-size: 0.7em;
         padding: 25px 10px 36px 10px;
+    }
+    #win-text {
+        font-size: 12pt;
     }
 }
 
