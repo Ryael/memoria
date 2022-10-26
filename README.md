@@ -1,22 +1,22 @@
 # Memoria
 
-### A website for a memory-card game, allowing users to improve their short term memories.
+### A website for a memory-card game, allowing users to improve their short term memories while having fun.
 
-[Memoria - Live Website](https://ryael.github.io/victory-fitness/)
+[Memoria - Live Website](https://ryael.github.io/memoria//)
 
-Memory is a fundamental part of our lives. Without memories, our perception of time would be distorted and lose most of its meaning. Short term memory, however, while not as grandiose or important, still holds significant meaning. It's our to ability to recall recent experiences, knowledge, and emotions, paving the way for those short term memories to become long term memories. [More on this]
+Memory is a fundamental part of our lives. Without memories, our perception of time would be distorted and lose most of its meaning. Short term memory, however, while not as grandiose or important, still holds significant meaning. It's our to ability to recall recent experiences, knowledge, and emotions, paving the way for those short term memories to become long term memories. That doesn't, however, mean that this improving our memory needs to be a chore! In fact, it can be a lot of fun.
+
+Growing up, I was always fond of browser based games and spent many a day on the computer playing all sorts of mini-games on the family computer. Out of those mini-games, my personal favourite was memory card games where you're presented with a set amount of images and upon interaction with them, they will flip up and reveal what sort of design is hidden underneath. Your objective is to memorise which designs are where and match up pairs, until the entire board is matched. It's quite simple in theory but it can also put your short-term memory to the test, and it definitely is fun to see how well you can push yourself to achieve the fastest time possible. Without cheating, of course! Nobody likes cheaters and I believe that you aren't a cheater!
 
 ![AmIResponsive Mock-up Image](docs/screenshots/responsive.png)
 
 This is my second milestone project as part of Code Institute's Diploma in <strong>Software Development (E-commerce Applications)</strong>.
 
-I decided to create an interactive mini-game using JavaScript focus on Victory Fitness because of my passion for exercise and appreciation for the quality services provided by Ronan Kiely of Victory Fitness. Ronan, the founder and director, gave me full permission to base this project on his business. All logos, photos, and even some of the text content was provided to me expressly for the project. While there is an existing website, Ronan Kiely wanted to see my approach. He emphasised my use of some professional photography he provided.
+I decided to create an interactive memory-card game using JavaScript that used emoji icons as its hidden images. The key term I'd use to describe the pool of emoji chosen is "traditional role-playing game concepts". This includes but is not limited to: bow-and-arrow, bomb, fire, water, lightning, ribbon, puzzle-piece, anchor, and die. The idea here was to evoke a sense of traditional fantasy concepts that feels familiar, straightforward, and cozy.
 
-No funds were exchanged, as this was agreed to be solely for the sake of this project. However, I treated Ronan Kiely as my client and discussed many aspects of the website with him to understand his preferences. I worked closely with him so as to make sure this website correctly represents Victory Fitness, its brand, and its ethos.
+This website is a single-page-application (SPA) that has a consistent design throughout all its content and is both simple and pleasing to navigate. Content is either toggled between displayed and hidden as necessary, or is generated and destroyed via the use of JavaScript. All content present adheres to my themeatic vision and only contains what is necessary. My vision for this website was for it to feel and act like an application, which is why transitions were added to make the process of navigating the menus as smooth and pleasant as possible. The content includes the memory game itself available on three different difficulities, a main menu, a rules and difficulty menu, a leaderboards section showing the top ten players for each difficulty via another menu, a credits section with instructions on how to report bugs and attribution links for the images used, and links to my social media in the footer.
 
-The website is fully responsive at all screen sizes, adapting well to smaller resolutions for tablets, phones, and even landscape view on the aforementioned. It also works as intended on all popular web browsers.
-
-This website is a multi-page website that has a consistent design throughout all its pages, and is both simple and pleasing to navigate. All content present adheres to Victory Fitness's vision and only contains what is necessary. Content includes the different coaching services available, an about section detailing the history, a contact-form and details, links to the social media, a google-map showing the location, and a gallery showcasing the inside of the gym itself.
+The website is fully responsive at all screen sizes, adapting well to smaller resolutions for tablets, phones, and even landscape view on the aforementioned. It also works as intended on all popular web browsers. 
 
 ## Table of Contents
 
