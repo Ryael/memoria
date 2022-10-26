@@ -356,6 +356,8 @@ body {
     background: #F8F8F8;
     border-radius: 25px;
     padding: 25px 25px 36px 25px;
+    background: url("/assets/images/window-bg.png") center top no-repeat;
+    background-size: cover;
 }
 
 #rules-difficulty > h2 {
@@ -386,6 +388,8 @@ body {
     background: #F8F8F8;
     border-radius: 25px;
     padding: 25px 25px 36px 25px;
+    background: url("/assets/images/window-bg.png") center top no-repeat;
+    background-size: cover;
 }
 
 #leaderboards > h2 {
@@ -408,6 +412,8 @@ body {
     background: #F8F8F8;
     border-radius: 25px;
     padding: 25px 25px 36px 25px;
+    background: url("/assets/images/window-bg.png") center top no-repeat;
+    background-size: cover;
 }
 
 #credits > h2 {
