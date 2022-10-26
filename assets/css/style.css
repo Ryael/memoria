@@ -751,3 +751,11 @@ body {
         font-size: 0.6em;
     }
 }
+
+/* For modern phone screens that have much bigger resolutions than before */
+@media (min-width: 900px) and (min-height: 2000px) {
+    #game-stats {
+        font-size: 20pt;
+        padding-bottom: 6.8vh;
+    }
+}
