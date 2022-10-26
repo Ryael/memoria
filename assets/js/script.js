@@ -55,32 +55,34 @@ function startGameButton() {
     showSectionFlex(menuSelectors.backButton);
 }
 
-/** Easy Mode */
-function easyGameButton() {
-    hideSection(menuSelectors.rulesDifficulty);
+/** Game Area */
+function showGameArea() {
     showSectionFlex(menuSelectors.gameArea);
     showSectionFlex(menuSelectors.memoryGame);
     showSectionFlex(menuSelectors.gameControls);
+}
+
+/** Easy Mode */
+function easyGameButton() {
+    hideSection(menuSelectors.rulesDifficulty);
+    showGameArea();
     generateGame(2);
 }
 
 /** Normal Mode */
 function normalGameButton() {
     hideSection(menuSelectors.rulesDifficulty);
-    showSectionFlex(menuSelectors.gameArea);
-    showSectionFlex(menuSelectors.memoryGame);
-    showSectionFlex(menuSelectors.gameControls);
+    showGameArea();
     generateGame(4);
 }
 
 /** Hard Mode */
 function hardGameButton() {
     hideSection(menuSelectors.rulesDifficulty);
-    showSectionFlex(menuSelectors.gameArea);
-    showSectionFlex(menuSelectors.memoryGame);
-    showSectionFlex(menuSelectors.gameControls);
+    showGameArea();
     generateGame(6);
 }
+
 
 /** Leaderboards */
  function leaderboardsButton() {
