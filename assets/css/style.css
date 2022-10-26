@@ -522,7 +522,7 @@ body {
     }
     .difficulty-btn,
     .leaderboards-btn {
-        width: 30%;
+        width: 25vw;
     }
     #board-6 {
         width: 580px;
@@ -543,7 +543,7 @@ body {
     #rules-difficulty,
     #leaderboards,
     #credits {
-        width: 500px;
+        width: 75vw;
     }
 }
 
@@ -611,7 +611,8 @@ body {
     }
     .difficulty-btn,
     .leaderboards-btn {
-        width: 60%;
+        width: 40vw;
+        font-size: 13pt;
     }
     #board-6 {
         width: 400px;
@@ -632,7 +633,7 @@ body {
     #rules-difficulty,
     #leaderboards,
     #credits {
-        width: 350px;
+        width: 80vw;
     }
 
 }
@@ -643,7 +644,7 @@ body {
     }
     .difficulty-btn,
     .leaderboards-btn {
-        width: 50%;
+        width: 50vw;
     }
     .difficulty-btn > span,
     .leaderboards-btn > span {
@@ -668,7 +669,7 @@ body {
     #rules-difficulty,
     #leaderboards,
     #credits {
-        width: 260px;
+        width: 75vw;
     }
     #rules-difficulty > h2,
     #leaderboards > h2,
@@ -678,6 +679,7 @@ body {
     #instructions,
     #credits > #container > p {
         font-size: 1em;
+        padding: 25px 10px 36px 10px; 
     }
     #win-text {
         font-size: 14pt;
@@ -693,11 +695,11 @@ body {
     }
     .difficulty-btn,
     .leaderboards-btn {
-        width: 55%;
+        width: 45vw;
     }
     .difficulty-btn > span,
     .leaderboards-btn > span {
-        font-size: 0.4em;
+        font-size: 0.7em;
     }
     #board-6 {
         width: 130px;
@@ -718,7 +720,7 @@ body {
     #rules-difficulty,
     #leaderboards,
     #credits {
-        width: 140px;
+        width: 60vw;
     }
     #rules-difficulty > h2,
     #leaderboards > h2,
@@ -728,7 +730,7 @@ body {
     #instructions,
     #credits > #container > p {
         font-size: 0.7em;
-        padding: 25px 10px 36px 10px;
+        padding: 25px 5px 36px 5px;
     }
     #win-text {
         font-size: 12pt;
@@ -742,7 +744,7 @@ body {
     }
     .difficulty-btn,
     .leaderboards-btn {
-        width: 50%;
+        width: 40vw;
     }
     .difficulty-btn > span,
     .leaderboards-btn > span {
