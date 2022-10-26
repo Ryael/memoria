@@ -61,6 +61,7 @@ The aim of this project is two-fold:
 - Find a mini-game that can help train and improve your short-term memory
 - Find a mini-game that kids can enjoy while training their short-term memory
 - Find a mini-game with a sense of progression in terms of difficulty
+- Find a clear and concise elaboration of the game-rules and how to play
 - Find the developer's contact details
 - Contact the developer about any bugs, game-breaking or otherwise
 - Read about how to report bugs and where the images were found
@@ -70,7 +71,10 @@ The aim of this project is two-fold:
 
 - Provide an enjoyable mini-game that has memory benefits
 - Provide different difficulites, creating a sense of progression
-- Create a smooth experience in navigating the menus
+- Provide feedback to the player after they finish a game
+- Create a smooth experience in navigating the menus#
+- Provide a clear explanation of the game rules and difficulty
+- Create a game that is fully accessibile to those who are visually impaired
 - Provide leaderboards to show how players rank up against each other
 - Provide links to the developer's social media should players discover any bugs
 - Make the website responsive for mobile devices, as [over 50% of traffic comes from mobile users](https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/)
