@@ -115,13 +115,13 @@ function onReturnButtonClick() {
 /** Creates and displays the game */
 const generateGame = (area) => {
     if (area % 2 !== 0) {
-        throw new Error("The area of the board must be an even number.") // Checks if the attribute passed above is an even number. If not, it throws an error.
+        throw new Error("The area of the board must be an even number."); // Checks if the attribute passed above is an even number. If not, it throws an error.
     }
 
-    const boardDifficulty = `board-${area}`
+    const boardDifficulty = `board-${area}`;
     const emojis = [...SUPPORTED_EMOJIS]; // Array of emoji for card faces. Minimum required is (largest area² / 2).
-    const picks = pickRandom(emojis, (area * area) / 2) // Selects (area² / 2) random emoji.
-    const shuffledItems = shuffle([...picks, ...picks]) // Creates an array of shuffled pairs of emoji.
+    const picks = pickRandom(emojis, (area * area) / 2); // Selects (area² / 2) random emoji.
+    const shuffledItems = shuffle([...picks, ...picks]); // Creates an array of shuffled pairs of emoji.
     const cards = `
         <div id="${boardDifficulty}" class="board" style="grid-template-columns: repeat(${area}, auto)">
         <span></span>
@@ -135,39 +135,39 @@ const generateGame = (area) => {
                 </div>
             `).join("")}
        </div>
-    ` // Creates a board of cards based on the area², and adds a card for each item in the shuffled array with the emoji as its back.
+    `; // Creates a board of cards based on the area², and adds a card for each item in the shuffled array with the emoji as its back.
 
-    const parser = new DOMParser().parseFromString(cards, "text/html") // This adds the board to the HTML.
-    selectors.board.replaceWith(parser.querySelector(`#${boardDifficulty}`)) // Updates the selector board with the new board.
+    const parser = new DOMParser().parseFromString(cards, "text/html"); // This adds the board to the HTML.
+    selectors.board.replaceWith(parser.querySelector(`#${boardDifficulty}`)); // Updates the selector board with the new board.
 
-    attachEventListener() // Attaches event listener to created board.
+    attachEventListener(); // Attaches event listener to created board.
 }
 
 /** Take a selection of random items from an array */
 const pickRandom = (array, numberOfItems) => {
-    const clonedArray = [...array] // Duplicates the array.
-    const randomPicks = [] // Stores randomly picked emoji.
+    const clonedArray = [...array]; // Duplicates the array.
+    const randomPicks = []; // Stores randomly picked emoji.
 
     for (let index = 0; index < numberOfItems; index++) {
-        const randomIndex = Math.floor(Math.random() * clonedArray.length) // Returns a random whole number between 0 and the given array length.
+        const randomIndex = Math.floor(Math.random() * clonedArray.length); // Returns a random whole number between 0 and the given array length.
 
-        randomPicks.push(clonedArray[randomIndex]) // Stores randomly picked emoji in the randomPicks array.
-        clonedArray.splice(randomIndex, 1) // Removes the randomly picked emoji from clonedArray such that it isn't chosen again.
+        randomPicks.push(clonedArray[randomIndex]); // Stores randomly picked emoji in the randomPicks array.
+        clonedArray.splice(randomIndex, 1); // Removes the randomly picked emoji from clonedArray such that it isn't chosen again.
     }
 
-    return randomPicks // Returns the randomly chosen emoji.
+    return randomPicks; // Returns the randomly chosen emoji.
 }
 
 /** Shuffles an array using the Fisher-Yates shuffling algorithm */
 const shuffle = array => {
-    const clonedArray = [...array] // Duplicates the array.
+    const clonedArray = [...array]; // Duplicates the array.
 
     for (let index = 0; index < clonedArray.length; index++) {
-        const randomIndex = Math.floor(Math.random() * (clonedArray.length - index)) + index // Generates a random index between the current index and the end of the array.
-        const originalValue = clonedArray[index] // Stores the value at index in clonedArray. This will help us swap places with a value at another index.
+        const randomIndex = Math.floor(Math.random() * (clonedArray.length - index)) + index; // Generates a random index between the current index and the end of the array.
+        const originalValue = clonedArray[index]; // Stores the value at index in clonedArray. This will help us swap places with a value at another index.
 
-        clonedArray[index] = clonedArray[randomIndex] // Sets the value at index to be equal to the value at randomIndex.
-        clonedArray[randomIndex] = originalValue // Sets the value at randomIndex to be equal to originalValue, finishing the swapping of values.
+        clonedArray[index] = clonedArray[randomIndex]; // Sets the value at index to be equal to the value at randomIndex.
+        clonedArray[randomIndex] = originalValue; // Sets the value at randomIndex to be equal to originalValue, finishing the swapping of values.
     }
 
     return clonedArray // Returns the shuffled array.
@@ -177,12 +177,12 @@ const shuffle = array => {
 const attachEventListener = () => {
     // Attaches an event listener directly to the DOM for a click event.
     selectors.boardContainer.addEventListener("click", event => {
-        const eventTarget = event.target // Stores the element that was clicked.
-        const eventParent = eventTarget.parentElement // Stores the parent of the element of that was clicked.
+        const eventTarget = event.target; // Stores the element that was clicked.
+        const eventParent = eventTarget.parentElement; // Stores the parent of the element of that was clicked.
 
         // If the element clicked includes the class "card" and its parent doesn't include the class "flipped", then call flipCard on the parent.
         if (eventTarget.className.includes("card") && !eventParent.className.includes("flipped")) {
-            flipCard(eventParent)
+            flipCard(eventParent);
         }
     })
 }
@@ -201,12 +201,12 @@ const startGame = () => {
 
     // Increases total time state by 1 second.
     state.loop = setInterval(() => {
-        state.totalTime++
+        state.totalTime++;
 
         const {minutes, seconds} = getMinutesAndSecondsFromSeconds(state.totalTime);
         selectors.flips.innerHTML = `Flips: <span class="highlight">${state.totalFlips}</span>` // Sets the text of the flips element.
         selectors.timer.innerHTML = `Time: <span class="highlight">${minutes}:${seconds}</span>` // Sets the text of the timer element.
-    }, 1000)
+    }, 1000);
 }
 
 /** Flipping Cards */
@@ -217,17 +217,17 @@ const flipCard = card => {
         return;
     }
 
-    state.flippedCards++ // Increments the state of flippedCards by 1.
+    state.flippedCards++;// Increments the state of flippedCards by 1.
 
     // If the gameStarted state is false, call startGame().
     if (!state.gameStarted) {
-        startGame()
+        startGame();
     }
 
     // If there are less than two flipped cards, add the "flipped" class.
     if (state.flippedCards <= 2) {
-        state.disableFlip = true
-        card.classList.add("flipped")
+        state.disableFlip = true;
+        card.classList.add("flipped");
 
         state.totalFlips++ // Increments the state of totalFlips by 1.
 
@@ -239,25 +239,25 @@ const flipCard = card => {
     }
 
     if (state.flippedCards === 2) {
-        const flippedCards = document.querySelectorAll(".flipped:not(.matched)")  // Stores flipped cards that haven't been matched.
-        let timeOut
+        const flippedCards = document.querySelectorAll(".flipped:not(.matched)"); // Stores flipped cards that haven't been matched.
+        let timeOut;
 
         // If the cards have matching emojis, give them the "matched" and "shake" classes.
         if (flippedCards[0].innerText === flippedCards[1].innerText) {
-            timeOut = FLIP_TIME
-            flippedCards[0].classList.add("matched")
-            flippedCards[1].classList.add("matched")
+            timeOut = FLIP_TIME;
+            flippedCards[0].classList.add("matched");
+            flippedCards[1].classList.add("matched");
         } else if (flippedCards[0].innerText !== flippedCards[1].innerText) {
-            timeOut = UNMATCHED_TIME
-            flippedCards[0].classList.add("shake")
-            flippedCards[1].classList.add("shake")
+            timeOut = UNMATCHED_TIME;
+            flippedCards[0].classList.add("shake");
+            flippedCards[1].classList.add("shake");
         }
 
         // Flip the cards back after 0.4 second.
         const timeoutRef = setTimeout(() => {
             flipBackCards();
             clearTimeout(timeoutRef);
-        }, timeOut)
+        }, timeOut);
     }
 
     // If there are no more to flip, display win state.
@@ -266,7 +266,7 @@ const flipCard = card => {
         // Flips the board container and displays winning text and game stats.
         setTimeout(() => {
             const {minutes, seconds} = getMinutesAndSecondsFromSeconds(state.totalTime);
-            selectors.boardContainer.classList.add("flipped")
+            selectors.boardContainer.classList.add("flipped");
             selectors.win.innerHTML = `
                 <span id="win-text">
                     You won!<br />
@@ -275,9 +275,9 @@ const flipCard = card => {
                 </span>
             `
 
-            clearInterval(state.loop) // Stops the game loop.
-            displayConfetti() // Displays confetti.
-        }, 1000)
+            clearInterval(state.loop); // Stops the game loop.
+            displayConfetti(); // Displays confetti.
+        }, 1000);
     }
 }
 
@@ -285,9 +285,9 @@ const flipCard = card => {
 const flipBackCards = () => {
     // Unflip all unmatched cards.
     document.querySelectorAll(".card:not(.matched)").forEach(card => {
-        card.classList.remove("flipped", "shake")
+        card.classList.remove("flipped", "shake");
     })
 
-    state.flippedCards = 0 // Reset flippedCards state to 0.
-    state.disableFlip = false
+    state.flippedCards = 0; // Reset flippedCards state to 0.
+    state.disableFlip = false;
 }
