@@ -133,6 +133,8 @@ const generateGame = (area) => {
     
     const parser = new DOMParser().parseFromString(cards, "text/html") // This adds the board to the HTML.
     selectors.board.replaceWith(parser.querySelector(`#${boardDifficulty}`)) // Updates the selector board with the new board.
+
+    attachEventListener() // Attaches event listener to created board. 
 }
 
 /** Take a selection of random items from an array */
@@ -168,7 +170,7 @@ const shuffle = array => {
 /** Adds Event Listener */
 const attachEventListener = () => {
     // Attaches an event listener directly to the DOM for a click event.
-    document.addEventListener("click", event => { 
+    selectors.boardContainer.addEventListener("click", event => { 
         const eventTarget = event.target // Stores the element that was clicked.
         const eventParent = eventTarget.parentElement // Stores the parent of the element of that was clicked.
 
@@ -303,4 +305,3 @@ function displayConfetti() {
 
 /* Calling Functions */
 
-attachEventListener() 
