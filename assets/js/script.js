@@ -196,8 +196,13 @@ const startGame = () => {
 
 /** Flipping Cards */
 const flipCard = card => {
+
+    // If this card has flipped property, then return out of here
+    if (card.classList.contains("flipped") || card.classList.contains("matched")) {
+        return;
+     }
+
     state.flippedCards++ // Increments the state of flippedCards by 1.
-    state.totalFlips++ // Increments the state of totalFlips by 1.
 
     // If the gameStarted state is false, call startGame().
     if (!state.gameStarted) {
@@ -207,6 +212,8 @@ const flipCard = card => {
     // If there are less than two flipped cards, add the "flipped" class.
     if (state.flippedCards <= 2) {
         card.classList.add("flipped")
+
+        state.totalFlips++ // Increments the state of totalFlips by 1.
     }
 
     if (state.flippedCards === 2) {
