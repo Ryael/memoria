@@ -111,11 +111,12 @@ const generateGame = (area) => {
         throw new Error("The area of the board must be an even number.") // Checks if the attribute passed above is an even number. If not, it throws an error.
     }
 
+    const boardDifficulty = `board-${area}`
     const emojis = ["💧", "🔥", "🧩", "⚡", "🌀", "🎲", "🧨", "💎", "⭐", "🌙", "🏹", "💣", "⏳", "⚓", "🏺", "🎵", "💍", "🎀"] // Array of emoji for card faces. Minimum required is (largest area² / 2).
     const picks = pickRandom(emojis, (area * area) / 2) // Selects (area² / 2) random emoji.
     const shuffledItems = shuffle([...picks, ...picks]) // Creates an array of shuffled pairs of emoji.
     const cards = `
-        <div id="board" style="grid-template-columns: repeat(${area}, auto)">
+        <div id="${boardDifficulty}" class="board" style="grid-template-columns: repeat(${area}, auto)">
         <span></span>
         <span></span>
         <span></span>
@@ -130,7 +131,7 @@ const generateGame = (area) => {
     ` // Creates a board of cards based on the area², and adds a card for each item in the shuffled array with the emoji as its back.
     
     const parser = new DOMParser().parseFromString(cards, "text/html") // This adds the board to the HTML.
-    selectors.board.replaceWith(parser.querySelector("#board")) // Updates the selector board with the new board.
+    selectors.board.replaceWith(parser.querySelector(`#${boardDifficulty}`)) // Updates the selector board with the new board.
 }
 
 /** Take a selection of random items from an array */

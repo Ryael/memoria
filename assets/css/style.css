@@ -175,7 +175,7 @@ body {
     font-size: 14pt;
 }
 
-#board,
+.board,
 #win {
     box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
     background: url("/assets/images/game-bg.png") center center no-repeat;
@@ -184,7 +184,7 @@ body {
     backface-visibility: hidden;
 }
 
-#board > span{
+.board > span{
     position: absolute;
     top: 0;
     left: 0;
@@ -194,27 +194,27 @@ body {
     box-sizing: border-box;
   }
   
-  #board > span:nth-child(1)
+  .board > span:nth-child(1)
   {
     transform:rotate(0deg);
   }
   
-  #board > span:nth-child(2)
+  .board > span:nth-child(2)
   {
     transform:rotate(90deg);
   }
   
-  #board > span:nth-child(3)
+  .board > span:nth-child(3)
   {
     transform:rotate(180deg);
   }
 
-  #board > span:nth-child(4)
+  .board > span:nth-child(4)
   {
     transform:rotate(270deg);
   }
   
-#board > span:before
+.board > span:before
   {
     content: '';
     position: absolute;
@@ -250,18 +250,18 @@ body {
     }
   }
 
-#board {
+.board {
     padding: 20px;
     display: grid;
     grid-gap: 20px;
     border: 2px solid #2a3cad;
 }
 
-#board-container.flipped #board {
+#board-container.flipped .board {
     transform: rotateY(180deg) rotateZ(50deg);
 }
 
-#board-container.flipped #board > span {
+#board-container.flipped .board > span {
     display: none;
 }
 
@@ -402,7 +402,6 @@ body {
     padding: 25px 0 25px 0;
 }
 
-
 /* Credits */
 
 #credits {
@@ -525,7 +524,7 @@ body {
     .leaderboards-btn {
         width: 30%;
     }
-    #board {
+    #board-6 {
         width: 580px;
         display: flex;
         flex-wrap: wrap;
@@ -556,7 +555,7 @@ body {
     .leaderboards-btn {
         width: 30%;
     }
-    #board {
+    #board-6 {
         width: 700px;
         display: flex;
         flex-wrap: wrap;
@@ -614,7 +613,7 @@ body {
     .leaderboards-btn {
         width: 60%;
     }
-    #board {
+    #board-6 {
         width: 400px;
         display: flex;
         flex-wrap: wrap;
@@ -651,7 +650,7 @@ body {
     .leaderboards-btn > span {
         font-size: 0.7em;
     }
-    #board {
+    #board-6 {
         width: 240px;
         display: flex;
         flex-wrap: wrap;
@@ -698,7 +697,7 @@ body {
     .leaderboards-btn > span {
         font-size: 0.4em;
     }
-    #board {
+    #board-6 {
         width: 130px;
         display: flex;
         flex-wrap: wrap;
