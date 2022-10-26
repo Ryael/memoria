@@ -27,7 +27,8 @@ const state = {
     flippedCards: 0, // Keeps track of the number of flipped cards. If this number is 2, the cards are flipped back.
     totalFlips: 0, // Keeps track of the total number of flips.
     totalTime: 0, // Keeps track of the amount of time elapsed in seconds.
-    loop: null // Used to update the timer every second once the game has started.
+    loop: null, // Used to update the timer every second once the game has started.
+    disableFlip: false // Prevent flipping cards if true.
 }
 
 /* Button Scripts */
@@ -198,9 +199,9 @@ const startGame = () => {
 const flipCard = card => {
 
     // If this card has flipped property, then return out of here
-    if (card.classList.contains("flipped") || card.classList.contains("matched")) {
+    if (state.disableFlip || card.classList.contains("flipped") || card.classList.contains("matched")) {
         return;
-     }
+    }
 
     state.flippedCards++ // Increments the state of flippedCards by 1.
 
@@ -211,9 +212,16 @@ const flipCard = card => {
 
     // If there are less than two flipped cards, add the "flipped" class.
     if (state.flippedCards <= 2) {
+        state.disableFlip = true
         card.classList.add("flipped")
 
         state.totalFlips++ // Increments the state of totalFlips by 1.
+
+        // Flip the cards back after 1 second.
+        const timeoutRef = setTimeout(() => {
+            clearTimeout(timeoutRef);
+            state.disableFlip = false;
+        }, 400)
     }
 
     if (state.flippedCards === 2) {
@@ -263,6 +271,7 @@ const flipBackCards = () => {
     })
 
     state.flippedCards = 0 // Reset flippedCards state to 0.
+    state.disableFlip = false
 }
 
 /* Confetti
