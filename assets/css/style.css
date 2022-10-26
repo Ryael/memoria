@@ -178,7 +178,7 @@ body {
 .board,
 #win {
     box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
-    background: url("/assets/images/game-bg.png") center center no-repeat;
+    background: url("../images/game-bg.png") center center no-repeat;
     background-size: cover;
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
@@ -356,7 +356,7 @@ body {
     background: #F8F8F8;
     border-radius: 25px;
     padding: 25px 25px 36px 25px;
-    background: url("/assets/images/settings-bg.png") center top no-repeat;
+    background: url("../images/settings-bg.png") center top no-repeat;
     background-size: cover;
 }
 
@@ -388,7 +388,7 @@ body {
     background: #F8F8F8;
     border-radius: 25px;
     padding: 25px 25px 36px 25px;
-    background: url("/assets/images/settings-bg.png") center top no-repeat;
+    background: url("../images/settings-bg.png") center top no-repeat;
     background-size: cover;
 }
 
@@ -411,7 +411,7 @@ body {
     background: #F8F8F8;
     border-radius: 25px;
     padding: 25px 25px 36px 25px;
-    background: url("/assets/images/settings-bg.png") center top no-repeat;
+    background: url("../images/settings-bg.png") center top no-repeat;
     background-size: cover;
 }
 
