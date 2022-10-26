@@ -1,5 +1,8 @@
 /* Constants */
 
+const flipTime = 400
+const unmatchedTime = 1000
+
 /** Sets menu selectors for menu navigation */
 const menuSelectors = {
     mainMenu: document.querySelector("#main-menu"),
@@ -219,30 +222,33 @@ const flipCard = card => {
 
         state.totalFlips++ // Increments the state of totalFlips by 1.
 
-        // Flip the cards back after 1 second.
+        // Flip the cards back after 0.4 seconds.
         const timeoutRef = setTimeout(() => {
             clearTimeout(timeoutRef);
             state.disableFlip = false;
-        }, 400)
+        }, flipTime);
     }
 
     if (state.flippedCards === 2) {
         const flippedCards = document.querySelectorAll(".flipped:not(.matched)")  // Stores flipped cards that haven't been matched.
+        let timeOut
 
         // If the cards have matching emojis, give them the "matched" and "shake" classes.
         if (flippedCards[0].innerText === flippedCards[1].innerText) {
+            timeOut = flipTime
             flippedCards[0].classList.add("matched") 
             flippedCards[1].classList.add("matched")
         } else if (flippedCards[0].innerText !== flippedCards[1].innerText) {
+            timeOut = unmatchedTime
             flippedCards[0].classList.add("shake") 
             flippedCards[1].classList.add("shake")
         }
 
-        // Flip the cards back after 1 second.
+        // Flip the cards back after 0.4 second.
         const timeoutRef = setTimeout(() => {
             flipBackCards();
             clearTimeout(timeoutRef);
-        }, 1000)
+        }, timeOut)
     }
 
     // If there are no more to flip, display win state. 
@@ -302,6 +308,4 @@ function displayConfetti() {
     confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
     }, 500);
 }
-
-/* Calling Functions */
 
