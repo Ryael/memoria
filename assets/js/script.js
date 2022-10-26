@@ -60,25 +60,23 @@ function showGameArea() {
     showSectionFlex(menuSelectors.gameArea);
     showSectionFlex(menuSelectors.memoryGame);
     showSectionFlex(menuSelectors.gameControls);
+    hideSection(menuSelectors.rulesDifficulty);
 }
 
 /** Easy Mode */
 function easyGameButton() {
-    hideSection(menuSelectors.rulesDifficulty);
     showGameArea();
     generateGame(2);
 }
 
 /** Normal Mode */
 function normalGameButton() {
-    hideSection(menuSelectors.rulesDifficulty);
     showGameArea();
     generateGame(4);
 }
 
 /** Hard Mode */
 function hardGameButton() {
-    hideSection(menuSelectors.rulesDifficulty);
     showGameArea();
     generateGame(6);
 }
