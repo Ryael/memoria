@@ -221,9 +221,10 @@ const flipCard = card => {
             flippedCards[1].classList.add("shake")
         }
 
-        // Flip the cards back after 1 second.
-        setTimeout(() => {
-            flipBackCards()
+        // Flip the cards back after 1 second and prevents cards from being flipped again before two are flipped back.
+        const timeoutRef = setTimeout(() => {
+            flipBackCards();
+            clearTimeout(timeoutRef);
         }, 1000)
     }
 
