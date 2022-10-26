@@ -14,7 +14,7 @@
 html {
     width: 100%;
     height: 100%;
-    background: url(../images/background/main.png) center top no-repeat;
+    background: url("../images/background/main.png") center top no-repeat;
 }
 
 h1,
@@ -179,7 +179,7 @@ body {
 .board,
 #win {
     box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
-    background: url("../images/background/game.png") center center no-repeat;
+    background: url("../images/background/game.webp") center center no-repeat;
     background-size: cover;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     backface-visibility: hidden;
@@ -349,7 +349,7 @@ body {
     background: #f8f8f8;
     border-radius: 25px;
     padding: 25px 25px 36px 25px;
-    background: url("../images/background/settings.png") center top no-repeat;
+    background: url("../images/background/settings.webp") center top no-repeat;
     background-size: cover;
 }
 
@@ -381,7 +381,7 @@ body {
     background: #f8f8f8;
     border-radius: 25px;
     padding: 25px 25px 36px 25px;
-    background: url("../images/background/settings.png") center top no-repeat;
+    background: url("../images/background/settings.webp") center top no-repeat;
     background-size: cover;
 }
 
@@ -404,7 +404,7 @@ body {
     background: #f8f8f8;
     border-radius: 25px;
     padding: 25px 25px 36px 25px;
-    background: url("../images/background/settings.png") center top no-repeat;
+    background: url("../images/background/settings.webp") center top no-repeat;
     background-size: cover;
 }
 
@@ -418,7 +418,7 @@ body {
     padding: 25px 0 25px 0;
 }
 
-#credits > #container > p {
+#credits > .container > p {
     color: #7a7594;
     display: inline-block;
     align-items: center;
