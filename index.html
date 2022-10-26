@@ -1,138 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Data -->
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Memoria, a memory game built using JavaScript" />
-<meta name="keywords" content="memory game, card game, game, memory" />
-<meta name="author" content="Ryael" />
-<!-- End Meta Data -->
+    <head>
+        <!-- Meta Data -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Memoria, a memory game built using JavaScript" />
+        <meta name="keywords" content="memory game, card game, game, memory" />
+        <meta name="author" content="Ryael" />
+        <!-- End Meta Data -->
 
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
-<!-- Favicon -->
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
+        <!-- Favicon -->
 
-<!-- Title -->
-<title>Memoria</title>
-<!-- Title -->
+        <!-- Title -->
+        <title>Memoria</title>
+        <!-- Title -->
 
-<!-- CSS -->
-<link rel="stylesheet" href="assets/css/style.css" />
-<!-- End CSS -->
-</head>
-<body>
-    <!-- Header -->
-    <div id="title" class="fadeIn">
-        <h1 onclick="onReturnButtonClick()">Memoria</h1>
-    </div>
-    <!-- End Header -->
-
-    <!-- Main Menu -->
-    <div id="main-menu" class="fadeIn">
-        <a class="btn" onclick="onStartGameButtonClick()">
-            <span>Start Game</span>
-        </a>
-        <a class="btn" onclick="onLeaderboardsButtonClick()">
-            <span>Leaderboards</span>
-        </a>	
-        <a class="btn" onclick="onCreditsButtonClick()">
-            <span>Credits</span>
-        </a>
-    </div>
-    <!-- End Main Menu -->
-
-    <!-- Game Area -->
-    <div id="game-area">
-        <div id="game-stats" class="fadeIn">
-            <div id="flips">Flips: <span class="highlight">0</span></div>
-            <div id="timer">Time: <span class="highlight">0:00</span></div>
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- End CSS -->
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="title" class="fadeIn">
+            <h1 onclick="onReturnButtonClick()">Memoria</h1>
         </div>
-        <!-- Memory Game -->
-        <div id="memory-game" class="fadeIn">
-            <div id="board-container">
-                <div id="board">
-                    <div id="card-front"></div>
-                    <div id="card-back"></div>
+        <!-- End Header -->
+
+        <!-- Main Menu -->
+        <div id="main-menu" class="fadeIn">
+            <a class="btn" onclick="onStartGameButtonClick()">
+                <span>Start Game</span>
+            </a>
+            <a class="btn" onclick="onLeaderboardsButtonClick()">
+                <span>Leaderboards</span>
+            </a>
+            <a class="btn" onclick="onCreditsButtonClick()">
+                <span>Credits</span>
+            </a>
+        </div>
+        <!-- End Main Menu -->
+
+        <!-- Game Area -->
+        <div id="game-area">
+            <div id="game-stats" class="fadeIn">
+                <div id="flips">Flips: <span class="highlight">0</span></div>
+                <div id="timer">Time: <span class="highlight">0:00</span></div>
+            </div>
+            <!-- Memory Game -->
+            <div id="memory-game" class="fadeIn">
+                <div id="board-container">
+                    <div id="board">
+                        <div id="card-front"></div>
+                        <div id="card-back"></div>
+                    </div>
+                    <div id="win">You Won!</div>
                 </div>
-                <div id="win">You Won!</div>
             </div>
-        </div>
-        <!-- End Memory Game -->
+            <!-- End Memory Game -->
 
-        <!-- Rules & Difficulty -->
-        <div id="rules-difficulty" class="fadeIn">
-            <h2>How to Play:</h2>
-            <p id="instructions"> 
-                Click a card to reveal a shape. Click another card to reveal a second shape. When both shapes match, both cards are permanently revealed. Once the whole board is revealed, the game ends.
-            </p>
-            <h2>Select Difficulty:</h2>
-            <div id="container">
-                <a class="btn difficulty-btn" onclick="onEasyGameButtonClick()">
-                    <span>Easy (2 x 2)</span>
-                </a>
-                <a class="btn difficulty-btn" onclick="onNormalGameButtonClick()">
-                    <span>Normal (4 x 4)</span>
-                </a>
-                <a class="btn difficulty-btn" onclick="onHardGameButtonClick()">
-                    <span>Hard (6 x 6)</span>
-                </a>
+            <!-- Rules & Difficulty -->
+            <div id="rules-difficulty" class="fadeIn">
+                <h2>How to Play:</h2>
+                <p id="instructions">
+                    Click a card to reveal a shape. Click another card to reveal a second shape. When both shapes match, both cards are permanently revealed. Once the whole board is revealed, the game ends.
+                </p>
+                <h2>Select Difficulty:</h2>
+                <div id="container">
+                    <a class="btn difficulty-btn" onclick="onEasyGameButtonClick()">
+                        <span>Easy (2 x 2)</span>
+                    </a>
+                    <a class="btn difficulty-btn" onclick="onNormalGameButtonClick()">
+                        <span>Normal (4 x 4)</span>
+                    </a>
+                    <a class="btn difficulty-btn" onclick="onHardGameButtonClick()">
+                        <span>Hard (6 x 6)</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <!-- End Rules & Difficulty -->
+            <!-- End Rules & Difficulty -->
 
-        <!-- Leaderboards -->
-        <div id="leaderboards" class="fadeIn">
-            <h2>Leaderboards</h2>
-            <div id="container">
-                <a class="btn leaderboards-btn" onclick="onEasyLeaderboardButtonClick()">
-                    <span>Easy</span>
-                </a>
-                <a class="btn leaderboards-btn" onclick="onNormalLeaderboardButtonClick()">
-                    <span>Normal</span>
-                </a>
-                <a class="btn leaderboards-btn" onclick="onHardLeaderboardButtonClick()">
-                    <span>Hard</span>
-                </a>
+            <!-- Leaderboards -->
+            <div id="leaderboards" class="fadeIn">
+                <h2>Leaderboards</h2>
+                <div id="container">
+                    <a class="btn leaderboards-btn" onclick="onEasyLeaderboardButtonClick()">
+                        <span>Easy</span>
+                    </a>
+                    <a class="btn leaderboards-btn" onclick="onNormalLeaderboardButtonClick()">
+                        <span>Normal</span>
+                    </a>
+                    <a class="btn leaderboards-btn" onclick="onHardLeaderboardButtonClick()">
+                        <span>Hard</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <!-- End Leaderboards -->
+            <!-- End Leaderboards -->
 
-        <!-- Credits -->
-        <div id="credits" class="fadeIn">
-            <h2>Credits</h2>
-            <div id="container">
-                <p>This website was designed by me, <a href="https://github.com/Ryael" class="highlight" title="GitHub" rel="noopener" aria-label="Visit my Github page (opens in a new tab)" target="_blank">Ryael</a>, as my second portfolio project for Code Institute.</p> 
-                <p>If you've found a bug or would like to give me some feedback, then please feel free to create an <a href="https://github.com/Ryael/memoria/issues" class="highlight" title="GitHub" rel="noopener" aria-label="Visit the issues section of my Github page (opens in a new tab)" target="_blank">issue on GitHub</a> or drop me an e-mail. I'd love to hear it! Memory games are a personal favourite of mine and I'd like to make this as great as I can.</p>
-                <p> The image used as the background for the game was made by <a href="https://www.freepik.com/free-vector/blank-purple-patterned-background-vector_3780734.htm#query=gradient&position=19&from_view=search&track=sph" class="highlight" title="FreePik" rel="noopener" aria-label="Visit the FreePik page of the designer (opens in a new tab)" target="_blank">rawpixel.com</a> and the image used as the background for the entire website was made by <a href="https://www.freepik.com/free-vector/gradient-particles-background_4298560.htm#query=gradient%20particle%20background&position=0&from_view=search&track=sph" class="highlight" title="FreePik" rel="noopener" aria-label="Visit the FreePik page of the designer (opens in a new tab)" target="_blank">Freepik</a>.</p>
+            <!-- Credits -->
+            <div id="credits" class="fadeIn">
+                <h2>Credits</h2>
+                <div id="container">
+                    <p>
+                        This website was designed by me, <a href="https://github.com/Ryael" class="highlight" title="GitHub" rel="noopener" aria-label="Visit my Github page (opens in a new tab)" target="_blank">Ryael</a>, as my second
+                        portfolio project for Code Institute.
+                    </p>
+                    <p>
+                        If you've found a bug or would like to give me some feedback, then please feel free to create an
+                        <a href="https://github.com/Ryael/memoria/issues" class="highlight" title="GitHub" rel="noopener" aria-label="Visit the issues section of my Github page (opens in a new tab)" target="_blank">issue on GitHub</a> or
+                        drop me an e-mail. I'd love to hear it! Memory games are a personal favourite of mine and I'd like to make this as great as I can.
+                    </p>
+                    <p>
+                        The image used as the background for the game was made by
+                        <a
+                            href="https://www.freepik.com/free-vector/blank-purple-patterned-background-vector_3780734.htm#query=gradient&position=19&from_view=search&track=sph"
+                            class="highlight"
+                            title="FreePik"
+                            rel="noopener"
+                            aria-label="Visit the FreePik page of the designer (opens in a new tab)"
+                            target="_blank"
+                        >
+                            rawpixel.com
+                        </a>
+                        and the image used as the background for the entire website was made by
+                        <a
+                            href="https://www.freepik.com/free-vector/gradient-particles-background_4298560.htm#query=gradient%20particle%20background&position=0&from_view=search&track=sph"
+                            class="highlight"
+                            title="FreePik"
+                            rel="noopener"
+                            aria-label="Visit the FreePik page of the designer (opens in a new tab)"
+                            target="_blank"
+                        >
+                            Freepik.
+                        </a>
+                    </p>
+                </div>
             </div>
+            <!-- End Credits -->
         </div>
-        <!-- End Credits -->
-    </div>
-    <!-- End Game Area-->
+        <!-- End Game Area-->
 
-    <!-- Back Button -->
-    <div id="back-button" class="fadeIn">
-        <a class=btn onclick="onReturnButtonClick()">
-            <span>Main Menu</span>
-        </a>
-    </div>
-    <!-- Footer -->
-    <div id="footer" class="fadeIn">
-        <a href="https://github.com/Ryael" class="social-icons" title="GitHub" rel="noopener" aria-label="Visit my Github page (opens in a new tab)" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/andrey-belyakov-/" class="social-icons" title="Linked In" rel="noopener" aria-label="Visit my LinkedIn page (opens in a new tab)" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a href="mailto:rayrah@live.com" class="social-icons" title="E-mail" rel="noopener" aria-label="Send me an email (opens email application)" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-    </div>
-    <!-- End Footer -->
+        <!-- Back Button -->
+        <div id="back-button" class="fadeIn">
+            <a class="btn" onclick="onReturnButtonClick()">
+                <span>Main Menu</span>
+            </a>
+        </div>
+        <!-- End Back Button -->
 
-    <!-- JavaScript -->
-    <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <!-- End JavaScript -->
-            
-    <!-- Font Awesome Script -->
-    <script src="https://kit.fontawesome.com/d93feb1e77.js" crossorigin="anonymous"></script>
-    <!--End Font Awesome Script -->
-</body>
+        <!-- Footer -->
+        <div id="footer" class="fadeIn">
+            <a href="https://github.com/Ryael" class="social-icons" title="GitHub" rel="noopener" aria-label="Visit my Github page (opens in a new tab)" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/andrey-belyakov-/" class="social-icons" title="Linked In" rel="noopener" aria-label="Visit my LinkedIn page (opens in a new tab)" target="_blank">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:rayrah@live.com" class="social-icons" title="E-mail" rel="noopener" aria-label="Send me an email (opens email application)" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+        <!-- End Footer -->
+
+        <!-- JavaScript -->
+        <script src="assets/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+        <!-- End JavaScript -->
+
+        <!-- Font Awesome Script -->
+        <script src="https://kit.fontawesome.com/d93feb1e77.js" crossorigin="anonymous"></script>
+        <!--End Font Awesome Script -->
+    </body>
 </html>
