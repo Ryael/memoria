@@ -52,31 +52,30 @@ The website is fully responsive at all screen sizes, adapting well to smaller re
 ## Project Goals
 
 The aim of this project is two-fold:
-- To demonstrate my knowledge of HTML and CSS languages and to document my experiences, difficulties, and solutions developed. No other languages or frameworks were used in the development of this project.
-- To adhere to the vision of Victory Fitness from a UI/UX perspective, creating a website that aptly represents this enterprise throughout all of the content and formatting. This will allow Ronan Kiely to further extend his reach online in promoting Victory Fitness to potential clientele.
+- To demonstrate my knowledge of JavaScript in tandem with HTML and CSS, to document my experiences, difficulties, and solutions developed. No other languages or frameworks were used in the development of this project.
+- To adhere to my thematic vision of a SPA from a UI/UX perspective, creating a website that allows for an enjoyable experience for anyone visiting the website. 
 
 ### User Goals
 
-- Find a personal trainer and/or gym located in County Kerry
-- Find a personal trainer and/or gym where you can consistently and reliably exercise
-- Find a personal trainer and/or gym where there's a clear sense of motivation and camaraderie
-- Find a personal trainer and/or gym that will help you achieve your fitness goals
-- Find the personal trainer’s location and contact details
-- Contact the personal trainer via the online form on the contact page
-- Read about the history of the personal trainer and/or gym
-- Check the coaching services provided
+- Find a mini-game that can distract you for a short period of time
+- Find a mini-game that can help train and improve your short-term memory
+- Find a mini-game that kids can enjoy while training their short-term memory
+- Find a mini-game with a sense of progression in terms of difficulty
+- Find the developer's contact details
+- Contact the developer about any bugs, game-breaking or otherwise
+- Read about how to report bugs and where the images were found
+- Check to see if they have created any other games
 
 ### Site Owner Goals
 
-- Promote their coaching services and gym online
-- Provide their contact details for the users of the website
-- Provide an online form of contact, with a 7-day free trial
-- Show the available coaching services for existing and potential new customers
-- Provide links to the gym's social media
+- Provide an enjoyable mini-game that has memory benefits
+- Provide different difficulites, creating a sense of progression
+- Create a smooth experience in navigating the menus
+- Provide leaderboards to show how players rank up against each other
+- Provide links to the developer's social media should players discover any bugs
 - Make the website responsive for mobile devices, as [over 50% of traffic comes from mobile users](https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/)
-- Increase profits by gaining more clientele, allowing for enhancement of the gym
 
-[Back to Top &uarr;](#victory-fitness)
+[Back to Top &uarr;](#memoria)
 <hr>
 
 ## User Experience 
@@ -118,7 +117,7 @@ The aim of this project is two-fold:
 17. As the site owner, I want to provide links to the gym's social media accounts.
 18. As the site owner, I want to provide users with a free and no commitment 7-day trial upon filling out the online form.
 
-[Back to Top &uarr;](#victory-fitness)
+[Back to Top &uarr;](#memoria)
 <hr>
 
 ## User Interface
@@ -202,7 +201,7 @@ This is the prototype of the project, which changes over the course of project d
     <img src="docs/wireframes/404.png" alt="Wireframe of the 404 page">
 </details>
 
-[Back to top &uarr;](#victory-fitness)
+[Back to top &uarr;](#memoria)
 <hr>
 
 ## Features
@@ -267,7 +266,7 @@ Should the user navigate to a page that doesn't exist, an HTTP 404 error will oc
 
 As with all websites, this one also has a favicon that is displayed beside the title of the page. A user can discern what pages they have opened or are currently viewing by simply glancing at the tabs and titles.
 
-[Back to top &uarr;](#victory-fitness)
+[Back to top &uarr;](#memoria)
 <hr>
 
 ## Validation
@@ -314,7 +313,7 @@ As with all websites, this one also has a favicon that is displayed beside the t
     <img src="docs/validation/css-validation.png" alt="Validation of the CSS Style page">
 </details>
 
-[Back to top &uarr;](#victory-fitness)
+[Back to top &uarr;](#memoria)
 <hr>
 
 ## Testing
@@ -489,7 +488,7 @@ The website was tested on many different devices, such as:
     - This free trial can be viewed via the Home page in one of two ways: it can be accessed via the ‘Call to Action’ Join Now button on top of the Hero Image and/or it can be found in the Free Trial section, which also has its own ‘Call to Action’ button.
     - Lastly, the users can navigate to the Contact page via the Navigation Bar links, where they can find all the details regarding the free trial and the form.
 
-[Back to top &uarr;](#victory-fitness)
+[Back to top &uarr;](#memoria)
 <hr>
 
 ## Bugs
@@ -504,7 +503,7 @@ The website was tested on many different devices, such as:
 
 Otherwise, all bugs were due to my own code and were usually fixed as soon as identified due to the fact that they originated from my own mistake. No pervasive bugs, aside from the accessibility error described above.
 
-[Back to top &uarr;](#victory-fitness)
+[Back to top &uarr;](#memoria)
 <hr>
 
 ## Future Updates
@@ -539,7 +538,7 @@ It can also be forked via the following steps:
 3. You will then be asked where you want to save it, so choose a location.
 4. You now should have a copy of this repository in your own GitHub account.
 
-[Back to top &uarr;](#victory-fitness)
+[Back to top &uarr;](#memoria)
 <hr>
 
 ## Technologies Used
