@@ -72,10 +72,8 @@ The aim of this project is two-fold:
 - Provide an enjoyable mini-game that has memory benefits
 - Provide different difficulites, creating a sense of progression
 - Provide feedback to the player after they finish a game
-- Create a smooth experience in navigating the menus#
+- Create a smooth experience in navigating the menus
 - Provide a clear explanation of the game rules and difficulty
-- Create a game that is fully accessibile to those who are visually impaired
-- Provide leaderboards to show how players rank up against each other
 - Provide links to the developer's social media should players discover any bugs
 - Make the website responsive for mobile devices, as [over 50% of traffic comes from mobile users](https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/)
 
@@ -86,40 +84,41 @@ The aim of this project is two-fold:
 
 ### Target Audience
 
-- People who are looking to be the best version of themselves through fitness
-- People who lead busy lives, but are looking to find a compromise between their lifestyle and exercise
-- People who are looking for a high-quality personal trainer, gym, and bespoke plan
-- People who want to exercise in a quiet and clean gym environment
-- People who are looking for an extra motivational push to help them achieve their fitness goals
+- People who are looking of an enjoyable way to train their short-term memory
+- People who are looking for a quick break in an otherwise hectic lifestyle
+- People who are looking for a mini-game that's simple enough that kids of any age can play
+- Fans of memory card games
+- Fans of traditional fantasy concepts
+- People who are looking for a mini-game with an escalating level of difficulty
 
 ### User Stories
 
 #### First Time Visitors
 
-1. As a first-time visitor, I want to easily understand the main purpose and ethos of the gym.
-2. As a first-time visitor, I want to easily navigate the page to find all the recent information.
-3. As a first-time visitor, I want to learn about the gym and its history.
-4. As a first-time visitor, I want to learn where the gym is located.
-5. As a first-time visitor, I want to know when I can book my session.
-6. As a first-time visitor, I want to know how to best contact the gym.
+1. As a first-time visitor, I want to easily understand the main purpose of the game.
+2. As a first-time visitor, I want to easily navigate the menus without getting lost.
+3. As a first-time visitor, I want to learn about the developer.
+4. As a first-time visitor, I want to learn where the images were gotten from.
+5. As a first-time visitor, I want to learn what the game-rules are.
+6. As a first-time visitor, I want to know what difficulities are available to me.
+7. As a first-time visitor, I want to feel engaged when playing the game.
+8. As a first-time visitor, I want to be provided visual feedback upon beating a round.
 
 #### Returning Visitors
 
-7. As a returning visitor, I want to quickly check the coaching services offered and the differences between them.
-8. As a returning visitor, I want to quickly access all of the social media to find any changes in opening times.
-9. As a returning visitor, I want to check if the 7-day free trial offer is still available.
-10. As a returning visitor, I want to see if there are any new promotions available.
-11. As a returning visitor, I want to easily find the location of the gym via the Google Maps section.
-12. As a returning visitor, I want to see if any professional photoshoots have been uploaded to the gallery since my last visit.
+9. As a returning visitor, I want to quickly check if the game has been updated.
+10. As a returning visitor, I want to quickly check if any new difficulties or game modes have been added.
+11. As a returning visitor, I want to check if any other new featues have been added.
+12. As a returning visitor, I want to see if the UI has evolved.
 
 #### Site Owner
 
-13. As the site owner, I want to clearly showcase the different coaching services available and the differences between them.
-14. As the site owner, I want users to be able to navigate the website smoothly and easily.
-15. As the site owner, I want to provide photographs of the inside of the gym and the facilities available.
-16. As the site owner, I want to provide the gym’s contact details for users.
-17. As the site owner, I want to provide links to the gym's social media accounts.
-18. As the site owner, I want to provide users with a free and no commitment 7-day trial upon filling out the online form.
+13. As the site owner, I want to clearly showcase the memory game.
+14. As the site owner, I want users to be able to navigate the menus smoothly and easily.
+15. As the site owner, I want to provide a clear explanation of the game-rules and the different difficulties.
+16. As the site owner, I want to provide the my social media contacts if users need to report a bug.
+17. As the site owner, I want to provide attribution links to the website where I used images from.
+18. As the site owner, I want to provide players a fun and beneficial game that can be enjoyed by players of all ages.
 
 [Back to Top &uarr;](#memoria)
 <hr>
