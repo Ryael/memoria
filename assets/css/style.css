@@ -164,7 +164,6 @@ body {
 
 #board-container {
     position: relative;
-    overflow: hidden;
 }
 
 #game-stats {
@@ -182,6 +181,7 @@ body {
     background-size: cover;
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
+    overflow: hidden;
 }
 
 .board > span{
