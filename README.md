@@ -274,9 +274,9 @@ As with all websites, this one also has a favicon that is displayed beside the t
 
 ### JavaScript Validation
 
-[JSHint](https://jshint.com/) was used to validate JavaScript code. No errors were found. 
+[JSHint](https://jshint.com/) was used to validate JavaScript code. It detected two undefined variables, however, they're from a library, which is where they're defined. It also detected seven unused variables are called from the DOM and hence JSHint is unable to detect that they are used. There were no errors found, otherwise.
 
-![CSS Validation](docs/validation/css-validation.png)
+![JavaScript Validation](docs/validation/js-validation.png)
 
 [Back to top &uarr;](#memoria)
 <hr>
