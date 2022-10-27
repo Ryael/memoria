@@ -209,7 +209,9 @@ The rules & difficulty section introduces the rules of the game and the overall 
 
 ![Memory Game - Easy](docs/features/game-easy.png)
 
-Here is where the magic happens! This is the core functionality of the website that displays a 4 card grid upon being the Easy mode button being interacted with. The previous menu is hidden but the game itself is written such that the timer doesn't start counting until the user clicks on a card. There's nothing worse than games that have their timers start counting before the user is even able to take an action. The emoji are randomised each time using a shuffle method but they're always pulled from the same list of emoji. The emoji approach is quite novel as it allows the website to not have to load images everytime as every device has their own version of emojis built in. The game board also has a simple border animation that runs around the edges, drawing the user's focus towards the game board. Upon selecting a card, they flip upwards. Upon selecting two non-matching cards, they both briefly shake to provide the user with visual feedback that there hasn't been a match before flipping back down. However, upon selecting two matching cards, the cards remain flipped. Once all the cards have been flipped, the board itself flips. At this point two things occur simultaneously: 1) the user is presented with their amount of flips and the time elapsed in minutes and second, and 2) a confetti script is ran to give the user a reason to celebrate their victory. [Here is the example](docs/features/border-animation.gif) of the animated border and the win screen with the confetti. This is perfect for younger kids as it's flashy enough to keep them invested and to get a taste of what memory games are like before diving into the higher difficulities.
+Here is where the magic happens! This is the core functionality of the website that displays a 4 card grid upon being the Easy mode button being interacted with. The previous menu is hidden but the game itself is written such that the timer doesn't start counting until the user clicks on a card. There's nothing worse than games that have their timers start counting before the user is even able to take an action. The emoji are randomised each time using a shuffle method but they're always pulled from the same list of emoji. The emoji approach is quite novel as it allows the website to not have to load images everytime as every device has their own version of emojis built in. 
+
+The game board also has a simple border animation that runs around the edges, drawing the user's focus towards the game board. Upon selecting a card, they flip upwards. Upon selecting two non-matching cards, they both briefly shake to provide the user with visual feedback that there hasn't been a match before flipping back down. However, upon selecting two matching cards, the cards remain flipped. Once all the cards have been flipped, the board itself flips. At this point two things occur simultaneously: 1) the user is presented with their amount of flips and the time elapsed in minutes and second, and 2) a confetti script is ran to give the user a reason to celebrate their victory. [Here is the example](docs/features/border-animation.gif) of the animated border and the win screen with the confetti. This is perfect for younger kids as it's flashy enough to keep them invested and to get a taste of what memory games are like before diving into the higher difficulities.
 
 ### Memory Game - Normal
 
@@ -260,45 +262,21 @@ As with all websites, this one also has a favicon that is displayed beside the t
 
 ### HTML Validation
 
-[W3C Markup Validation Service](https://validator.w3.org/nu/) was used to validate HTML code. No errors were found. Please see the summaries below for the results.
+[W3C Markup Validation Service](https://validator.w3.org/nu/) was used to validate HTML code. No errors were found. 
 
-<details>
-    <summary>Home</summary>
-    <img src="docs/validation/home-validation.png" alt="Validation of Home page">
-</details>
-<details>
-    <summary>About</summary>
-    <img src="docs/validation/about-validation.png" alt="Validation of About page">
-</details>
-<details>
-    <summary>Coaching</summary>
-    <img src="docs/validation/coaching-validation.png" alt="Validation of Coaching page">
-</details>
-<details>
-    <summary>Gallery</summary>
-    <img src="docs/validation/gallery-validation.png" alt="Validation of Gallery page">
-</details>
-<details>
-    <summary>Contact</summary>
-    <img src="docs/validation/contact-validation.png" alt="Validation of Contact page">
-</details>
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/validation/thank-you-validation.png" alt="Validation of Thank You page">
-</details>
-<details>
-    <summary>404</summary>
-    <img src="docs/validation/404-validation.png" alt="Validation of 404 page">
-</details>
+![HTML Validation](docs/validation/html-validation.png)
 
 ### CSS Validation
 
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate CSS code. No errors were found. 
 
-<details>
-    <summary>Style Page</summary>
-    <img src="docs/validation/css-validation.png" alt="Validation of the CSS Style page">
-</details>
+![CSS Validation](docs/validation/css-validation.png)
+
+### JavaScript Validation
+
+[JSHint](https://jshint.com/) was used to validate JavaScript code. No errors were found. 
+
+![CSS Validation](docs/validation/css-validation.png)
 
 [Back to top &uarr;](#memoria)
 <hr>
