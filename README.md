@@ -14,7 +14,7 @@ This is my second milestone project as part of Code Institute's Diploma in <stro
 
 I decided to create an interactive memory-card game using JavaScript that used emoji icons as its hidden images. The key term I'd use to describe the pool of emoji chosen is "traditional role-playing game concepts". This includes but is not limited to: bow-and-arrow, bomb, fire, water, lightning, ribbon, puzzle-piece, anchor, and die. The idea here was to evoke a sense of traditional fantasy concepts that feels familiar, straightforward, and cozy.
 
-This website is a single-page-application (SPA) that has a consistent design throughout all its content and is both simple and pleasing to navigate. Content is either toggled between displayed and hidden as necessary, or is generated and destroyed via the use of JavaScript. All content present adheres to my themeatic vision and only contains what is necessary. My vision for this website was for it to feel and act like an application, which is why transitions were added to make the process of navigating the menus as smooth and pleasant as possible. The content includes the memory game itself available on three different difficulities, a main menu, a rules and difficulty menu, a leaderboards section showing the top ten players for each difficulty via another menu, a credits section with instructions on how to report bugs and attribution links for the images used, and links to my social media in the footer.
+This website is a single-page-application (SPA) that has a consistent design throughout all its content and is both simple and pleasing to navigate. Content is either toggled between displayed and hidden as necessary, or is generated and destroyed via the use of JavaScript. All content present adheres to my themeatic vision and only contains what is necessary. My vision for this website was for it to feel and act like an application, which is why transitions were added to make the process of navigating the menus as smooth and pleasant as possible. The content includes the memory game itself available on three different difficulities, a Main Menu, a Rules & Difficulty menu, a Leaderboards section showing the top ten players for each difficulty via another menu, a Credits section with instructions on how to report bugs and attribution links for the images used, and links to my social media in the footer.
 
 The website is fully responsive at all screen sizes, adapting well to smaller resolutions for tablets, phones, and even landscape view on the aforementioned. It also works as intended on all popular web browsers. 
 
@@ -106,20 +106,18 @@ The aim of this project is two-fold:
 
 #### Returning Visitors
 
-9. As a returning visitor, I want to quickly check if the game has been updated.
-10. As a returning visitor, I want to quickly check if any new difficulties or game modes have been added.
-11. As a returning visitor, I want to check if any other new featues have been added.
-12. As a returning visitor, I want to see if the UI has evolved.
+9. As a returning visitor, I want to quickly check if any new difficulties or game modes have been added.
+10. As a returning visitor, I want to progress through the difficulties to improve my memorisation ability.
 
 #### Site Owner
 
-13. As the site owner, I want to clearly showcase the memory game.
-14. As the site owner, I want users to be able to navigate the menus smoothly and easily.
-15. As the site owner, I want to adhere to a specific vision and provide users with a very engaging game via its design and imagery.
-16. As the site owner, I want to provide a clear explanation of the game-rules and the different difficulties.
-17. As the site owner, I want to provide the my social media contacts if users need to report a bug.
-18. As the site owner, I want to provide attribution links to the website where I used images from.
-19. As the site owner, I want to provide players a fun and beneficial game that can be enjoyed by players of all ages.
+11. As the site owner, I want to clearly showcase the memory game.
+12. As the site owner, I want users to be able to navigate the menus smoothly and easily.
+13. As the site owner, I want to adhere to a specific vision and provide users with a very engaging game via its design and imagery.
+14. As the site owner, I want to provide a clear explanation of the game-rules and the different difficulties.
+15. As the site owner, I want to provide the my social media contacts if users need to report a bug.
+16. As the site owner, I want to provide attribution links to the website where I used images from.
+17. As the site owner, I want to provide players a fun and beneficial game that can be enjoyed by players of all ages.
 
 [Back to Top &uarr;](#memoria)
 <hr>
@@ -130,7 +128,7 @@ The aim of this project is two-fold:
 
 The design of this website began with a simple vision: I wanted to craft a clean and simple SPA with that was based on the old predominately [blue PS3 home theme](). With this as my core inspiration, the overall design of the website began to take form in my mind's eye. My idea was to find and use an image as the background that had a smooth and stuble light-blue to dark-blue gradient. After much searching I found [this lovely specimen on Freepik](https://www.freepik.com/free-vector/gradient-particles-background_4298560.htm#query=gradient%20particle%20background&position=0&from_view=search&track=sph). It has that exact colour-scheme and wave-like particles that I had in mind, after some manipulation I arrived at the current [background image](). This, combined with some simple and sleek visual menu elements is what makes the foundation of this project. I had hoped for the end result to be a combination of flashy and clean, which is a difficult balance to achieve but I think I was mostly successful and quite happy with the visual end result overall.
 
-All sections of the website follow a similar structure with the "Memoria" title at the top of the page, the footer with the social icons at the bottom, and all interactive elements have similar hover/focus effects wherein they fade-in on mouse-over/interaction and fade-out gently on mouse-leave. This is done to establish a consistency throughout the website such that users become familiar with how interactive elements respond. The rules & difficulty, leaderboards, and credits section have a white with a slight hexagonal pattern as their main element as they contain text elements. Otherwise, the game portions of the website all possess complementary elements to the rest of the site, creating a sense of flow familiarity for new users.
+All sections of the website follow a similar structure with the "Memoria" title at the top of the page, the footer with the social icons at the bottom, and all interactive elements have similar hover/focus effects wherein they fade-in on mouse-over/interaction and fade-out gently on mouse-leave. This is done to establish a consistency throughout the website such that users become familiar with how interactive elements respond. The Rules & Difficulty, Leaderboards, and Credits section have a white with a slight hexagonal pattern as their main element as they contain text elements. Otherwise, the game portions of the website all possess complementary elements to the rest of the site, creating a sense of flow familiarity for new users.
 
 On smaller viewports, the content expands to 80-100% of the width to reduce user scrolling burden and to allow for easier viewing. The exception to this is the memory game itself. On the easy and normal difficulties, the game-board always keep to a square ratio. However, on the hard difficulty, the game-board takes the shape of rectangle to best use as much of the available vertical space. This is intentional, as otherwise the cards become far too small on smaller resolutions to interact with and would be an accessibility nightmare.
 
@@ -191,19 +189,19 @@ This is the prototype of the project, which changes over the course of project d
 
 ![Title](docs/features/header-title.png)
 
-The title is the first things users will see when loading the page and it's geometric and retro look is here to make an impact. It's bold and assertive with its heavy font-weight and contrasting white on blue, and establishes the sort of design philosophy the rest of the website will adhere to. Upon mouse-over and focus, it plays [a subtle animation](docs/features/header-title-animation.gif) and converts the user's cursor to that of a pointer to indicate that it's an interactable element. Upon interaction it plays a script that reloads the page, effectively bringing the user to the main menu page. As such, no matter what part of the game the user has navigated to, they are always a simple click or tap away from going back to the main-menu. The name "Memoria" is simply a play on the word "memory" and has no other significant meaning aside from my liking of how it sounds and looks.
+The Title is the first things users will see when loading the page and its geometric and retro look is here to make an impact. It's bold and assertive with its heavy font-weight and contrasting white on blue, and establishes the sort of design philosophy the rest of the website will adhere to. Upon mouse-over and focus, it plays [a subtle animation](docs/features/header-title-animation.gif) and converts the user's cursor to that of a pointer to indicate that it's an interactable element. Upon interaction it plays a script that reloads the page, effectively bringing the user to the Main Menu. As such, no matter what part of the game the user has navigated to, they are always a simple click or tap away from going back to the Main Menu. The name "Memoria" is simply a play on the word "memory" and has no other significant meaning aside from my liking of how it sounds and looks.
 
 ### Main Menu
 
 ![Main-Menu](docs/features/main-menu.png)
 
-The main menu is fundamentally the navigation menu for the website and also doubles up as the landing page. Upon loading into the page, the user is greeted by a subtle fade-in transition, which is used throughout the entirety of Memoria. It keeps people who prefer reduced motion in mind and for that reason is quick and simple on the eyes. From the main menu, the user has the option to: a) start a game, b) view the leaderboards, or c) read the credits. All the [buttons have animations](docs/features/main-menu-animation.gif) that play upon hover/focus. A smooth fade in, and smooth fade out. Upon interaction, a script runs that hides the main menu and displays the relevant area instead. For example, clicking on Start Game will hide the main menu and instead display the rules & difficulty section alongside the return button, which can bring the user back to the main menu.
+The Main Menu is fundamentally the navigation menu for the website and also doubles up as the landing page. Upon loading into the page, the user is greeted by a subtle fade-in transition, which is used throughout the entirety of Memoria. It keeps people who prefer reduced motion in mind and for that reason is quick and simple on the eyes. From the Main Menu, the user has the option to: a) start a game, b) view the Leaderboards, or c) read the credits. All the [buttons have animations](docs/features/main-menu-animation.gif) that play upon hover/focus. A smooth fade in, and smooth fade out. Upon interaction, a script runs that hides the Main Menu and displays the relevant area instead. For example, clicking on Start Game will hide the Main Menu and instead display the Rules & Difficulty section alongside the return button, which can bring the user back to the Main Menu.
 
 ### Rules & Difficulty
 
 ![Rules & Difficulty](docs/features/rules-difficulty.png)
 
-The rules & difficulty section introduces the rules of the game and the overall objective of the game. It also provides three buttons that allow the user to select their difficulty of choice. The difficulty level itself is explained within the name, where easy is 2x2, normal is 4x4, and hard is 6x6. From a single glance it's made clear exactly what each button accomplishes. Their colour palettes are inverted due to the white background but [a similar animation](docs/features/rules-difficulty-animation.gif) plays upon hover/focus. Similar to main menu's script, upon interacting with any of the difficulities, the rules & difficulty section will be hidden and the game-board will be generated based on which difficulty was selected. 
+The Rules & Difficulty section introduces the rules of the game and the overall objective of the game. It also provides three buttons that allow the user to select their difficulty of choice. The difficulty level itself is explained within the name, where easy is 2x2, normal is 4x4, and hard is 6x6. From a single glance it's made clear exactly what each button accomplishes. Their colour palettes are inverted due to the white background but [a similar animation](docs/features/rules-difficulty-animation.gif) plays upon hover/focus. Similar to Main Menu's script, upon interacting with any of the difficulities, the Rules & Difficulty section will be hidden and the game-board will be generated based on which difficulty was selected. 
 
 ### Memory Game - Easy
 
@@ -229,31 +227,31 @@ Hard mode is very similar to the other two difficulities but the key difference 
 
 ![Return Button](docs/features/return-button.png)
 
-The return to the main menu button is present on every section but the main menu. Its purpose is to bring the user back to the main menu as it simply plays the same reload script as the title does, resetting the page to its default state: the main menu. It has the exact same animation as the other main menu buttons and is even styled the same to ensure consistency and familiarity. 
+The Return to the Main Menu button is present on every section but the Main Menu. Its purpose is to bring the user back to the Main Menu as it simply plays the same reload script as the Title does, resetting the page to its default state: the Main Menu. It has the exact same animation as the other Main Menu buttons and is even styled the same to ensure consistency and familiarity. 
 
 ### Leaderboards
 
 ![Leaderboards](docs/features/leaderboards.png)
 
-The leaderboards section is unfortunately not finished. It was intended to be a section where players could select one of the three corresponding difficulties to display the top 10 times for each. Due to no backend knowledge, the intention was to use a service like [Parse Platform](https://parseplatform.org/). However, I ended up running out of time and didn't want to rush and ultimately fail properply implenting this, hence this feature will be implemented in the future.
+The Leaderboards section is unfortunately not finished. It was intended to be a section where players could select one of the three corresponding difficulties to display the top 10 times for each. Due to no backend knowledge, the intention was to use a service like [Parse Platform](https://parseplatform.org/). However, I ended up running out of time and didn't want to rush and ultimately fail properply implenting this, hence this feature will be implemented in the future.
 
 ### Credits
 
 ![Credits](docs/features/credits.png)
 
-The credits section is very similar to both the rules & difficulty and leaderboards sections, both in how it displays and hides the other content and how it looks. Here the user can find my details and information on how to best contact me in the event of them finding a bug. It also attributes the images used from FreePik.
+The Credits section is very similar to both the Rules & Difficulty and Leaderboards sections, both in how it displays and hides the other content and how it looks. Here the user can find my details and information on how to best contact me in the event of them finding a bug. It also attributes the images used from FreePik.
 
 ### Footer
 
 ![Footer](docs/features/footer-icons.png)
 
-The footer of Memoria displays three social icons which are created via Font Awesome. These are links to my GitHub, LinkedIn, and E-mail. No more were added as the intention was to keep this strictly professional. The footer is present in all sections, providing the user with easy and direct methods to contact me to report bugs or any other reason. They also have [a unique animation](docs/features/footer-icons-animated.png) that fades in and out, similarly to the buttons.
+The Footer of Memoria displays three social icons which are created via Font Awesome. These are links to my GitHub, LinkedIn, and E-mail. No more were added as the intention was to keep this strictly professional. The Gooter is present in all sections, providing the user with easy and direct methods to contact me to report bugs or any other reason. They also have [a unique animation](docs/features/footer-icons-animated.png) that fades in and out, similarly to the buttons.
 
 ### Favicon
 
 ![Favicon](docs/features/favicon.png)
 
-As with all websites, this one also has a favicon that is displayed beside the title of the page. A user can quickly and easily discern if they have Memoria open amongst many different tabs by looking for the capital "M" icon, which is rendered in the same font as the title text, Jost.
+As with all websites, this one also has a Favicon that is displayed beside the Title of the page. A user can quickly and easily discern if they have Memoria open amongst many different tabs by looking for the capital "M" icon, which is rendered in the same font as the Title text, Jost.
 
 [Back to top &uarr;](#memoria)
 <hr>
@@ -329,75 +327,69 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 
 ### Testing User Stories
 
-1. As a first-time visitor, I want to easily understand the main purpose and ethos of the gym.
-    - Upon navigating to the website, the user is automatically greeted with a clean and easily readable Navigation Bar to go to their page of choice. The Hero Image and ‘Call to Action’ button draws the user's attention and starts to establish the gym's brand and purpose.
-    - At this point, users can navigate to another page, in this case About, or scroll down, both of which will delve into the ethos of the gym.
+1. As a first-time visitor, I want to easily understand the main purpose of the game.
+    - Upon navigating to the website, the user is automatically greeted with a clean and easily readable Main Menu that allows them to go to their page of choice. The Start Game button will bring them to the Rules & Difficulty section, where they can read about the rules and objective of the game.
+    - At this point, users can then select a difficulty to start a game and see first-hand what the purpose of the game is.
+    - In addition to this, they may navigate to the GitHub via the Footer and/or the Credits section, where they can read the introduction of the readme in order to ascertain the purpose.
 
-2. As a first-time visitor, I want to easily navigate the page to find all the relevant information.
-    - The website was designed to be easy to navigate and fluid. The top of each page has a Navigation Bar, with clearly described links so the user has an idea of where they'll end up upon interaction.
-    - There are ‘Call to Action’ buttons present throughout the website that help with funnelling the user into any topic they might be interested in.
-    - Upon successful submitting of the form on the Contact page, the user is brough to a Thank You page. They then have the option to interact with the links on the Navigation Bar or the button below the thank you text.
+2. As a first-time visitor, I want to easily navigate the menus without getting lost.
+    - The website was designed to be easy to navigate and fluid. The top of each section has a Title which doubles as a back button alongside the actual Return Button, with clearly described descriptions so the user has an idea of where they'll end up upon interaction.
+    - Every section always has a clear means of moving forwards or backwards, ensuring the user is never lost or overwhelmed.
 
-3. As a first-time visitor, I want to learn about the gym and its history.
-    - Upon reading the "Strive for Greatness" section on the home page, or even after they finish reading the home page, they can then navigate to the About page via the navigation links. Here, they can find more information on the gym, its ethos, and its history.
+3. As a first-time visitor, I want to learn about the developer.
+    - Navigating to the Credits secton is the best and simplest way to learn more about the developer, as it contains a short blurb, a means to report bugs, and attribution links for the images used throughout the project.
+    - Additionally, the icons in the Footer allow the user to visit the developer's GitHub or LinkedIn, where they may learn much about them.
 
-4. As a first-time visitor, I want to learn where the gym is located.
-    - The user is instantly introduced to where the gym is located based on the title text present on under the Victory Fitness text logo on the home page.
-    - Furthermore, there is a detailed Google map on the Contact page, allowing a solid understanding of the location.
+4. As a first-time visitor, I want to learn where the images were gotten from.
+    - The Credits section will hold the answer to this, as it contains full attribution links to the images, where they gotten, and who they were designed by.
 
-5. As a first-time visitor, I want to know when I can book my session.
-    - Due to the fluidic nature of the home page, the user will arrive at the Why Choose Us section which will provide details for session booking.
-    - Additionally, through the About and Coaching pages, information is laid out in a way that makes the user understand that clients are put first and a time that suits them can be agreed upon.
+5. As a first-time visitor, I want to learn what the game-rules are.
+    - Simply pressing Start Game will bring the user to the Rules & Difficulty section, which clearly lays out the rule of the game, the objective, and how the difficulties differ.
 
-6. As a first-time visitor, I want to know how to best contact the gym.
-    - Once the user has read any page, they will find icons in the footer that link to the gym's social media accounts and email.
-    - Additionally, if the user has navigated to the Contact page via the navigation links or the ‘Call to Action’ button on the Home page, they can find a form to fill out for a 7-day free trial.
+6. As a first-time visitor, I want to know what difficulities are available to me.
+    - Navigating to the Rules & Difficulty section by interacting with Start Game will bring the user where the difficulties are displayed via buttons alongside a clear descriptor of how they differ from each other.
+    - To add to this, they can click on each difficulty before returning to the Main Menu and clicking on the others to see the difference for themselves.
 
-7. As a returning visitor, I want to quickly check the coaching services offered and the differences between them.
-    - Upon returning to the website, this information can be found via a ‘Call to Action’ button on the Home page, which directs the user to the Coaching page.
-    - Here, the user is told about all the coaching services provided in great detail.
+7. As a first-time visitor, I want to feel engaged when playing the game.
+    - Upon starting the game via any of the difficulty buttons, the board is faded in as it generates with a subtle yet fitting background and an additional animation that runs around the border of the board.
+    - Additionally, feedback is provided to the user via the cards shaking upon an incorrect match being made. 
+    - Further yet, the game-controls area shows the amount of flips they've made and the amount of time that has elapsed, allowing them to keep track of their moves and become more invested.
 
-8. As a returning visitor, I want to quickly access all of the social media to find any changes in opening times.
-    - This is made very easy by the inclusion of the Footer, which is present across all pages.
-    - Here, the user may find links to the gym's Instagram and Facebook, which are their main social media accounts.
+8. As a first-time visitor, I want to be provided visual feedback upon beating a round.
+    - Upon the completion of the game on any difficulty, an animation is played where the board flips and confetti starts firing, increasing the user's engagement with the game by providing visual feedback of their accomplishment. 
 
-9. As a returning visitor, I want to check if the 7-day free trial offer is still available.
-    - Returning to the website, all the user has to do is interact with the "Join Now" button on the Hero Image of the Home page, scroll down to see the Contact section which lists the current offer, or navigate to the Contact page which has the full details regarding the current ongoing offer.
+9. As a returning visitor, I want to quickly check if any new difficulties or game modes have been added.
+    - If the UI remains the same and there isn't any additional element that informs the user of an update, then they could check the GitHub to see if any updates have been made to the game.
+    - Ultimately, they could also visit the Rules & Difficult section of the application to see whether or not new games modes or extra difficulties have been added as of yet.
 
-10. As a returning visitor, I want to see if there are any new promotions available.
-    - The newest promotions are always linked to with the ‘Call to Action’ button on the Hero Image of the Home page.
-    - Alternatively, users are incentivised to contact the gym via the form on the Contact page. As such, there is always an offer present there to encourage this.
+10. As a returning visitor, I want to progress progress through the difficulty to improve my memorisation ability.
+    - This is easily accomplished by starting with whichever difficulty the user may have left off on and work their way up the ladder that ends with the hardest difficulty.
+    - At this point the user should attempt the fastest clear time possible without any means of cheating to hone their memorisation.
 
-11. As a returning visitor, I want to easily find the location of the gym via the Google Map section.
-    - This can be accomplished by navigating to the Contact page via the ‘Call to Action’ button portion of the Free Trial section on the Home page, or by interacting with the Contact navigation link.
-    - Here, the user can find a detailed Google Map detailing where the gym is located.
+11. As the site owner, I want to clearly showcase the memory game.
+    - The application is designed with the game at the forefront; the menus are sleek and easy to navigate, the semantic structure suggests that there is a game available here, and the clear labelling of buttons will bring the user to the game within seconds.
 
-12. As a returning visitor, I want to see if any professional photoshoots have been uploaded to the gallery since my last visit.
-    - All new professional competitions and photoshoots will be uploaded to the Gallery page, which the user can easily navigate to using the links on the Navigation Bar.
-
-13. As the site owner, I want to clearly showcase the different coaching services available and the differences between them.
-    - This is easily accomplished by the Coaching page, which can be quickly accessed via ‘Call to Action’ button under the Coaching section, or simply navigated to using the Navigation Bar links.
-
-14. As the site owner, I want users to navigate the website smoothly and easily.
-    - The website has a very clear Navigation Bar, with easily seen links due to the contrast of the background and the colour of the links. This allows for a smooth navigation experience.
+12. As the site owner, I want users to be able to navigate the menus smoothly and easily.
+    - The website has a very clear Main Menu, with easily seen text due to the contrast of the background and the colour of the links. This allows for a smooth navigation experience.
     - Each section is built to be fluidic and flow in a coherent manner where the user learns relevant information as they go through each section of each page.
 
-15. As the site owner, I want to provide photographs of the inside of the gym and the facilities available.
-    - The Gallery page accomplishes this, allowing the site owner to display whichever photos they may like to their userbase.
-    - The Gallery page is also easily accessible due to the easy-to-use navigation links.
+13. As the site owner, I want to adhere to a specific vision and provide users with a very engaging game via its design and imagery.
+    - The consistency of the effects and colours used provide an experience that succeeds bringing many separate parts together to form something that's more than the sum of its parts.
+    - All the backgrounds used are primarly blue with some purple hues to create a colour synergy and the application never deviates from its theme.
+    - The game portion of the appliation itself is designed to provide as much feedback to user as possible, hopefully providing them with a highly engaging experience.
 
-16. As the site owner, I want to provide contact details for users.
-    - Users can find contact details through the address on the Home page, the social media accounts in the icons in the footer, and an online form on the Contact page.
-    - Additionally, a Google Map is also present should the users want to make a trip to the gym in person.
+14. As the site owner, I want to provide a clear explanation of the game-rules and the different difficulties.
+    - Users can find the explanation of the rules, objective, and different difficulties in the Rules & Difficulty section, which covers them succintly. 
 
-17. As the site owner, I want to provide links to the gym's social media accounts.
-    - The links to the gym's social media accounts are easily found and accessed through the footer, which is present throughout every page on the website. 
-    - No matter where the user is, they are always just a short scroll away from accessing the social media accounts.
+15. As the site owner, I want to provide the my social media contacts if users need to report a bug.
+    - The Credits section links to the issues page on the relevant GitHub page and explains that this is the ideal place to report bugs.
+    - Additionally, users may navigate to the Footer of the application and further navigate to the GitHub via that or send an e-mail altogether.
 
-18. As the site owner, I want to provide users with a free, no commitment, 7-day trial upon filling out the online form.
-    - Often it can be difficult to convince users to fill out forms as other communication can be easier and more readily available. However, a free trial is sufficient incentive for this.
-    - This free trial can be viewed via the Home page in one of two ways: it can be accessed via the ‘Call to Action’ Join Now button on top of the Hero Image and/or it can be found in the Free Trial section, which also has its own ‘Call to Action’ button.
-    - Lastly, the users can navigate to the Contact page via the Navigation Bar links, where they can find all the details regarding the free trial and the form.
+16. As the site owner, I want to provide attribution links to the website where I used images from.
+    - The attribution links, where the images were found, and who they were designed and uploaded by can all be found within the Credits section, which contains clearly laid-out and high-lighted links.
+
+17. As the site owner, I want to provide players a fun and beneficial game that can be enjoyed by players of all ages.
+    - Due to the different difficulties available, especially easy, and the fun and flashy design direction of the application, it's something even younger kids can pick up and learn to enjoy. The concepts don't take much learning and the confetti upon winning will be all the encouragement they'll need.
 
 [Back to top &uarr;](#memoria)
 <hr>
