@@ -187,7 +187,7 @@ This is the prototype of the project, which changes over the course of project d
 
 ## Features
 
-### Navigation Bar
+### Header Title
 
 ![Navigation Bar](docs/features/navigation-bar.png)
 

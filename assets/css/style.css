@@ -395,6 +395,15 @@ body {
     padding: 25px 0 25px 0;
 }
 
+#leaderboards > .container > p {
+    color: #7a7594;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 25px 25px 25px;
+}
+
 /* Credits */
 
 #credits {
