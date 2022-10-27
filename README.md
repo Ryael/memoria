@@ -126,7 +126,7 @@ The aim of this project is two-fold:
 
 ### Design Philosophy
 
-The design of this website began with a simple vision: I wanted to craft a clean and simple SPA with that was based on the old predominately [blue PS3 home theme](). With this as my core inspiration, the overall design of the website began to take form in my mind's eye. My idea was to find and use an image as the background that had a smooth and stuble light-blue to dark-blue gradient. After much searching I found [this lovely specimen on Freepik](https://www.freepik.com/free-vector/gradient-particles-background_4298560.htm#query=gradient%20particle%20background&position=0&from_view=search&track=sph). It has that exact colour-scheme and wave-like particles that I had in mind, after some manipulation I arrived at the current [background image](). This, combined with some simple and sleek visual menu elements is what makes the foundation of this project. I had hoped for the end result to be a combination of flashy and clean, which is a difficult balance to achieve but I think I was mostly successful and quite happy with the visual end result overall.
+The design of this website began with a simple vision: I wanted to craft a clean and simple SPA with that was based on the old predominately [blue PS3 home theme](docs/screenshots/ps-theme.webp). With this as my core inspiration, the overall design of the website began to take form in my mind's eye. My idea was to find and use an image as the background that had a smooth and stuble light-blue to dark-blue gradient. After much searching I found [this lovely specimen on Freepik](https://www.freepik.com/free-vector/gradient-particles-background_4298560.htm#query=gradient%20particle%20background&position=0&from_view=search&track=sph). It has that exact colour-scheme and wave-like particles that I had in mind, after some manipulation I arrived at the current [background image](assets/images/background/main.png). This, combined with some simple and sleek visual menu elements is what makes the foundation of this project. I had hoped for the end result to be a combination of flashy and clean, which is a difficult balance to achieve but I think I was mostly successful and quite happy with the visual end result overall.
 
 All sections of the website follow a similar structure with the "Memoria" title at the top of the page, the footer with the social icons at the bottom, and all interactive elements have similar hover/focus effects wherein they fade-in on mouse-over/interaction and fade-out gently on mouse-leave. This is done to establish a consistency throughout the website such that users become familiar with how interactive elements respond. The Rules & Difficulty, Leaderboards, and Credits section have a white with a slight hexagonal pattern as their main element as they contain text elements. Otherwise, the game portions of the website all possess complementary elements to the rest of the site, creating a sense of flow familiarity for new users.
 
@@ -136,17 +136,17 @@ You can find the images used for all the backgrounds below:
 
 <details>
     <summary>Website Background</summary>
-    <img src="docs/features/hero-image.jpeg" alt="Background image used for website">
+    <img src="assets/images/background/main.png" alt="Background image used for website">
 </details>
 
 <details>
     <summary>Game Background</summary>
-    <img src="docs/features/hero-small-image.png" alt="Background image used for the game-board">
+    <img src="assets/images/background/game.webp" alt="Background image used for the game-board">
 </details>
 
 <details>
     <summary>Settings Background</summary>
-    <img src="docs/features/404.jpeg" alt="Background image used for the settings windows">
+    <img src="assets/images/background/settings.webp" alt="Background image used for the settings windows">
 </details>
 
 ### Colours 
