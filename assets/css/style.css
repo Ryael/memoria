@@ -57,8 +57,6 @@ body {
     padding-top: 5.4vh;
     transition: 0.5s;
     cursor: pointer;
-    background-clip: text;
-    -webkit-background-clip: text;
 }
 
 #title > h1:hover {
