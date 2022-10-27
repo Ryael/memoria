@@ -283,82 +283,21 @@ As with all websites, this one also has a favicon that is displayed beside the t
 
 ## Testing
 
+### Responsiveness
+
+[Website Responsive Test Online](https://websiteresponsivetest.com/) was used to extensively test the responsiveness of Memoria. All screen sizes and viewports are now accounted for, including even extremely small widths like 240 px.
+
 ### Accessibility
 
-[WAVE WebAIM](https://wave.webaim.org/report#/https://ryael.github.io/victory-fitness) was used to validate CSS code. One error was found, and this related to the hamburger menu having an empty label. This was fixed and is covered in the bugs section. Otherwise, there were some contrast errors that came up and they were simply fixed by increasing the colour of the fonts used. One such example was changing #777 to #575757, which now passes all accessibility checks.
+[WAVE WebAIM](https://wave.webaim.org/report#/https://ryael.github.io/memoria/) was used to check for accessibility and no errors were found.
 
-Additionally, the address below the text-logo as well as the button on the Home page are flagged as contrast errors. This also concerns any text on an image-background on other pages. However, attempting to follow the suggestions provided by the tool seemed to impact actual accessibility negatively, despite satisfying the actual tool. Please find a screenshot example of the colour suggestion for said area. As such, these contrast errors will be disregarded as they are not picked up by Lighthouse.
-
-<details>
-    <summary>Contrast Error Example</summary>
-    <img src="docs/testing/contrast-error.png" alt="Contrast error via the WAVE tool colour suggestion">
-</details>
-
-Below are the results for every page, with no errors present (aside from the disregarded contrast ones):
-
-<details>
-    <summary>Home</summary>
-    <img src="docs/testing/wave-home.png" alt="Accessibility of Home page">
-</details>
-<details>
-    <summary>About</summary>
-    <img src="docs/testing/wave-about.png" alt="Accessibility of About page">
-</details>
-<details>
-    <summary>Coaching</summary>
-    <img src="docs/testing/wave-coaching.png" alt="Accessibility of Coaching page">
-</details>
-<details>
-    <summary>Gallery</summary>
-    <img src="docs/testing/wave-gallery.png" alt="Accessibility of Gallery page">
-</details>
-<details>
-    <summary>Contact</summary>
-    <img src="docs/testing/wave-contact.png" alt="Accessibility of Contact page">
-</details>
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/testing/wave-thank-you.png" alt="Accessibility of Thank You page">
-</details>
-<details>
-    <summary>404</summary>
-    <img src="docs/testing/wave-404.png" alt="Accessibility of 404 page">
-</details>
+![WAVE WebAIM](docs/testing/wave-webaim.png)
 
 ### Performance
 
-Google Lighthouse was used to assess the performance of all webpages. All pages have a score of 100 Accessibility, 100 Best Practices, and 100 SEO across all devices. However, Performance seems to fluctuate between 72-95 for all pages. Multiple browsers have been used incognito to disable any extensions that could be potentially hindering performance. I investigated this, finding that webpages that had scores of 100 Performance also seemed to produce different results when I tested the websites on my end. Regardless, all webpages have been optimised for load speed and performance, netting in 85-92 scores across the board without any cherry-picking.
+Google Lighthouse was used to assess the performance of this website. All tests were performed in incognito mode to avoid interference from any other sources. Tests were carried out on each section but the same result was returned every time. This was the same case for mobile, and as such, only one result will be provided. Performance could be improved yet again but I made a choice to not convert the main background due to the colours becoming [visibily distorted](docs/testing/background-issue.png). 
 
-The results can be seen below.
-
-<details>
-    <summary>Home</summary>
-    <img src="docs/testing/lighthouse-home.png" alt="Performance of Home page">
-</details>
-<details>
-    <summary>About</summary>
-    <img src="docs/testing/lighthouse-about.png" alt="Performance of About page">
-</details>
-<details>
-    <summary>Coaching</summary>
-    <img src="docs/testing/lighthouse-coaching.png" alt="Performance of Coaching page">
-</details>
-<details>
-    <summary>Gallery</summary>
-    <img src="docs/testing/lighthouse-gallery.png" alt="Performance of Gallery page">
-</details>
-<details>
-    <summary>Contact</summary>
-    <img src="docs/testing/lighthouse-contact.png" alt="Performance of Contact page">
-</details>
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/testing/lighthouse-thank-you.png" alt="Performance of Thank You page">
-</details>
-<details>
-    <summary>404</summary>
-    <img src="docs/testing/lighthouse-404.png" alt="Performance of 404 page">
-</details>
+![Lighthouse](docs/testing/lighthouse.png)
 
 ### Device Testing
 
@@ -367,11 +306,16 @@ The website was tested on many different devices, such as:
 - Samsung Galaxy S10
 - Samsung Galaxy S21
 - MSI GE72 6QF Apache Pro
+- iPhone 8
 - iPhone 10
 - iPhone 12
+- iPhone 14
 - iPad Mini (Landscape and Portrait)
 - iPad (Landscape and Portrait)
 - Vivo S1 Pro
+- LG v60
+- Huawei P40 Pro
+- Google Pixel 6
 
 ### Browser Compatibility
 
@@ -380,6 +324,8 @@ The website was tested on many different devices, such as:
 - Opera
 - Safari
 - Microsoft Edge
+
+I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsoft Edge. For the remaining two, I asked friends and family to test the website on my behalf while overlooking it to ensure cross-compatibility. No issues or bugs were reported.
 
 ### Testing User Stories
 
