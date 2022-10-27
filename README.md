@@ -115,10 +115,11 @@ The aim of this project is two-fold:
 
 13. As the site owner, I want to clearly showcase the memory game.
 14. As the site owner, I want users to be able to navigate the menus smoothly and easily.
-15. As the site owner, I want to provide a clear explanation of the game-rules and the different difficulties.
-16. As the site owner, I want to provide the my social media contacts if users need to report a bug.
-17. As the site owner, I want to provide attribution links to the website where I used images from.
-18. As the site owner, I want to provide players a fun and beneficial game that can be enjoyed by players of all ages.
+15. As the site owner, I want to adhere to a specific vision and provide users with a very engaging game via its design and imagery.
+16. As the site owner, I want to provide a clear explanation of the game-rules and the different difficulties.
+17. As the site owner, I want to provide the my social media contacts if users need to report a bug.
+18. As the site owner, I want to provide attribution links to the website where I used images from.
+19. As the site owner, I want to provide players a fun and beneficial game that can be enjoyed by players of all ages.
 
 [Back to Top &uarr;](#memoria)
 <hr>
@@ -127,47 +128,40 @@ The aim of this project is two-fold:
 
 ### Design Philosophy
 
-The design of this website began with this [one image](docs/features/hero-image.jpeg). As soon as I saw it, the design of the website began to take form in my mind's eye. My vision was to use this photograph as the centerpiece for the website. As such, it was fashioned into a full-screen hero image. It is cropped such that the V part of the logo at the top of the photograph redirect the user's attention to the text logo in the center, with the coaches on either side of it. It establishes the brand image quickly, simply, and cleanly. I darkened the hero-image via the use of a dark linear-gradient at 30% opacity to help enhance the contrast between the image and all text, including the navigation links as well as the text logo and address.
+The design of this website began with a simple vision: I wanted to craft a clean and simple SPA with that was based on the old predominately [blue PS3 home theme](). With this as my core inspiration, the overall design of the website began to take form in my mind's eye. My idea was to find and use an image as the background that had a smooth and stuble light-blue to dark-blue gradient. After much searching I found [this lovely specimen on Freepik](https://www.freepik.com/free-vector/gradient-particles-background_4298560.htm#query=gradient%20particle%20background&position=0&from_view=search&track=sph). It has that exact colour-scheme and wave-like particles that I had in mind, after some manipulation I arrived at the current [background image](). This, combined with some simple and sleek visual menu elements is what makes the foundation of this project. I had hoped for the end result to be a combination of flashy and clean, which is a difficult balance to achieve but I think I was mostly successful and quite happy with the visual end result overall.
 
-The Home page takes an approach where all of the content in the body occupies approximately 70% of the width available on the page. The ‘About’, ‘Coaching’, ‘Gallery’, and ‘Contact’ pages meanwhile take a different, albeit consistent approach with a much [shorter hero image](docs/features/hero-small-image.png). This is to establish a sense of flow familiarity with the design of the website for new users. This is then further accompanied by a transparent navigation bar on wider resolutions, a black-background hamburger menu for smaller resolutions, and a light grey footer. The footer is the same throughout the entire website at all viewpoints. The ‘About’, ‘Coaching’, ‘Gallery’, and ‘Contact’ pages take a very similar approach to the Home page in the design of their bodies, using approximately 70% of the available width on larger resolutions. However, they differ in how images are displayed; background images always occupy 100% of the available width, whereas inline images only occupy the same width as the body. This is a conscious design decision to allow for the body text to sleekly wrap under any images present, resulting in a neat and tidy viewing experience.
+All sections of the website follow a similar structure with the "Memoria" title at the top of the page, the footer with the social icons at the bottom, and all interactive elements have similar hover/focus effects wherein they fade-in on mouse-over/interaction and fade-out gently on mouse-leave. This is done to establish a consistency throughout the website such that users become familiar with how interactive elements respond. The rules & difficulty, leaderboards, and credits section have a white with a slight hexagonal pattern as their main element as they contain text elements. Otherwise, the game portions of the website all possess complementary elements to the rest of the site, creating a sense of flow familiarity for new users.
 
-On smaller viewports, the content expands to 80-100% of the width to reduce user scrolling burden and to allow for easier viewing.
+On smaller viewports, the content expands to 80-100% of the width to reduce user scrolling burden and to allow for easier viewing. The exception to this is the memory game itself. On the easy and normal difficulties, the game-board always keep to a square ratio. However, on the hard difficulty, the game-board takes the shape of rectangle to best use as much of the available vertical space. This is intentional, as otherwise the cards become far too small on smaller resolutions to interact with and would be an accessibility nightmare.
 
-The ‘404’ and ‘Thank You’ pages employ a similar design philosophy to that of the Home page in using a full-screen hero image, but where they differ is that the opacity of the dark gradient layer is increased from 30% to 50% to draw less focus to the images themselves. This provides more user focus on the message being delivered, as well as a button in how to return to the general browsing of the website.
-
-You can find the images used for all pages below:
+You can find the images used for all the backgrounds below:
 
 <details>
-    <summary>Home</summary>
-    <img src="docs/features/hero-image.jpeg" alt="Hero image used for the Home Page">
+    <summary>Website Background</summary>
+    <img src="docs/features/hero-image.jpeg" alt="Background image used for website">
 </details>
 
 <details>
-    <summary>About, Coaching, Gallery, and Contact</summary>
-    <img src="docs/features/hero-small-image.png" alt="Hero image used for the About, Coaching, Gallery, and Contact pages">
+    <summary>Game Background</summary>
+    <img src="docs/features/hero-small-image.png" alt="Background image used for the game-board">
 </details>
 
 <details>
-    <summary>404</summary>
-    <img src="docs/features/404.jpeg" alt="Hero image used for the Error 404 page">
-</details>
-
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/features/thank-you.jpeg" alt="Hero image used for the Thank You page">
+    <summary>Settings Background</summary>
+    <img src="docs/features/404.jpeg" alt="Background image used for the settings windows">
 </details>
 
 ### Colours 
 
-No pre-set colour palettes were used in the designing of this website. My goal was to create a monochromatic look, focusing mostly using shades of black, white, and grey. My vision was to have the site feel simple, clean, and elegant. [Color-Name](https://www.color-name.com/) was used to find slightly lighter and darker shade variations of the colours used for this project. The body content is primarily grey text on a white background with black titles, sometimes being inverted to white for sections that rely on background images. 
+No pre-set colour palettes were used in the designing of this website. My goal was to create a monochromatic look, focusing mostly using shades of black, white, and grey. My vision was to have the site feel simple, clean, but also fancy and packing a bit of a flavourful punch.  I wanted to focus on primarily three colours: blue, white, and purple. Shades of blue are used to establish structures and give form to the most important structures in the background, the game itself, and the game background. White is mainly used as the font and the buttons. Purple is used as an accent to the blue, often being being used the link and highlight colour. [Color-Name](https://www.color-name.com/) was used to find slightly lighter and darker shade variations of the colours used for this project. The text content is primarily dark-blue on a white background with darker titles. Buttons and their text elements are either entirely white that transition to purple or vice versa.
 
 ### Fonts
 
-The fonts I chose for this project are Lato and Railway. Lato is the font for the general content, whereas Railway is used for title content. They complement each other well and they were chosen because they were recommended by [this website](https://www.coralnodes.com/best-google-font-combinations/). I also considered a combination of Montserrat and Source Sans Pro, which evoke a similar sense of simplicity and elegance. However, I ultimately chose to go with Lato and Railway due to how well Railway works with letter spacing. It is a modern and clean approach, which I believe works well for almost any website.
+The fonts I chose for this project are Jost and Fredoka. Fredoka is the font for the general content, whereas Jost is used for title content. Prior to Jost, I had chosen and used Josefin Sans as my title font of choice. I saw it used [as a title here](https://elementor.com/blog/font-pairing/) and decided it was that geometric and retro look I wanted to introduce the user to the website. However, it unfortunately had uneven padding on its top and bottom, which is simply just how the font was designed. This made it very difficult to creative even padding areas. As such, I ended up looking for a similar font and fortunately Jost is visually very similar, and in fact, the shape of the capital "M" is even better than what Josefin Sans had to offer. 
 
-Font-weights of 300, 400, and 700 were chosen for both fonts. 300 was used as the default for both. 400 was used for a bit more weight and clarity, and 700 was used in rare cases where a bold or strong element was required for the text.
+Fredoka was chosen because of it's round edges and overall bold and daring appearance. It epitomises "fun" and I figured this was perfect for text content a for browser game website. They complement each other well although I hadn't found any pairings that used these too before. I think this is a pretty specific case that works which otherwise wouldn't work if the design philsophy was more minimalistic.
 
-Normally, one would associate big and powerful fonts and font-weights with gyms and working out. However, I wanted to adhere to my initial vision in designing a clean and elegant website. This represents my core values better as well as reinforcing the idea that the gym is clean and well-maintained, and the coaches are elegant and well-spoken.
+Font-weights of 300, 400, and 600 were chosen for Jost and font-weights of 400 and 500. 400 was used as the default for both. 600 was used for a bit more weight and clarity, primarily in titles and especially the "Memoria" page title.
 
 ### Wireframes
 
@@ -176,32 +170,16 @@ The conceptualisation of the layout used in this project began with simple pen a
 This is the prototype of the project, which changes over the course of project development.
 
 <details>
-    <summary>Home</summary>
-    <img src="docs/wireframes/home.png" alt="Wireframe of the Home page">
+    <summary>Main Menu</summary>
+    <img src="docs/wireframes/main.png" alt="Wireframe of the Main Menu">
 </details>
 <details>
-    <summary>About</summary>
-    <img src="docs/wireframes/about.png" alt="Wireframe of the About page">
+    <summary>Settings Window</summary>
+    <img src="docs/wireframes/settings.png" alt="Wireframe of the Settings Window">
 </details>
 <details>
-    <summary>Coaching</summary>
-    <img src="docs/wireframes/coaching.png" alt="Wireframe of the Coaching page">
-</details>
-<details>
-    <summary>Gallery</summary>
-    <img src="docs/wireframes/gallery.png" alt="Wireframe of the Gallery page">
-</details>
-<details>
-    <summary>Contact</summary>
-    <img src="docs/wireframes/contact.png" alt="Wireframe of the Contact page">
-</details>
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/wireframes/thank-you.png" alt="Wireframe of the Thank You page">
-</details>
-<details>
-    <summary>404</summary>
-    <img src="docs/wireframes/404.png" alt="Wireframe of the 404 page">
+    <summary>Game Board</summary>
+    <img src="docs/wireframes/game.png" alt="Wireframe of the Game Board">
 </details>
 
 [Back to top &uarr;](#memoria)
