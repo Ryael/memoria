@@ -283,7 +283,7 @@ As with all websites, this one also has a Favicon that is displayed beside the T
 
 ### Responsiveness
 
-[Website Responsive Test Online](https://websiteresponsivetest.com/) was used to extensively test the responsiveness of Memoria. All screen sizes and viewports are now accounted for, including even extremely small widths like 240 px.
+[Website Responsive Test Online](https://websiteresponsivetest.com/) was used to extensively test the responsiveness of Memoria. All screen sizes and viewports are now accounted for, including even extremely small screen-widths like 240 px.
 
 ### Accessibility
 
