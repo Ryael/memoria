@@ -396,15 +396,51 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 
 ## Bugs
 
-1. Accessibility Error - Empty Label detected as part of the hamburger navigation menu. 
-    - Fix: Add <span> with text inside the label, and attach a CSS class to this span that uses "display: none;".
-    - This satisfies the error as the label is no longer empty, even if the content is never displayed.
+1.  **Intended Outcome:** Image not covering the entire screen -> new image crop: Done
+    * **Issue:**
+    * **Cause(s):**
+    * **Solution:** 
 
-2. Font Awesome Icons Displayed Incorrectly on Mobile - Icons seem to have been nudged slightly to the right and downwards.  This is a very minor visual bug. This issue only exists on mobile, specifically the Samsung Galaxy S10. I have been unable to recreate it with other mobile phones. This could have something to do with the OS of the S10. This display issue is the same with FA icons on all websites.
-    - Fix: None. I have researched the Internet extensively and there is no documentation of this issue or any similar issues.
-    - [Here](docs/screenshots/icon-bug.jpg) is a link to a screenshot of the issue. The icons are slightly off-center.
 
-Otherwise, all bugs were due to my own code and were usually fixed as soon as identified due to the fact that they originated from my own mistake. No pervasive bugs, aside from the accessibility error described above.
+2. Title text, Josefin Sans, spaced weirdly -> new font
+
+3. After using Return/Back button, all the previously displayed containers weren't hidden. Fix: Hiding the aforementioned containers when the back button is clicked.
+
+4. Easy Game Mode:  Meant to display 2 x 2 grid. It displays the grid correctly, but only one of the two pairs of emoji is being shown: https://i.imgur.com/qzmfRJk.png. Fix: replace emoji that wasn't rendering properly with emoji that is.
+
+5. The win state is being displayed (it shouldn't be). https://i.imgur.com/1u3E2Xn.png Fix: #memory-game had a #111 background that covered the win window. Removing that helped. + class selector instead of id selector. fixed completely.
+
+6. It's not properly centered alongside the timer.  fix: game stats contaienr was within the same container, causing it go beside the game. Fix: moving the container up a level/div & adding a script to the easygamemode script that allows the game-stats to be display from a none-display state.  typo in the constant selectors (no # for idselector)
+
+7. selecting the pair of correct emoji doesn't add the matched class to them. incorrect id/class: check bugfix commit.
+
+8. Game bug too many clicks or interactions (mobile), the event listener breaks and stops adding the flipped/matched class, making it unable to progress the game. Fix: add setTimeOut script.
+
+9. Game needs to be destroyed if the player wants to play on a different difficulty. / after finishing Fix: add location.reload() as a script to main-menu button/return. This was later set as the main functionality for the button.
+
+10. bug: scrollbar appears in game-area. fix: remove overflow:auto;
+
+11. Widescreen (ultra and above 2k), difficulty buttons too small. Fix: adjust media query for it.
+
+12. returnButton would display the menu briefly before the reload and the transitional effects that followed. Fix: Remove hide/show scripts.
+
+13. Entire title container is being used as returnButton, should only be the title. Fix: Move returnButton() to h1 instead.
+
+14. Spam click the same card, removes the class from only card. Only one shakes, the other doesnt. Fix: add delay to shake and flip.
+
+15. bug:  border-animation still displaying after flip/win on chrome. solution: add display none to the animated borders on flip.
+
+16. after the board was made responsive, emoji out of place: https://i.imgur.com/6kySFqh.png Media query to target size and position.
+
+17. Easy and normal broken after hard was made responsive: https://i.imgur.com/ifLs4qo.png Fix: media queries that target normal and easy modes. Fix: Adjust generateGame script with the inclusion of template literals to create 3 different boards (board-2, board-4, board-6) to better manipulate all with separate media queries.
+
+18. Animated border appears far of to the right side on the smallest media query. Fix: add overflow: hidden to #board-container to hide it.
+
+19. Game stats very small on newer gen phones: target via media query height and width and increase size. Esy fix.
+
+20. Flip counter was adding extra flisp to the total if you went too fast. fix: moving state.TotalFlips++ into the if statement where there has to be less than 2 total flips existing at any time.
+
+All bugs were due to my own code and were usually fixed as soon as identified due to the fact that they originated from my own mistake. No pervasive bugs were found.
 
 [Back to top &uarr;](#memoria)
 <hr>
