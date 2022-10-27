@@ -187,65 +187,51 @@ This is the prototype of the project, which changes over the course of project d
 
 ## Features
 
-### Header Title
+### Title
 
-![Navigation Bar](docs/features/navigation-bar.png)
+![Title](docs/features/title)
 
-Every single page on the website has this Navigation Bar at the very top. Due to the darker hero-images behind it, it is easy to see even if the bar itself is fully transparent. It is very simple and intuitive, focusing primarily on the function of allowing users to effectively navigate the website. The current page is highlighted in a white brighter than the rest of the links, which are displayed in a more grey colour. The Victory Fitness logo is a link that re-directs the user to the Home page. For smaller viewports, a hamburger menu appears with a black background, to make the links easier to see and interact with. This makes it fully responsive across all viewports.
+The title is the first things users will see when loading the page and it's geometric and retro look is here to make an impact. It's bold and assertive with its heavy font-weight and contrasting white on blue, and establishes the sort of design philosophy the rest of the website will adhere to. Upon mouse-over and focus, it plays [a subtle animation]() and converts the user's cursor to that of a pointer to indicate that it's an interactable element. Upon interaction it plays a script that reloads the page, effectively bringing the user to the main menu page. As such, no matter what part of the game the user has navigated to, they are always a simple click or tap away from going back to the main-menu. The name "Memoria" is simply a play on the word "memory" and has no other significant meaning aside from my liking of how it sounds and looks.
 
-![Hero Image - Home](docs/features/hero-image.jpeg)
+![Main-Menu](docs/features/main-menu)
 
-This hero image is the foundation upon which the entire website was built. It perfectly encapsulates the brand and vision of Victory Fitness in a single image. It is the very first thing new users see, and ultimately is the deciding factor in whether new users will continue to interact and explore or click off the website. First impressions hold a lot of power and that's why a good first impression is incredibly important. This is a crop of a full image that puts focus on the white letter "V" with the red logo V itself, which draws the user's attention towards the middle of the screen. This is further enhanced by the two coaches standing side by side, making sure the user's eyes do not stray from where they are visually directed. That brings the user to the Victory Fitness text logo, and subsequently, the address of the gym. With just one look, in a matter of seconds, the brand and reputation of the gym is established. This allows the user to form an impression, as well as understand where the gym is located. Further, a ‘Call to Action’ button is located under the address, which brings them to the Contact page, where they can avail of a 7-Day Free Trial.
+The main menu is fundamentally the navigation menu for the website and also doubles up as the landing page. Upon loading into the page, the user is greeted by a subtle fade-in transition, which is used throughout the entirety of Memoria. It keeps people who prefer reduced motion in mind and for that reason is quick and simple on the eyes. From the main menu, the user has the option to: a) start a game, b) view the leaderboards, or c) read the credits. All the [buttons have animations]() that play upon hover/focus. A smooth fade in, and smooth fade out. Upon interaction, a script runs that hides the main menu and displays the relevant area instead. For example, clicking on Start Game will hide the main menu and instead display the rules & difficulty section alongside the return button, which can bring the user back to the main menu.
 
-![Home Page - First Half](docs/features/home-part1.png)
+![Rules & Difficulty](docs/features/rules-difficulty)
 
-The first half of the Home page is a relatively simple section as it offers the user a bit more information about the gym, its ethos, and the services being offered. The full-width image is used to great effect in creating contrast between the white sections above and below. This also helps to break up the text-only content. A button is also present, which inverts its colour schemes upon interaction, giving the user a direct means of accessing the coaching page.
+The rules & difficulty section introduces the rules of the game and the overall objective of the game. It also provides three buttons that allow the user to select their difficulty of choice. The difficulty level itself is explained within the name, where easy is 2x2, normal is 4x4, and hard is 6x6. From a single glance it's made clear exactly what each button accomplishes. Their colour palettes are inverted due to the white background but [a similar animation]() plays upon hover/focus. Similar to main menu's script, upon interacting with any of the difficulities, the rules & difficulty section will be hidden and the game-board will be generated based on which difficulty was selected. 
 
-![Home Page - Second Half](docs/features/home-part2.png)
+![Memory Game - Easy](docs/features/game-easy)
 
-The second half of the Home page continues the brief introductory content of the first half, providing reasons as to why this gym is worth choosing. This was a direct request from Ronan Kiely, who believes in selling what makes your gym and services special. He dislikes transformation pictures as they tend to convey to the user that the only thing that matters is the end results. However, Ronan feels that there is so much more to it than that – for instance, the journey, the starting point, and the struggles. For this reason, there's no section showing transformations or successes. They may bring great business, but this brand prefers to focus on other aspects of their clients’ fitness journeys.
+Here is where the magic happens! This is the core functionality of the website that displays a 4 card grid upon being the Easy mode button being interacted with. The previous menu is hidden but the game itself is written such that the timer doesn't start counting until the user clicks on a card. There's nothing worse than games that have their timers start counting before the user is even able to take an action. The emoji are randomised each time using a shuffle method but they're always pulled from the same list of emoji. The emoji approach is quite novel as it allows the website to not have to load images everytime as every device has their own version of emojis built in. The game board also has a simple border animation that runs around the edges, drawing the user's focus towards the game board. Upon selecting a card, they flip upwards. Upon selecting two non-matching cards, they both briefly shake to provide the user with visual feedback that there hasn't been a match before flipping back down. However, upon selecting two matching cards, the cards remain flipped. Once all the cards have been flipped, the board itself flips. At this point two things occur simultaneously: 1) the user is presented with their amount of flips and the time elapsed in minutes and second, and 2) a confetti script is ran to give the user a reason to celebrate their victory. [Here is the example]() of the animated border and the win screen with the confetti. This is perfect for younger kids as it's flashy enough to keep them invested and to get a taste of what memory games are like before diving into the higher difficulities.
 
-Below that, there is another section with a full-width background image that helps to break up the text whilst simultaneously showcasing the gym. This section informs the user of a 7-day no commitment free trial, with a ‘Call to Action’ button below that brings them to the Contact page where they can learn more.
+![Memory Game - Normal](docs/features/game-normal.png)
+
+Normal mode is pretty much indentical to what is described up above except that the game-board generates a 16 card grid. This is pretty much the ideal difficulty to play as it strikes the sweet spot between easy and normal, and is commonly what one would see when looking at other memory card games. It doesn't take too long but still tests the user's short-term memory. It's a nice and relaxing difficulty mode. Both the easy and normal modes retain their square ratio across all resolutions.
+
+![Memory Game - Hard](docs/features/game-hard.png)
+
+Hard mode is very similar to the other two difficulities but the key difference is that it generates a 36 card grid. Playing on hard mode is significantly more time consuming and can take as much time as two full normal mode games, however, this game mode is here for those who are really trying to push their abilities and test their memory. Completing the game to have the board flip and seeing the confetti is extremely satisfying considering the time and effort needed to be put in, but I'd like to believe that it's all worth it! If the user is looking for a challenge, then they need look no further. Hard mode maintains a square ratio for most viewports except the very small and narrow ones, at which point it flex-wraps into a column. This is to make the best use possible of the vertical space, ensure that the cards themselves aren't too small, and prevent the game-board from overflowing entirely.
+
+![Return Button](docs/features/return-button.png)
+
+The return to the main menu button is present on every section but the main menu. Its purpose is to bring the user back to the main menu as it simply plays the same reload script as the title does, resetting the page to its default state: the main menu. It has the exact same animation as the other main menu buttons and is even styled the same to ensure consistency and familiarity. 
+
+![Leaderboards](docs/features/leaderboards.png)
+
+The leaderboards section is unfortunately not finished. It was intended to be a section where players could select one of the three corresponding difficulties to display the top 10 times for each. Due to no backend knowledge, the intention was to use a service like [Parse Platform](https://parseplatform.org/). However, I ended up running out of time and didn't want to rush and ultimately fail properply implenting this, hence this feature will be implemented in the future.
+
+![Credits](docs/features/credits.png)
+
+The credits section is very similar to both the rules & difficulty and leaderboards sections, both in how it displays and hides the other content and how it looks. Here the user can find my details and information on how to best contact me in the event of them finding a bug. It also attributes the images used from FreePik.
 
 ![Footer](docs/features/footer.png)
 
-Like the Navigation Bar, the Footer is present across all pages. It is fully responsive across all viewports and houses three icons that provide links to Victory Fitness's social media accounts and email. These buttons change colour upon interaction, and the links all open in a new page so the user isn't forced to leave the website and can continue exploring. Below these icons is a line of text that describes Victory Fitness as the copyright holder for this website.
-
-![Hero Image - Other](docs/features/hero-small-image.png)
-
-As mentioned earlier, the About, Coaching, Gallery, and Contact pages utilise a much shorter hero image. This is to bring the user to the page content quickly and to make navigation more fluid, as having to navigate a full-height viewport image when loading each page can be cumbersome. This section also serves as a darker backdrop for the transparent navigation bar and houses location title text within, informing the user of the section.
-
-![About](docs/features/about.png)
-
-The About page provides the user with a detailed history of Victory Fitness, a more in-depth dive into their ethos as a gym and coaching service, which is supported by a photograph of the two coaches in the gym. The text content here uses the same amount of width as the image, providing a very fluid reading experience.
-
-![Coaching](docs/features/coaching.png)
-
-The Coaching page delves into greater depth regarding the coaching services offered. It's broken up into three sections: 1) Premium Coaching, 2) Semi-private Coaching, and 3) Online Coaching. Each of these sections has a photograph accompanying them. This helps to break up the text and prevents information overload. Consistent with the About page, the width of the text content never exceeds the width used by the images.
-
-![Gallery](docs/features/gallery.png)
-
-The Gallery page is dedicated to showcasing the gym and all of the available equipment and facilities, allowing the users to see the gym for themselves through the professional photographs. The images are displayed in two columns and are fully responsive across all viewports, shrinking down to one column as the viewport grows narrower. 
-
-![Contact - Form](docs/features/contact.png)
-
-The Contact page allows users to get in touch with Victory Fitness directly via filling out the online form. Users are also educated about the free trial and can avail of it through the form. The form has both labels and placeholder text in place, ensuring both accessibility and clarity. A line of text below the form-fields informs the user that all fields are required to be filled for the form to be successfully submitted. The details submitted are not stored, as the user is simply redirected to the Thank You page.
-
-![Contact - Map](docs/features/google-map.png)
-
-The Google Maps section of the Contact page informs users of where the gym is located, should they want to see it first-hand. Photographs are beneficial but seeing the location in person is preferred. A face-to-face conversation with one of the coaches is also a possibility, which tend to be a bit more personal, warmer, and more comfortable than online correspondence. The embed for this maps section is provided by Google itself. Unfortunately, the Google Maps section didn't make it into the final build. It was instead replaced by a static image of the location due to major performance issues.
-
-![Thank You](docs/features/thank-you.jpeg)
-
-After successful completion of the form on the Contact page, the user is redirected to this page. This contains a simple ‘Thank You’ message that lets them know their message was received successfully and someone will be in touch with them shortly. Any details submitted are not stored. This page employs the same sort of approach as the Home page, using a full-screen hero image with text overlayed on top of it. It differs in that the opacity is increased to 50% to bring the viewer's attention to the message.
-
-![Error 404](docs/features/404.jpeg)
-
-Should the user navigate to a page that doesn't exist, an HTTP 404 error will occur. Upon doing so, the 404 Page will be loaded, informing the user that this page does not exist. All the usual means of navigation are present in the Navigation Bar and the Footer, but with the addition of a button to take them home. This is located under the error text. This page employs the same approach as both the Home and Thank You pages, using a full-screen hero image with text overlayed on top of it.
+The footer of Memoria displays three social icons which are created via Font Awesome. These are links to my GitHub, LinkedIn, and E-mail. No more were added as the intention was to keep this strictly professional. The footer is present in all sections, providing the user with easy and direct methods to contact me to report bugs or any other reason. 
 
 ![Favicon](docs/features/favicon.png)
 
-As with all websites, this one also has a favicon that is displayed beside the title of the page. A user can discern what pages they have opened or are currently viewing by simply glancing at the tabs and titles.
+As with all websites, this one also has a favicon that is displayed beside the title of the page. A user can quickly and easily discern if they have Memoria open amongst many different tabs by looking for the capital "M" icon, which is rendered in the same font as the title text, Jost.
 
 [Back to top &uarr;](#memoria)
 <hr>
