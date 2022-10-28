@@ -1,8 +1,8 @@
 # Memoria
 
-![Stars - Badge](https://badgen.net/github/stars/Ryael/memoria) ![Watchers - Badge](https://badgen.net/github/watchers/Ryael/memoria) ![Issues - Badge](https://badgen.net/github/issues/Ryael/memoria)
-
 ### A website for a memory-card game, allowing users to strengthen their memorisation.
+
+![Stars - Badge](https://badgen.net/github/stars/Ryael/memoria) ![Watchers - Badge](https://badgen.net/github/watchers/Ryael/memoria) ![Issues - Badge](https://badgen.net/github/issues/Ryael/memoria)
 
 [Memoria - Live Website](https://ryael.github.io/memoria//)
 
