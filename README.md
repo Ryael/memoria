@@ -4,6 +4,8 @@
 
 [Memoria - Live Website](https://ryael.github.io/memoria//)
 
+![Memoria - Animation](docs/screenshots/memoria-animation-1.gif)
+
 Memory is a fundamental part of our lives. Without memories, our perception of time would be distorted and lose most of its meaning. It's our ability to recall recent experiences, knowledge, and emotions, paving the way for those short term memories to become long term memories. That doesn't, however, mean that this improving our memory needs to be a chore! In fact, it can be a lot of fun.
 
 Growing up, I was always fond of browser based games and spent many a day on the computer playing all sorts of mini-games on the family computer. Out of those mini-games, my personal favourite was memory card games where you're presented with a set amount of images and upon interaction with them, they will flip up and reveal what sort of design is hidden underneath. Your objective is to memorise which designs are where and match up pairs, until the entire board is matched. It's quite simple in theory but it can also put your short-term memory to the test, and it definitely is fun to see how well you can push yourself to achieve the fastest time possible. Without cheating, of course! Nobody likes cheaters and I believe that you aren't a cheater!
