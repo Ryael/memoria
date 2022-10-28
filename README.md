@@ -559,3 +559,6 @@ It can also be forked via the following steps:
 - My family and friends, who have been incredibly supportive and have been instrumental in keeping me motivated throughout this project. Thank you all so much! All of you who helped proofread, test, provide feedback on the UI, code, and etc... I couldn't have done it without you all!
 - The Code Institute community on Slack - Easy, straightforward, and always willing to help and provide advice.
 - Love Running - Ultimately, it wasn't until we went through this project that I realised that this was something I could do. A lot of the website is loosely based on it, too.
+
+[Back to top &uarr;](#memoria)
+<hr>
