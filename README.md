@@ -1,12 +1,12 @@
 # Memoria
 
+![Stars - Badge](https://badgen.net/github/stars/Ryael/memoria) ![Watchers - Badge](https://badgen.net/github/watchers/Ryael/memoria) ![Issues - Badge](https://badgen.net/github/issues/Ryael/memoria)
+
 ### A website for a memory-card game, allowing users to strengthen their memorisation.
 
 [Memoria - Live Website](https://ryael.github.io/memoria//)
 
 ![Memoria - Animation](docs/screenshots/memoria-animation-1.gif)
-
-![Stars - Badge](https://badgen.net/github/stars/Ryael/memoria) ![Watchers - Badge](https://badgen.net/github/watchers/Ryael/memoria) ![Issues - Badge](https://badgen.net/github/issues/Ryael/memoria)
 
 Memory is a fundamental part of our lives. Without memories, our perception of time would be distorted and lose most of its meaning. It's our ability to recall recent experiences, knowledge, and emotions, paving the way for those short term memories to become long term memories. That doesn't, however, mean that this improving our memory needs to be a chore! In fact, it can be a lot of fun.
 
