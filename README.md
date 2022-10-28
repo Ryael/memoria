@@ -16,13 +16,15 @@ Growing up, I was always fond of browser based games and spent many a day on the
 
 This is my second milestone project as part of Code Institute's Diploma in <strong>Software Development (E-commerce Applications)</strong>.
 
-I decided to create an interactive memory-card game using JavaScript that used emoji icons as its hidden images. The key term I'd use to describe the pool of emoji chosen is "traditional role-playing game concepts". This includes: bow-and-arrow, bomb, fire, water, lightning, ribbon, puzzle-piece, anchor, and die. The idea here was to evoke a sense of traditional fantasy concepts that feels familiar, straightforward, and cozy.
+I decided to create an interactive memory-card game using JavaScript that used emoji icons as its hidden images. The key term I'd use to describe the pool of emoji chosen is "traditional role-playing game concepts". This includes: bow-and-arrow, bomb, fire, water, lightning, ribbon, puzzle-piece, anchor, and die. The idea here was to evoke a sense of traditional fantasy concepts that feel familiar, straightforward, and cozy.
 
-This website is a single-page-application (SPA) that has a consistent design throughout all its content and is both simple and pleasing to navigate. Content is either toggled between displayed and hidden as necessary, or is generated and destroyed via the use of JavaScript. All content present adheres to my themeatic vision and only contains what is necessary. My vision for this website was for it to feel and act like an application, which is why transitions were added to make the process of navigating the menus as smooth and pleasant as possible. 
+This website is a single-page-application (SPA) that has a consistent design throughout all its content and is both simple and pleasing to navigate. Content is either toggled between displayed and hidden as necessary, or is generated and destroyed via the use of JavaScript. All content present adheres to my themeatic vision and only contains what is necessary. My vision for this website was for it to feel and act like an application, which is why transitions were added to make the process of navigating the menus as smooth and pleasant as possible. Additionally, user select is disabled and this is in order to create that application-like feel where you can't highlight text, which can detract from the user's experience.
 
 The content includes the memory game itself, a Main Menu, a Rules & Difficulty menu, a Leaderboards section, a Credits section, and links to my social media in the footer. The memory game is available on three different difficulities, the Leaderboard section shows the top ten players for each difficulty, and the Credits section contains instructions on how to report bugs and attribution links for the images used.
 
 The website is fully responsive at all screen sizes, adapting well to smaller resolutions for tablets, phones, and even landscape view on the aforementioned. It also works as intended on all popular web browsers. 
+
+
 
 ## Table of Contents
 
@@ -40,7 +42,9 @@ The website is fully responsive at all screen sizes, adapting well to smaller re
 5. [Validation](#validation)
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
+    - [JavaScript Validation](#javascript-validation)
 6. [Testing](#testing)
+    - [Responsiveness](#responsiveness)
     - [Accessibility](#accessibility)
     - [Performance](#performance)
     - [Device Testing](#device-testing)
@@ -132,7 +136,7 @@ The aim of this project is two-fold:
 
 ### Design Philosophy
 
-The design of this website began with a simple vision: I wanted to craft a clean and simple SPA with that was based on the old predominately [blue PS3 home theme](docs/screenshots/ps-theme.webp). With this as my core inspiration, the overall design of the website began to take form in my mind's eye. My idea was to find and use an image as the background that had a smooth and subtle light-blue to dark-blue gradient. After much searching I found [this lovely specimen on Freepik](https://www.freepik.com/free-vector/gradient-particles-background_4298560.htm#query=gradient%20particle%20background&position=0&from_view=search&track=sph). It has that exact colour scheme and wave-like particles that I had in mind, after some manipulation I arrived at the current [background image](assets/images/background/main.png). This, combined with some simple and sleek visual menu elements is what makes the foundation of this project. I had hoped for the end result to be a combination of flashy and clean, which is a difficult balance to achieve but I think I was mostly successful and quite happy with the visual end result overall.
+The design of this website began with a simple vision: I wanted to craft a clean and simple SPA with that was based on the old predominately [blue PS3 home theme](docs/screenshots/ps-theme.webp). With this as my core inspiration, the overall design of the website began to take form in my mind's eye. My idea was to find and use an image as the background that had a smooth and subtle light-blue to dark-blue gradient. After much searching I found [this lovely specimen on Freepik](https://www.freepik.com/free-vector/gradient-particles-background_4298560.htm#query=gradient%20particle%20background&position=0&from_view=search&track=sph). It has that exact colour scheme and wave-like particles that I had in mind, and after some manipulation I arrived at the current [background image](assets/images/background/main.png). This, combined with some simple and sleek visual menu elements is what makes the foundation of this project. I had hoped for the end result to be a combination of flashy and clean, which is a difficult balance to achieve but I think I was mostly successful and I am quite happy with the visual end result overall.
 
 All sections of the website follow a similar structure with the "Memoria" title at the top of the page, the footer with the social icons at the bottom, and all interactive elements have similar hover/focus effects wherein they fade-in on mouse-over/interaction and fade-out gently on mouse-leave. This is done to establish a consistency throughout the website such that users become familiar with how interactive elements respond. The Rules & Difficulty, Leaderboards, and Credits section have a white with a slight hexagonal pattern as their main element as they contain text elements. Otherwise, the game portions of the website all possess complementary elements to the rest of the site, creating a sense of flow familiarity for new users.
 
@@ -213,7 +217,7 @@ The Rules & Difficulty section introduces the rules of the game and the overall 
 
 ![Memory Game - Easy](docs/features/game-easy.png)
 
-Here is where the magic happens! This is the core functionality of the website that displays a 4-card grid upon being the Easy mode button being interacted with. The previous menu is hidden but the game itself is written such that the timer doesn't start counting until the user clicks on a card. There's nothing worse than games that have their timers begin counting before the user is even able to take an action. The emoji are randomised each time using a shuffle method but they are always pulled from the same list of emoji. The emoji approach is quite novel as it allows the website to not have to load images everytime as every device has their own version of emojis built in. 
+Here is where the magic happens! This is the core functionality of the website that displays a 4-card grid upon the Easy mode button being interacted with. The previous menu is hidden but the game itself is written such that the timer doesn't start counting until the user clicks on a card. There's nothing worse than games that have their timers begin counting before the user is even able to take an action. The emoji are randomised each time using a shuffle method but they are always pulled from the same list of emoji. The emoji approach is quite novel as it allows the website to not have to load images everytime as every device has their own version of emojis built in. 
 
 The game board also has a simple border animation that runs around the edges, drawing the user's focus towards the game board. Upon selecting a card, they flip upwards. Upon selecting two non-matching cards, they both briefly shake to provide the user with visual feedback that there hasn't been a match before flipping back down. However, upon selecting two matching cards, the cards remain flipped. Once all the cards have been flipped, the board itself flips. At this point two things occur simultaneously: 1) the user is presented with their amount of flips and the time elapsed in minutes and second, and 2) a confetti script is run to give the user a reason to celebrate their victory. [Here is the example](docs/features/border-animation.gif) of the animated border and the win screen with the confetti. This is perfect for younger kids as it's flashy enough to keep them invested and to get a taste of what memory games are like before diving into the higher difficulties.
 
@@ -438,39 +442,34 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 7.  **Intended Outcome:** Upon interacting with the Back/Return buttons, elements on the page fade in normally.
     * **Issue:** Interacting with the Back/Return button would display the Main Menu briefly before the reload and the transitional effects that follow.
     * **Cause:** The page reload would play the transitional effects once and then the show/hide scripts would play the effects again.
-    * **Solution:** Remove hide/show scripts. [Commit](https://github.com/Ryael/memoria/commit/6340e47c37d8cdf294e879975b10f71dc296abfb).
+    * **Solution:** Remove hide/show scripts in favour of location.reload script. [Commit](https://github.com/Ryael/memoria/commit/6340e47c37d8cdf294e879975b10f71dc296abfb).
 
 8.  **Intended Outcome:** Interacting with the H1 title allows the user to return to the Main Menu.
     * **Issue:** Interacting with the entire section that houses the H1 title causes the user to return to the Main Menu.
     * **Cause:** The function returnButton() was attached to the div that houses the H1 title.
     * **Solution:** Move returnButton() to the H1 instead. [Commit](https://github.com/Ryael/memoria/commit/faab9a6d22a7dbc62ea460199e791247234c1c07).
 
-9.  **Intended Outcome:** Interacting with the H1 title allows the user to return to the Main Menu.
-    * **Issue:** Interacting with the entire section that houses the H1 title causes the user to return to the Main Menu.
-    * **Cause:** The function returnButton() was attached to the div that houses the H1 title.
-    * **Solution:** Move returnButton() to the H1 instead. [Commit](https://github.com/Ryael/memoria/commit/faab9a6d22a7dbc62ea460199e791247234c1c07).
-
-10. **Intended Outcome:** Memory game works as intended with the "matched" and "shakes" class being added to matching cards when two matched cards are flipped.
+9. **Intended Outcome:** Memory game works as intended with the "matched" and "shakes" class being added to matching cards when two matched cards are flipped.
     * **Issue:** Too many rapid inputs break the game.
-    * **Cause:** The event listener breaks and stops adding the "flipped" "matched" classes making it impossible to progress the game.
+    * **Cause:** The event listener breaks and stops adding the "flipped" and "matched" classes making it impossible to progress the game.
     * **Solution:** Add timeOutRef which adds a delay to shake and flip. [Commit](https://github.com/Ryael/memoria/commit/76eeaa0eb1cf5c14d4e58206d43badc00b12897f).
 
-11. **Intended Outcome:** Border animation stops playing after the game board is flipped and the win state is displayed.
+10. **Intended Outcome:** Border animation stops playing after the game board is flipped and the win state is displayed.
     * **Issue:** [Border animation continues playing on the flipped game board when the win state is displayed](docs/bugs/bug-11.png). This was only present on Google Chrome.
     * **Cause:** Google Chrome handles this animation differently from other browsers and the animation persists despite the element technically being out of view.
     * **Solution:** Add "display: none;" to the animated borders (spans) on flip. [Commit](https://github.com/Ryael/memoria/commit/fa7763928db3b5d77a2695a6389867115fde44fa).
 
-12. **Intended Outcome:** All difficulty levels of the game should be responsive.
-    * **Issue:** [After hard mode was made responsive, easy and normal modes broke.](docs/bugs/bug-12.png).
+11. **Intended Outcome:** All difficulty levels of the game should be responsive.
+    * **Issue:** [After hard mode was made responsive, easy and normal modes broke](docs/bugs/bug-12.png).
     * **Cause:** Easy, normal, and hard all share one ID selector, which was changed via media query to make the game responsive on hard.
     * **Solution:** Adjust generateGame script with the inclusion of template literals to create 3 different boards (board-2, board-4, board-6) to better manipulate all with separate media queries. [Commit](https://github.com/Ryael/memoria/commit/9a7121533e56761c93745c4e5da2b222b11a912b).
 
-13. **Intended Outcome:** Animated border around the game area should remain around the game area.
+12. **Intended Outcome:** Animated border around the game area should remain around the game area.
     * **Issue:** Animated border appears far off to the right side on the smallest media query.
     * **Cause:** The left and right part of animated border are displaced due to the smallest media query causing the hard game board to vertically fill up the screen.
     * **Solution:** Add "overflow: hidden;" to #board-container to hide it. [Commit](https://github.com/Ryael/memoria/commit/f8894fa2842cb0066b707c647ff59ed9d6bde6e1). 
 
-14. **Intended Outcome:** Flip counter only counts the flips made on the game board.
+13. **Intended Outcome:** Flip counter only counts the flips made on the game board.
     * **Issue:** Flip counter adds extra flips if the user rapidly interacted with the game board, even if a card was already mid-flip.
     * **Cause:** There was no if statement to ensure there are less than two total flips existing at any time.
     * **Solution:** Moving state.TotalFlips++ into the if statement where there has to be less than 2 total flips existing at any time. [Commit](https://github.com/Ryael/memoria/commit/553351075921cacf2eb57d01241111674ef56b47).  
@@ -484,7 +483,7 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 
 2. Restart Button - This would allow users to restart a game without having to return to the Main Menu, effectively saving them a lot of extra clicks. 
 
-3. UI Update - I'd like to update the UI, namely the settings menus such that they feel even more visually and themetically fitting.
+3. UI Update - I'd like to update the UI, namely the settings menus such that they feel even more visually and thematically fitting.
 
 4. Extra Difficulties - For people that would really like to push their memorisation to the max. Namely 8 x 8 card grids and 10 x 10 card grids.
 
@@ -547,6 +546,7 @@ It can also be forked via the following steps:
 - [Canvas Confetti](https://www.kirilv.com/canvas-confetti/) - Library of confetti scripts, which were used.
 - [FreePik](https://www.freepik.com/) - Used to find background images.
 - [Badgen](https://badgen.net/) - Used to generate live badge icons.
+- [Website Responsive Test Online](https://websiteresponsivetest.com/) - Used to test the responsiveness of the website.
 
 ## Credits
 
