@@ -454,7 +454,7 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 11. **Intended Outcome:** Border animation stops playing after the game board is flipped and the win state is displayed.
     * **Issue:** [Border animation continues playing on the flipped game board when the win state is displayed](docs/bugs/bug-11.png). This was only present on Google Chrome.
     * **Cause:** Google Chrome handles this animation differently from other browsers and the animation persists despite the element technically being out of view.
-    * **Solution:** Add "display: none;" to the animated borders (spans) on flip. [Commit](https://github.com/Ryael/memoria/commit/f8894fa2842cb0066b707c647ff59ed9d6bde6e1).
+    * **Solution:** Add "display: none;" to the animated borders (spans) on flip. [Commit](https://github.com/Ryael/memoria/commit/fa7763928db3b5d77a2695a6389867115fde44fa).
 
 12. **Intended Outcome:** All difficulty levels of the game should be responsive.
     * **Issue:** [After hard mode was made responsive, easy and normal modes broke.](docs/bugs/bug-12.png).
@@ -476,23 +476,23 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 
 ## Future Updates
 
-1. Sticky Navigation Bar - This was part of my vision for the website but I was unable to find a solution to this without relying on JavaScript. My vision is as follows: I wanted the Navigation Bar to be transparent when it was resting above the Hero Images, but once it left those regions, it would become an opaque black colour as it follows the user down the page.
+1. Leaderboards - Unfortunately this was part of the original scope, it proved to be too difficult to incorporate in time. The idea is top display the top ten users for every difficulty. After winning a round, a the win state would allow the user to input their name and assign it their clear time, which would then be ranked against other players who input their name.
 
-2. Fullscreen Hamburger Menu - This is very difficult to accomplish without JavaScript and I found myself struggling with the current hamburger menu as is. My vision for this was to have the entire screen to be covered in white with links in black structured in a column appearing the middle.
+2. Restart Button - This would allow users to restart a game without having to return to the Main Menu, effectively saving them a lot of extra clicks. 
 
-3. Coaching Pricing Plan Comparisons - This was part of the plan for the website but I found myself not having the time necessary to bring this idea to light. Hence, I plan to work on it in the future and put it at the top of Coaching page, so users are available to compare plans with just a single glance.
+3. UI Update - I'd like to update the UI, namely the settings menus such that they feel even more visually and themetically fitting.
 
-4. Google Map - This was originally a part of the website but it caused major performance issues and hence was removed and instead replaced by an image.
+4. Extra Difficulties - For people that would really like to push their memorisation to the max. Namely 8 x 8 card grids and 10 x 10 card grids.
 
-5. Testimonials - This was originally a part of the plan for this project but unfortunately, Google Reviews aren't too easy to embed without having to pay for the service. The alternatives are well over my head but it's definitely something I'd like to look into in the future.
+5. More Emoji - Add more emoji that fit the criteria of traditional fantasy role playing game concepts. This would allow for an even wider pool of emoji to be pulled from, creating a much more varied pool.
 
-I'd like to revisit this project in the future after having learned more about JavaScript, especially if Ronan Kiely of Victory Fitness would be interested in using this website.
+I'd like to revisit this project in the future after having learned more about JavaScript in order to push this application to become as good as it can possibly be.
 
 ## Deployment
 
 This project was deployed to GitHub Pages using the following steps:
 
-1. Log in to GitHub and locate the repository: [Victory Fitness](https://github.com/Ryael/victory-fitness).
+1. Log in to GitHub and locate the repository: [Memoria](https://github.com/Ryael/memoria).
 2. Locate the Settings button, and then click it.
 3. Scroll down to the Pages section, which is found under "Code and automation".
 4. Under "Source", click the dropdown called "None" and select "Master Branch".
@@ -515,6 +515,7 @@ It can also be forked via the following steps:
 
 - HTML 5
 - CSS 3
+- JavaScript
 
 ### Frameworks & Tools
 
@@ -523,6 +524,7 @@ It can also be forked via the following steps:
 - [Balsamiq](https://balsamiq.com) - Used to create wireframes.
 - [Obsidian](https://obsidian.md/) - Used to take notes and create to-do lists.
 - [Adope Photoshop](https://www.adobe.com/products/photoshop.html) - Used to crop, resize, and edit images.
+- [Adope Illustrator](https://www.adobe.com/products/illustrator.html) - Used to crop, resize, and edit images.
 - [W3C HTML Validator](https://validator.w3.org/) - Used to validate HTML code.
 - [W3C JigSaw Validator](https://jigsaw.w3.org/css-validator/) - Used to Validate CSS code.
 - [WAVE WebAIM](https://wave.webaim.org/) - Used to check accessibility.
@@ -536,12 +538,12 @@ It can also be forked via the following steps:
 - [Favicon.io](https://favicon.io/) - Used to create a favicon out of a .PNG.
 - [ShareX](https://getsharex.com/) - Used to take screenshots.
 - [Color-Name](https://www.color-name.com/) - Used to find complementary shades of colours used.
-- [CoralNodes](https://www.coralnodes.com/best-google-font-combinations/) - Used to find Google Font combinations.
+- [Elementor](https://elementor.com/blog/font-pairing/) - Used to find Google Font combinations.
 
 ## Credits
 
 1. [Victory Fitness](https://victoryfitnesstraining.com/?ad=ie) - This project was only possible due to Ronan Kiely letting me base this website on his business. He helped provide me with information, text, photographs, logos, advice, and direxction. All of the content belongs to Victory Fitness.
-2. [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) - This project was first based off the repository created by Code Institute. This template made it very easy to work with in GitPod.
+1. [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) - This project was first based off the repository created by Code Institute. This template made it very easy to work with in GitPod.
 3. [Alvaro Trigo](https://codepen.io/alvarotrigo/pen/MWEJEWG) - This codepen is what my own hamburger menu was based on due to me running into so many issues with trying to do it alone. Their code helped me understand how animations function with smaller icons in CSS, as well as how to use media queries to manipulate the navigation bar. The code has partially modified but otherwise the idea is taken from this codepen.
 4. [Stack Overflow](https://stackoverflow.com/) & [W3Schools](https://www.w3schools.com/) - These two website were instrumental in me furthering my understanding of HTML and CSS.
 5. [Code Institute](https://codeinstitute.net/ie/) - Last but certainly not least, this project wouldn't have been possible without the course and material presented there.
