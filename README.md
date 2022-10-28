@@ -541,6 +541,7 @@ It can also be forked via the following steps:
 - [Color-Name](https://www.color-name.com/) - Used to find complementary shades of colours used.
 - [Elementor](https://elementor.com/blog/font-pairing/) - Used to find Google Font combinations.
 - [Canvas Confetti](https://www.kirilv.com/canvas-confetti/) - Library of confetti scripts, which were used.
+- [FreePik](https://www.freepik.com/) - Used to find background images.
 
 ## Credits
 
