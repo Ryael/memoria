@@ -524,9 +524,10 @@ It can also be forked via the following steps:
 - [Balsamiq](https://balsamiq.com) - Used to create wireframes.
 - [Obsidian](https://obsidian.md/) - Used to take notes and create to-do lists.
 - [Adope Photoshop](https://www.adobe.com/products/photoshop.html) - Used to crop, resize, and edit images.
-- [Adope Illustrator](https://www.adobe.com/products/illustrator.html) - Used to crop, resize, and edit images.
+- [Adope Illustrator](https://www.adobe.com/products/illustrator.html) - Used to manipulate background images from FreePik.
 - [W3C HTML Validator](https://validator.w3.org/) - Used to validate HTML code.
 - [W3C JigSaw Validator](https://jigsaw.w3.org/css-validator/) - Used to Validate CSS code.
+- [JSHint](https://jshint.com/) - Used to validate JS code.
 - [WAVE WebAIM](https://wave.webaim.org/) - Used to check accessibility.
 - [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) - Used to check performance, SEO, accessibility, and best practices.
 - [Mozilla Firefox Developer Tools](https://www.mozilla.org/en-US/firefox/new/) - Used to check and test the project.
@@ -535,23 +536,25 @@ It can also be forked via the following steps:
 - [TinyPNG](https://tinypng.com/) - Used to compress images.
 - [Google Fonts](https://fonts.google.com/) - Fonts were imported from here.
 - [Font Awesome](https://fontawesome.com/) - Icons are used from here.
-- [Favicon.io](https://favicon.io/) - Used to create a favicon out of a .PNG.
-- [ShareX](https://getsharex.com/) - Used to take screenshots.
+- [Favicon.io](https://favicon.io/) - Used to create a favicon.
+- [ShareX](https://getsharex.com/) - Used to take screenshots and gifs.
 - [Color-Name](https://www.color-name.com/) - Used to find complementary shades of colours used.
 - [Elementor](https://elementor.com/blog/font-pairing/) - Used to find Google Font combinations.
+- [Canvas Confetti](https://www.kirilv.com/canvas-confetti/) - Library of confetti scripts, which were used.
 
 ## Credits
 
-1. [Victory Fitness](https://victoryfitnesstraining.com/?ad=ie) - This project was only possible due to Ronan Kiely letting me base this website on his business. He helped provide me with information, text, photographs, logos, advice, and direxction. All of the content belongs to Victory Fitness.
+1. [WebTips - Memory Game Tutorial](https://www.webtips.dev/memory-game-in-javascript) - The code presented and explained here was what my project was based on. I heavily modified it and commented every single step of the way to demonstrate my understanding of the complete functionality and concepts employed throughout. It served as a frame of reference with regard to how certain aspects of the memory game worked and gaps with bridging this approach to my own vision were filled by my own solutions and ideas.
 1. [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) - This project was first based off the repository created by Code Institute. This template made it very easy to work with in GitPod.
-3. [Alvaro Trigo](https://codepen.io/alvarotrigo/pen/MWEJEWG) - This codepen is what my own hamburger menu was based on due to me running into so many issues with trying to do it alone. Their code helped me understand how animations function with smaller icons in CSS, as well as how to use media queries to manipulate the navigation bar. The code has partially modified but otherwise the idea is taken from this codepen.
-4. [Stack Overflow](https://stackoverflow.com/) & [W3Schools](https://www.w3schools.com/) - These two website were instrumental in me furthering my understanding of HTML and CSS.
+3. [Codepen - Swarup Kumar Kuila](https://codepen.io/uiswarup/pen/RBByzW) - This codepen is where the idea for the animated border came from and helped me understand the use of nth-child elements in creating a uniquely animated four part border such as this.
+4. [Stack Overflow](https://stackoverflow.com/) & [W3Schools](https://www.w3schools.com/) - These two website were instrumental in me furthering my understanding of HTML 
 5. [Code Institute](https://codeinstitute.net/ie/) - Last but certainly not least, this project wouldn't have been possible without the course and material presented there.
 
 
 ## Acknowledgements 
 
-- Akshat Garg - Akshat is an absolutely amazing mentor that's friendly, knowledgeable, and helpful. He's been super helpful in providing me with suggestions and advice.
+- [Akshat Garg](https://github.com/akshatnitd) - Akshat is an absolutely amazing mentor that's friendly, knowledgeable, and helpful. He's been super helpful in providing me with suggestions and advice.
+- [Simon Waldron](https://github.com/saikez) - One of my closest friends and the very person who introduced me to the world of programming! He has been supporting me throughout my reskilling journey and is an absolute wonder of a human being. He has taken time out of his day again to help break down the more complicated JavaScript concepts and I honestly wouldn't have been able to complete this project to a satisfactory level without him.
 - My family and friends, who have been incredibly supportive and have been instrumental in keeping me motivated throughout this project. Thank you all so much! All of you who helped proofread, test, provide feedback on the UI, code, and etc... I couldn't have done it without you all!
 - The Code Institute community on Slack - Easy, straightforward, and always willing to help and provide advice.
 - Love Running - Ultimately, it wasn't until we went through this project that I realised that this was something I could do. A lot of the website is loosely based on it, too.
