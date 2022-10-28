@@ -426,38 +426,50 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
     * **Cause:** The memory game had a white colour covering it, which is what made the text disappear. Additionally, "win" had a class selector instead of a id selector.
     * **Solution:** Remove the white background and update "win" from a class selector to a id selector. [Commit](https://github.com/Ryael/memoria/commit/a3dd7769ce25eeaac6482b322984772099935f10).
 
+6.  **Intended Outcome:** Game controls is displayed above the game area.
+    * **Issue:** Game controls is not visible at all.
+    * **Cause:** The game controls section was being placed beside the game area. It also wasn't being hidden upon the user navigating away from the game.
+    * **Solution:** Moving the container up a level/div and adding a script to the easyGameMode script that allows the game stats to be displayed from a none-display state. Fix the typo in the constant selectors (no # for idSelector) [Commit](https://github.com/Ryael/memoria/commit/b8693edf9777f0abc5d7eeda75e6975fc3ab1829).
 
-6. It's not properly centered alongside the timer.  fix: game stats contaienr was within the same container, causing it go beside the game. Fix: moving the container up a level/div & adding a script to the easygamemode script that allows the game-stats to be display from a none-display state.  typo in the constant selectors (no # for idselector)
+7.  **Intended Outcome:** Upon interacting with the Back/Return buttons, elements on the page fade in normally.
+    * **Issue:** Interacting with the Back/Return button would display the Main Menu briefly before the reload and the transitional effects that follow.
+    * **Cause:** The page reload would play the transitional effects once and then the show/hide scripts would play the effects again.
+    * **Solution:** Remove hide/show scripts. [Commit](https://github.com/Ryael/memoria/commit/6340e47c37d8cdf294e879975b10f71dc296abfb).
 
-7. selecting the pair of correct emoji doesn't add the matched class to them. incorrect id/class: check bugfix commit.
+8.  **Intended Outcome:** Interacting with the H1 title allows the user to return to the Main Menu.
+    * **Issue:** Interacting with the entire section that houses the H1 title causes the user to return to the Main Menu.
+    * **Cause:** The function returnButton() was attached to the div that houses the H1 title.
+    * **Solution:** Move returnButton() to the H1 instead. [Commit](https://github.com/Ryael/memoria/commit/faab9a6d22a7dbc62ea460199e791247234c1c07).
 
-8. Game bug too many clicks or interactions (mobile), the event listener breaks and stops adding the flipped/matched class, making it unable to progress the game. Fix: add setTimeOut script.
+9.  **Intended Outcome:** Interacting with the H1 title allows the user to return to the Main Menu.
+    * **Issue:** Interacting with the entire section that houses the H1 title causes the user to return to the Main Menu.
+    * **Cause:** The function returnButton() was attached to the div that houses the H1 title.
+    * **Solution:** Move returnButton() to the H1 instead. [Commit](https://github.com/Ryael/memoria/commit/faab9a6d22a7dbc62ea460199e791247234c1c07).
 
-9. Game needs to be destroyed if the player wants to play on a different difficulty. / after finishing Fix: add location.reload() as a script to main-menu button/return. This was later set as the main functionality for the button.
+10. **Intended Outcome:** Memory game works as intended with the "matched" and "shakes" class being added to matching cards when two matched cards are flipped.
+    * **Issue:** Too many rapid inputs break the game.
+    * **Cause:** The event listener breaks and stops adding the "flipped" "matched" classes making it impossible to progress the game.
+    * **Solution:** Add timeOutRef which adds a delay to shake and flip. [Commit](https://github.com/Ryael/memoria/commit/76eeaa0eb1cf5c14d4e58206d43badc00b12897f).
 
-10. bug: scrollbar appears in game-area. fix: remove overflow:auto;
+11. **Intended Outcome:** Border animation stops playing after the game board is flipped and the win state is displayed.
+    * **Issue:** [Border animation continues playing on the flipped game board when the win state is displayed](docs/bugs/bug-11.png). This was only present on Google Chrome.
+    * **Cause:** Google Chrome handles this animation differently from other browsers and the animation persists despite the element technically being out of view.
+    * **Solution:** Add "display: none;" to the animated borders (spans) on flip. [Commit](https://github.com/Ryael/memoria/commit/f8894fa2842cb0066b707c647ff59ed9d6bde6e1).
 
-11. Widescreen (ultra and above 2k), difficulty buttons too small. Fix: adjust media query for it.
+12. **Intended Outcome:** All difficulty levels of the game should be responsive.
+    * **Issue:** [After hard mode was made responsive, easy and normal modes broke.](docs/bugs/bug-12.png).
+    * **Cause:** Easy, normal, and hard all share one ID selector, which was changed via media query to make the game responsive on hard.
+    * **Solution:** Adjust generateGame script with the inclusion of template literals to create 3 different boards (board-2, board-4, board-6) to better manipulate all with separate media queries. [Commit](https://github.com/Ryael/memoria/commit/9a7121533e56761c93745c4e5da2b222b11a912b).
 
-12. returnButton would display the menu briefly before the reload and the transitional effects that followed. Fix: Remove hide/show scripts.
+13. **Intended Outcome:** Animated border around the game area should remain around the game area.
+    * **Issue:** Animated border appears far off to the right side on the smallest media query.
+    * **Cause:** The left and right part of animated border are displaced due to the smallest media query causing the hard game board to vertically fill up the screen.
+    * **Solution:** Add "overflow: hidden;" to #board-container to hide it. [Commit](https://github.com/Ryael/memoria/commit/f8894fa2842cb0066b707c647ff59ed9d6bde6e1). 
 
-13. Entire title container is being used as returnButton, should only be the title. Fix: Move returnButton() to h1 instead.
-
-14. Spam click the same card, removes the class from only card. Only one shakes, the other doesnt. Fix: add delay to shake and flip.
-
-15. bug:  border-animation still displaying after flip/win on chrome. solution: add display none to the animated borders on flip.
-
-16. after the board was made responsive, emoji out of place: https://i.imgur.com/6kySFqh.png Media query to target size and position.
-
-17. Easy and normal broken after hard was made responsive: https://i.imgur.com/ifLs4qo.png Fix: media queries that target normal and easy modes. Fix: Adjust generateGame script with the inclusion of template literals to create 3 different boards (board-2, board-4, board-6) to better manipulate all with separate media queries.
-
-18. Animated border appears far of to the right side on the smallest media query. Fix: add overflow: hidden to #board-container to hide it.
-
-19. Game stats very small on newer gen phones: target via media query height and width and increase size. Esy fix.
-
-20. Flip counter was adding extra flisp to the total if you went too fast. fix: moving state.TotalFlips++ into the if statement where there has to be less than 2 total flips existing at any time.
-
-All bugs were due to my own code and were usually fixed as soon as identified due to the fact that they originated from my own mistake. No pervasive bugs were found.
+14. **Intended Outcome:** Flip counter only counts the flips made on the game board.
+    * **Issue:** Flip counter adds extra flips if the user rapidly interacted with the game board, even if a card was already mid-flip.
+    * **Cause:** There was no if statement to ensure there are less than two total flips existing at any time.
+    * **Solution:** Moving state.TotalFlips++ into the if statement where there has to be less than 2 total flips existing at any time. [Commit](https://github.com/Ryael/memoria/commit/553351075921cacf2eb57d01241111674ef56b47).  
 
 [Back to top &uarr;](#memoria)
 <hr>
