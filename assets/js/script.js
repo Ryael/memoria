@@ -123,21 +123,20 @@ const generateGame = (area) => {
     const shuffledItems = shuffle([...picks, ...picks]); // Creates an array of shuffled pairs of emoji.
     const cards = `
         <div id="${boardDifficulty}" class="board" style="grid-template-columns: repeat(${area}, auto)">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             ${shuffledItems
-                .map(
-                    (emoji) => `
-                <div class="card">
-                    <div class="card-front"></div>
-                    <div class="card-back">${emoji}</div>
-                </div>
-            `
-                )
-                .join("")}
-       </div>
+                .map((emoji) => `
+                    <div class="card">
+                        <div class="card-front"></div>
+                        <div class="card-back">${emoji}</div>
+                    </div>
+                `)
+                .join("")
+            }
+        </div>
     `; // Creates a board of cards based on the area², and adds a card for each item in the shuffled array with the emoji as its back.
 
     const parser = new DOMParser().parseFromString(cards, "text/html"); // This adds the board to the HTML.
@@ -197,6 +196,7 @@ function getMinutesAndSecondsFromSeconds(totalSecsElapsed) {
 
     return { minutes, seconds };
 }
+
 /** Starting the game */
 const startGame = () => {
     state.gameStarted = true; // Sets the gameStarted state to true.

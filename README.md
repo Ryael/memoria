@@ -401,19 +401,31 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 
 ## Bugs
 
-1.  **Intended Outcome:** Image not covering the entire screen -> new image crop: Done
-    * **Issue:**
-    * **Cause(s):**
-    * **Solution:** 
+1.  **Intended Outcome:** Background images covers the entire available viewport.
+    * **Issue:** Background image only covers a certain amount of the vertical viewport, before being cropped and displaying white space.
+    * **Cause:** The background image had a square ratio and was quite small in terms of size.
+    * **Solution:** Replace the old image with a new image that's a higher resolution and a wider ratio. [Commit](https://github.com/Ryael/memoria/commit/36d73075c269e5c6e902a1075212808940ee9e61).
 
+2.  **Intended Outcome:** H1 title is created such that there is an even amount of space above and below it.
+    * **Issue:** [H1 title is unevenly spaced](docs/bugs/bug-2.png).
+    * **Cause:** H1 title is created such that there is excess space below the it.
+    * **Solution:** Replace the old font with a new font, Jost, that has an even amount of space above and below it. [Commit](https://github.com/Ryael/memoria/commit/7f15638933dd2b3692a467dd0eb7296c9fa39fad).
 
-2. Title text, Josefin Sans, spaced weirdly -> new font
+3.  **Intended Outcome:** After using Return/Back button, all the previously displayed containers should be hidden.
+    * **Issue:** After using Return/Back button, all the previously displayed containers were still being displayed.
+    * **Cause:** After using Return/Back button, all the previously displayed containers didn't have their display changed to "display: none".
+    * **Solution:** Hide the containers when the Return/Back is clicked. This was then later changed to be a reload script, which accomplishes the same thing. [Commit](https://github.com/Ryael/memoria/commit/6340e47c37d8cdf294e879975b10f71dc296abfb).
 
-3. After using Return/Back button, all the previously displayed containers weren't hidden. Fix: Hiding the aforementioned containers when the back button is clicked.
+4.  **Intended Outcome:** All emoji should be rendered once the game board is generated.
+    * **Issue:** Some emoji weren't being being rendered.
+    * **Cause:** The emoji that weren't being rendered simply weren't compatible with being displayed as icons.
+    * **Solution:** Replace the emoji that weren't being properly rendered with ones that are. [Commit](https://github.com/Ryael/memoria/commit/309ec88eb40360d0ef139a6481b6cc65214dd82e).
 
-4. Easy Game Mode:  Meant to display 2 x 2 grid. It displays the grid correctly, but only one of the two pairs of emoji is being shown: https://i.imgur.com/qzmfRJk.png. Fix: replace emoji that wasn't rendering properly with emoji that is.
+5.  **Intended Outcome:** The win state is only displayed after a round is over.
+    * **Issue:** A part of the win state is being displayed and no text is visible after the board flips.
+    * **Cause:** The memory game had a white colour covering it, which is what made the text disappear. Additionally, "win" had a class selector instead of a id selector.
+    * **Solution:** Remove the white background and update "win" from a class selector to a id selector. [Commit](https://github.com/Ryael/memoria/commit/a3dd7769ce25eeaac6482b322984772099935f10).
 
-5. The win state is being displayed (it shouldn't be). https://i.imgur.com/1u3E2Xn.png Fix: #memory-game had a #111 background that covered the win window. Removing that helped. + class selector instead of id selector. fixed completely.
 
 6. It's not properly centered alongside the timer.  fix: game stats contaienr was within the same container, causing it go beside the game. Fix: moving the container up a level/div & adding a script to the easygamemode script that allows the game-stats to be display from a none-display state.  typo in the constant selectors (no # for idselector)
 
